@@ -40,51 +40,77 @@ void gui_splash(void) {
   delay(1500); // 1.5 second delay
 }
 
-void gui_terms_loop(void) {
+void gui_terms_loop(APStatsDB *db, char *search_buffer, int *buf_len, bool *show_result, int *active_tab) {
+  int selected_in_page = 0;
   int page = 0;
-  int terms_per_page = 3 * 18; // 3 columns, 18 rows = 54 terms
+  int rows = 15; // Reduced to make room for jump bar
+  int cols = 2;
+  int terms_per_page = rows * cols;
   int max_pages = (num_search_terms + terms_per_page - 1) / terms_per_page;
   bool redraw = true;
+  bool in_jump_bar = false;
+  int selected_letter = 0; // 0: A, 1: B, ...
 
   while (true) {
     if (redraw) {
       gfx_FillScreen(dark_mode ? 0 : 255);
       gfx_SetTextBGColor(dark_mode ? 0 : 255);
       gfx_SetTextTransparentColor(dark_mode ? 0 : 255);
-      gfx_SetTextFGColor(dark_mode ? 255 : 0); // Primary text
 
       // Header
       gfx_SetColor(dark_mode ? 255 : 0);
       gfx_FillRectangle(0, 0, 320, 20);
-      gfx_SetTextFGColor(dark_mode ? 0 : 255); // Inverse text for header
-      gfx_PrintStringXY("Glossary - [CLEAR] to exit, [UP]/[DOWN] scroll", 5, 6);
+      gfx_SetTextFGColor(dark_mode ? 0 : 255);
+      gfx_PrintStringXY("Glossary - [ALPHA] to Jump", 5, 6);
 
-      gfx_SetTextFGColor(dark_mode ? 255 : 0); // Primary text for terms
-
-      int start_idx = page * terms_per_page;
-      int x = 10;
-      int y = 30;
-
-      for (int i = 0; i < terms_per_page; i++) {
-        int idx = start_idx + i;
-        if (idx >= num_search_terms)
-          break;
-
-        gfx_PrintStringXY(search_terms[idx], x, y);
-
-        y += 11;
-        if (y > 220) {
-          y = 30;
-          x += 100;
-        }
+      // Alphabetical Jump Bar
+      int jump_y = 22;
+      for (int i = 0; i < 26; i++) {
+          int jx = 5 + (i * 12);
+          char l[2] = {'A' + i, '\0'};
+          if (in_jump_bar && selected_letter == i) {
+              gfx_SetColor(dark_mode ? 150 : 180);
+              gfx_FillRectangle(jx - 2, jump_y - 2, 10, 11);
+              gfx_SetTextFGColor(dark_mode ? 255 : 0);
+          } else {
+              gfx_SetTextFGColor(dark_mode ? 180 : 100);
+          }
+          gfx_PrintStringXY(l, jx, jump_y);
       }
 
-      // Footer with page number
+      int start_idx = page * terms_per_page;
+      for (int i = 0; i < terms_per_page; i++) {
+        int idx = start_idx + i;
+        if (idx >= num_search_terms) break;
+
+        int r = i % rows;
+        int c = i / rows;
+        int x = 15 + (c * 155);
+        int y = 40 + (r * 12);
+
+        if (!in_jump_bar && i == selected_in_page) {
+          gfx_SetColor(dark_mode ? 100 : 200);
+          gfx_FillRectangle(x - 5, y - 2, 145, 12);
+          gfx_SetTextFGColor(dark_mode ? 255 : 0);
+        } else {
+          gfx_SetTextFGColor(dark_mode ? 200 : 80);
+        }
+
+        char term_buf[25];
+        strncpy(term_buf, search_terms[idx], 20);
+        term_buf[20] = '\0';
+        if (strlen(search_terms[idx]) > 20) strcat(term_buf, "..");
+        gfx_PrintStringXY(term_buf, x, y);
+      }
+
+      // Footer
+      gfx_SetColor(dark_mode ? 255 : 0);
+      gfx_HorizLine(0, 222, 320);
       char page_str[32];
       sprintf(page_str, "Page %d of %d", page + 1, max_pages);
       gfx_SetTextFGColor(dark_mode ? 255 : 0);
-      gfx_PrintStringXY(page_str, 220, 225);
-
+      gfx_PrintStringXY(page_str, 220, 226);
+      
       gfx_SwapDraw();
       redraw = false;
     }
@@ -95,15 +121,59 @@ void gui_terms_loop(void) {
     if (key == sk_Clear) {
       break;
     } else if (key == sk_Down) {
-      if (page < max_pages - 1) {
+      if (in_jump_bar) {
+          in_jump_bar = false;
+          selected_in_page = 0;
+      } else if (selected_in_page < terms_per_page - 1 && (page * terms_per_page + selected_in_page + 1) < num_search_terms) {
+        selected_in_page++;
+      } else if (page < max_pages - 1) {
         page++;
-        redraw = true;
+        selected_in_page = 0;
       }
+      redraw = true;
     } else if (key == sk_Up) {
-      if (page > 0) {
-        page--;
-        redraw = true;
+      if (!in_jump_bar && selected_in_page < cols) {
+          in_jump_bar = true;
+      } else if (!in_jump_bar) {
+          selected_in_page--;
+      } else if (page > 0) {
+          page--;
+          selected_in_page = terms_per_page - 1;
       }
+      redraw = true;
+    } else if (key == sk_Left) {
+      if (in_jump_bar) {
+          if (selected_letter > 0) selected_letter--;
+      } else if (selected_in_page >= rows) {
+          selected_in_page -= rows;
+      }
+      redraw = true;
+    } else if (key == sk_Right) {
+      if (in_jump_bar) {
+          if (selected_letter < 25) selected_letter++;
+      } else if (selected_in_page < rows && (page * terms_per_page + selected_in_page + rows) < num_search_terms) {
+          selected_in_page += rows;
+      }
+      redraw = true;
+    } else if (key == sk_Enter) {
+      if (in_jump_bar) {
+          char target = 'a' + selected_letter;
+          // Jump to first term starting with target
+          for (int i = 0; i < num_search_terms; i++) {
+              if (search_terms[i][0] >= target) {
+                  page = i / terms_per_page;
+                  selected_in_page = i % terms_per_page;
+                  in_jump_bar = false;
+                  break;
+              }
+          }
+      } else {
+        int idx = page * terms_per_page + selected_in_page;
+        strcpy(search_buffer, search_terms[idx]);
+        *buf_len = strlen(search_buffer);
+        return; 
+      }
+      redraw = true;
     }
   }
 }
@@ -115,16 +185,11 @@ void gui_search_loop(APStatsDB *db) {
   char search_buffer[40] = "";
   int buf_len = 0;
   bool redraw = true;
-
-  // Status text
   const char *status = "Type keyword and press ENTER.";
-
-  // Result pointers
   const char *title, *c_str, *f_str, *k_str, *i_str, *t_str;
   size_t title_len, c_len, f_len, k_len, i_len, t_len;
   bool show_result = false;
-  int active_tab =
-      0; // 0: Conditions, 1: Formulas, 2: Calculator, 3: Interpretations
+  int active_tab = 0;
 
   const char chars_normal[60] = {
       [sk_0] = '0',      [sk_1] = '1',     [sk_2] = '2',      [sk_3] = '3',
@@ -148,15 +213,12 @@ void gui_search_loop(APStatsDB *db) {
                           "Trivia: Extrapolation is dangerous!",
                           "Trivia: 'S' is the SD of the residuals."};
   int trivia_idx = rand() % 5;
-
   int search_count = 0;
-
   bool alpha_mode = true;
 
   while (true) {
     if (redraw) {
       if (stealth_mode) {
-        // Fake home screen
         gfx_FillScreen(255);
         gfx_SetTextFGColor(0);
         gfx_PrintStringXY("2+2", 5, 5);
@@ -170,66 +232,56 @@ void gui_search_loop(APStatsDB *db) {
         gfx_SetTextBGColor(dark_mode ? 0 : 255);
         gfx_SetTextTransparentColor(dark_mode ? 0 : 255);
 
-      if (!show_result) {
-        gfx_PrintStringXY("AP Statistics Lexical Search Engine", 10, 10);
-        gfx_PrintStringXY(alpha_mode ? "[A]" : "[1]", 300, 10);
-        gfx_PrintStringXY(status, 10, 30);
-        gfx_PrintStringXY("Query: ", 10, 50);
-        gfx_PrintStringXY(search_buffer, 60, 50);
-        gfx_PrintStringXY("Press [MODE] to open Glossary", 10, 160);
-        gfx_PrintStringXY("Press [GRAPH] to toggle Dark Mode", 10, 175);
-        gfx_PrintStringXY("Press [STAT] for the Panic Button", 10, 190);
+        if (!show_result) {
+          gfx_PrintStringXY("AP Statistics Lexical Search Engine", 10, 10);
+          gfx_PrintStringXY(alpha_mode ? "[A]" : "[1]", 300, 10);
+          gfx_PrintStringXY(status, 10, 30);
+          gfx_PrintStringXY("Query: ", 10, 50);
+          gfx_PrintStringXY(search_buffer, 60, 50);
+          gfx_PrintStringXY("Press [MODE] to open Glossary", 10, 160);
+          gfx_PrintStringXY("Press [GRAPH] to toggle Dark Mode", 10, 175);
+          gfx_PrintStringXY("Press [STAT] for Stealth Mode", 10, 190);
 
-        char count_str[32];
-        sprintf(count_str, "Searches This Session: %d", search_count);
-        print_centered(count_str, 215);
+          char count_str[32];
+          sprintf(count_str, "Searches: %d", search_count);
+          print_centered(count_str, 215);
+          print_centered(trivia[trivia_idx], 230);
+        } else {
+          int content_y = 10;
+          int max_render_y = 210;
 
-        // Draw trivia at the bottom
-        gfx_SetTextFGColor(dark_mode ? 200 : 100); // Muted color
-        print_centered(trivia[trivia_idx], 230);
-        gfx_SetTextFGColor(dark_mode ? 255 : 0);
-      } else {
-        // Render the decompressed result
-        int y = 10;
-        gfx_PrintStringXY("Title: ", 10, y);
-        y += 10;
-        y = print_compressed_string(10, y, 300, title, title_len);
-        y += 10;
+          gfx_PrintStringXY("Title: ", 10, content_y);
+          content_y += 10;
+          content_y = print_compressed_string(10, content_y, 300, max_render_y, title, title_len);
+          content_y += 5;
 
-        // Draw Tabs (Screen is 320px wide, so 64px per tab max)
-        gfx_PrintStringXY(active_tab == 0 ? "[F1]COND" : " F1Cond ", 0, y);
-        gfx_PrintStringXY(active_tab == 1 ? "[F2]FORM" : " F2Form ", 64, y);
-        gfx_PrintStringXY(active_tab == 2 ? "[F3]CALC" : " F3Calc ", 128, y);
-        gfx_PrintStringXY(active_tab == 3 ? "[F4]INFO" : " F4Info ", 192, y);
-        gfx_PrintStringXY(active_tab == 4 ? "[F5]STEP" : " F5Step ", 256, y);
+          // Fixed Tab Bar
+          int tab_y = 225;
+          gfx_SetColor(dark_mode ? 255 : 0);
+          gfx_FillRectangle(0, tab_y - 5, 320, 20);
+          gfx_SetTextFGColor(dark_mode ? 0 : 255);
+          gfx_PrintStringXY(active_tab == 0 ? "[F1]COND" : " F1Cond ", 5, tab_y);
+          gfx_PrintStringXY(active_tab == 1 ? "[F2]FORM" : " F2Form ", 65, tab_y);
+          gfx_PrintStringXY(active_tab == 2 ? "[F3]CALC" : " F3Calc ", 125, tab_y);
+          gfx_PrintStringXY(active_tab == 3 ? "[F4]INFO" : " F4Info ", 185, tab_y);
+          gfx_PrintStringXY(active_tab == 4 ? "[F5]STEP" : " F5Step ", 245, tab_y);
 
-        // Draw an active underline beneath the selected tab
-        gfx_SetColor(dark_mode ? 255 : 0);
-        gfx_FillRectangle(active_tab * 64, y + 10, 64, 2);
+          gfx_SetTextFGColor(dark_mode ? 255 : 0);
+          gfx_SetTextBGColor(dark_mode ? 0 : 255);
 
-        y += 15;
-
-                const char *fb_cond = "No specific conditions are required for this concept.";
-                const char *fb_form = "No specific formula is required. See the INFO tab.";
-                const char *fb_calc = "No calculator shortcut exists for this topic.";
-                const char *fb_step = "No tutorial available. See the INFO tab for details.";
-
-                if (active_tab == 0) {
-                    y = print_compressed_string(10, y, 300, c_len <= 3 ? fb_cond : c_str, c_len <= 3 ? strlen(fb_cond) : c_len);
-                } else if (active_tab == 1) {
-                    y = print_compressed_string(10, y, 300, f_len <= 3 ? fb_form : f_str, f_len <= 3 ? strlen(fb_form) : f_len);
-                } else if (active_tab == 2) {
-                    y = print_compressed_string(10, y, 300, k_len <= 3 ? fb_calc : k_str, k_len <= 3 ? strlen(fb_calc) : k_len);
-                } else if (active_tab == 3) {
-                    y = print_compressed_string(10, y, 300, i_str, i_len);
-                } else if (active_tab == 4) {
-                    y = print_compressed_string(10, y, 300, t_len <= 3 ? fb_step : t_str, t_len <= 3 ? strlen(fb_step) : t_len);
-                }
-
-        gfx_PrintStringXY("Press CLEAR to search again.", 10, 220);
+          const char *data_ptr;
+          size_t data_len;
+          switch (active_tab) {
+            case 0: data_ptr = c_str; data_len = c_len; break;
+            case 1: data_ptr = f_str; data_len = f_len; break;
+            case 2: data_ptr = k_str; data_len = k_len; break;
+            case 3: data_ptr = i_str; data_len = i_len; break;
+            case 4: data_ptr = t_str; data_len = t_len; break;
+            default: data_ptr = ""; data_len = 0; break;
+          }
+          print_compressed_string(10, content_y, 300, max_render_y, data_ptr, data_len);
+        }
       }
-    }
-
       gfx_SwapDraw();
       redraw = false;
     }
@@ -237,15 +289,13 @@ void gui_search_loop(APStatsDB *db) {
     kb_Scan();
     uint8_t key = os_GetCSC();
 
-    // Global stealth toggle (Moved to STAT key to avoid conflict with 'B')
     if (key == sk_Stat) {
       stealth_mode = !stealth_mode;
       redraw = true;
       continue;
     }
 
-    if (stealth_mode)
-      continue;
+    if (stealth_mode) continue;
 
     if (show_result) {
       if (key == sk_Clear) {
@@ -253,34 +303,15 @@ void gui_search_loop(APStatsDB *db) {
         search_buffer[0] = '\0';
         buf_len = 0;
         status = "Type keyword and press ENTER.";
-        trivia_idx = rand() % 5; // new trivia on back
+        trivia_idx = rand() % 5;
         redraw = true;
-      } else if (key == sk_Yequ) { // F1
-        active_tab = 0;
-        redraw = true;
-      } else if (key == sk_Window) { // F2
-        active_tab = 1;
-        redraw = true;
-      } else if (key == sk_Zoom) { // F3
-        active_tab = 2;
-        redraw = true;
-      } else if (key == sk_Trace) { // F4
-        active_tab = 3;
-        redraw = true;
-      } else if (key == sk_Graph) { // F5
-        active_tab = 4;
-        redraw = true;
-      } else if (key == sk_Right) {
-        if (active_tab < 4) {
-          active_tab++;
-          redraw = true;
-        }
-      } else if (key == sk_Left) {
-        if (active_tab > 0) {
-          active_tab--;
-          redraw = true;
-        }
-      }
+      } else if (key == sk_Yequ) { active_tab = 0; redraw = true; }
+      else if (key == sk_Window) { active_tab = 1; redraw = true; }
+      else if (key == sk_Zoom) { active_tab = 2; redraw = true; }
+      else if (key == sk_Trace) { active_tab = 3; redraw = true; }
+      else if (key == sk_Graph) { active_tab = 4; redraw = true; }
+      else if (key == sk_Right && active_tab < 4) { active_tab++; redraw = true; }
+      else if (key == sk_Left && active_tab > 0) { active_tab--; redraw = true; }
     } else {
       if (key == sk_Clear) {
         if (buf_len > 0) {
@@ -288,72 +319,68 @@ void gui_search_loop(APStatsDB *db) {
           search_buffer[0] = '\0';
           status = "Type keyword and press ENTER.";
           redraw = true;
-        } else {
-          break; // Exit app
-        }
-      } else if (key == sk_Enter) {
-        if (strcmp(search_buffer, "antigravity") == 0) {
-          gfx_FillScreen(0);
-          gfx_SetTextFGColor(6); // Bright green
-          print_centered("WAKE UP, NEO...", 100);
-          print_centered("THE AP EXAM HAS YOU.", 120);
-          gfx_SwapDraw();
-          delay(3000);
-          search_buffer[0] = '\0';
-          buf_len = 0;
-          redraw = true;
-          continue;
-        }
+        } else break;
+      } else if (key == sk_Enter && buf_len > 0) {
+        // Synonym expansion
+        if (strcmp(search_buffer, "sd") == 0) strcpy(search_buffer, "deviation");
+        else if (strcmp(search_buffer, "ci") == 0) strcpy(search_buffer, "confidence");
+        else if (strcmp(search_buffer, "df") == 0) strcpy(search_buffer, "degrees");
+        else if (strcmp(search_buffer, "ho") == 0) strcpy(search_buffer, "null");
+        else if (strcmp(search_buffer, "ha") == 0) strcpy(search_buffer, "alternative");
 
-        // Idea #11: Keyword Synonyms
-        if (strcmp(search_buffer, "sd") == 0)
-          strcpy(search_buffer, "deviation");
-        else if (strcmp(search_buffer, "ci") == 0)
-          strcpy(search_buffer, "confidence");
-        else if (strcmp(search_buffer, "df") == 0)
-          strcpy(search_buffer, "degrees");
-        else if (strcmp(search_buffer, "ho") == 0)
-          strcpy(search_buffer, "null");
-        else if (strcmp(search_buffer, "ha") == 0)
-          strcpy(search_buffer, "alternative");
+        // Lowercase for hashing
+        for (int i = 0; search_buffer[i]; i++) search_buffer[i] = tolower(search_buffer[i]);
 
-        // Hash and search
         uint32_t target_hash = djb2_hash(search_buffer);
         uint8_t branch, node;
-
-        if (binary_search_keyword(db->index_ptr, db->num_keywords, target_hash,
-                                  &branch, &node)) {
-          if (get_node_data(db, branch, node, &title, &title_len, &c_str,
-                            &c_len, &f_str, &f_len, &k_str, &k_len, &i_str,
-                            &i_len, &t_str, &t_len)) {
+        if (binary_search_keyword(db->index_ptr, db->num_keywords, target_hash, &branch, &node)) {
+          if (get_node_data(db, branch, node, &title, &title_len, &c_str, &c_len, &f_str, &f_len, &k_str, &k_len, &i_str, &i_len, &t_str, &t_len)) {
             show_result = true;
             search_count++;
-            // active_tab = 0; // Removed to implement Tab Memory (Idea #28)
-          } else {
-            status = "Error loading node data.";
-          }
+            
+            // Smart Tab Selection: Pick the first tab that isn't "N/A"
+            active_tab = 3; // Default to INFO
+            if (c_len > 3) active_tab = 0;
+            else if (f_len > 3) active_tab = 1;
+            else if (k_len > 3) active_tab = 2;
+            else if (i_len > 3) active_tab = 3;
+            else if (t_len > 3) active_tab = 4;
+            
+          } else status = "Error loading node data.";
         } else {
           status = "Keyword not found. Try again.";
           search_buffer[0] = '\0';
           buf_len = 0;
         }
         redraw = true;
-      } else if (key == sk_Alpha) {
-        alpha_mode = !alpha_mode;
+      } else if (key == sk_Alpha) { alpha_mode = !alpha_mode; redraw = true; }
+      else if (key == sk_2nd) { alpha_mode = false; redraw = true; }
+      else if (key == sk_Mode) {
+        gui_terms_loop(db, search_buffer, &buf_len, &show_result, &active_tab);
+        if (buf_len > 0) {
+          // Trigger search after selecting from glossary
+          uint32_t target_hash = djb2_hash(search_buffer);
+          uint8_t branch, node;
+          if (binary_search_keyword(db->index_ptr, db->num_keywords, target_hash, &branch, &node)) {
+            if (get_node_data(db, branch, node, &title, &title_len, &c_str, &c_len, &f_str, &f_len, &k_str, &k_len, &i_str, &i_len, &t_str, &t_len)) {
+              show_result = true;
+              search_count++;
+              
+              // Smart Tab Selection
+              active_tab = 3; // Default to INFO
+              if (c_len > 3) active_tab = 0;
+              else if (f_len > 3) active_tab = 1;
+              else if (k_len > 3) active_tab = 2;
+              else if (i_len > 3) active_tab = 3;
+              else if (t_len > 3) active_tab = 4;
+            }
+          }
+        }
         redraw = true;
-      } else if (key == sk_Mode) {
-        gui_terms_loop();
-        redraw = true;
-      } else if (key == sk_Graph && !show_result) {
-        dark_mode = !dark_mode;
-        redraw = true;
-      } else if (key == sk_Stat && !show_result) {
-        strcpy(search_buffer, "panic");
-        buf_len = 5;
-        redraw = true;
-      } else if (key == sk_Del && buf_len > 0) {
-        buf_len--;
-        search_buffer[buf_len] = '\0';
+      }
+      else if (key == sk_Graph) { dark_mode = !dark_mode; redraw = true; }
+      else if (key == sk_Del && buf_len > 0) {
+        search_buffer[--buf_len] = '\0';
         redraw = true;
       } else if (key > 0 && key < 60 && buf_len < 19) {
         char c = alpha_mode ? chars_alpha[key] : chars_normal[key];

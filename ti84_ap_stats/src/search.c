@@ -3,7 +3,7 @@
 uint32_t djb2_hash(const char *str) {
     uint32_t hash = 5381;
     while (*str) {
-        hash = ((hash << 5) + hash) + *str; // hash * 33 + c
+        hash = ((hash << 5) + hash) + (uint8_t)(*str); // hash * 33 + c
         str++;
     }
     return hash;

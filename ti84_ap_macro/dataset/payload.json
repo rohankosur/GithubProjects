@@ -1,0 +1,471 @@
+{
+  "system_config": {
+    "appvar_max_bytes": 64000,
+    "compression_dictionary": [
+      "the",
+      "and",
+      "that",
+      "this",
+      "with",
+      "from",
+      "their",
+      "they",
+      "will",
+      "would"
+    ]
+  },
+  "database": {
+    "0": {
+      "branch_name": "Basic Economic Concepts",
+      "nodes": [
+        {
+          "id": "0.0",
+          "keywords": [
+            "produces",
+            "japan",
+            "because",
+            "advantage",
+            "produce",
+            "same",
+            "labor",
+            "using",
+            "resources",
+            "rule",
+            "word",
+            "absolute",
+            "amount",
+            "service",
+            "prob",
+            "good",
+            "with",
+            "than",
+            "others",
+            "country",
+            "more",
+            "units",
+            "cars",
+            "ability"
+          ],
+          "title": "Absolute Advantage",
+          "C": "The ability to produce more of a good or service than others using the same amount of resources.",
+          "F": "N/A",
+          "K": "If US produces 100 cars and Japan produces 80 with the same labor, the US has absolute advantage.",
+          "I": "\"Country X has an absolute advantage in Y because it can produce more units of Y with the same resources.\"",
+          "T": "N/A"
+        },
+        {
+          "id": "0.1",
+          "keywords": [
+            "word",
+            "opportunity",
+            "give",
+            "next",
+            "given",
+            "alternative",
+            "item",
+            "must",
+            "best",
+            "what",
+            "cost",
+            "because",
+            "rule",
+            "real",
+            "choosing"
+          ],
+          "title": "Opportunity Cost",
+          "C": "The real cost of an item; what you must give up to get it.",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "\"The opportunity cost of choosing X is Y because Y is the next best alternative given up.\"",
+          "T": "N/A"
+        }
+      ]
+    },
+    "1": {
+      "branch_name": "Measuring Economic Performance",
+      "nodes": [
+        {
+          "id": "1.0",
+          "keywords": [
+            "economy",
+            "final",
+            "domestic",
+            "goods",
+            "during",
+            "given",
+            "value",
+            "gdp",
+            "form",
+            "product",
+            "produced",
+            "gross",
+            "services",
+            "total",
+            "rule",
+            "period"
+          ],
+          "title": "Gross Domestic Product (GDP)",
+          "C": "The total value of all final goods and services produced in an economy during a given period.",
+          "F": "GDP = C + I + G + (X - IM).",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "N/A"
+        },
+        {
+          "id": "1.1",
+          "keywords": [
+            "price",
+            "year",
+            "rate",
+            "percent",
+            "change",
+            "inflation",
+            "form",
+            "index",
+            "rule",
+            "annual"
+          ],
+          "title": "Inflation Rate",
+          "C": "The annual percent change in a price index.",
+          "F": "[(Price Index Year 2 - Price Index Year 1) / Price Index Year 1] 100.",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "N/A"
+        },
+        {
+          "id": "1.2",
+          "keywords": [
+            "deflator",
+            "price",
+            "times",
+            "equal",
+            "ratio",
+            "nominal",
+            "gdp",
+            "form",
+            "rule",
+            "real",
+            "measure"
+          ],
+          "title": "GDP Deflator",
+          "C": "A price measure equal to 100 times the ratio of nominal GDP to real GDP.",
+          "F": "100 (Nominal GDP / Real GDP).",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "N/A"
+        },
+        {
+          "id": "1.3",
+          "keywords": [
+            "word",
+            "natural",
+            "economy",
+            "full",
+            "when",
+            "rate",
+            "actual",
+            "arises",
+            "from",
+            "employment",
+            "equals",
+            "frictional",
+            "plus",
+            "that",
+            "structural",
+            "unemployment",
+            "rule"
+          ],
+          "title": "Natural Rate of Unemployment",
+          "C": "The unemployment rate that arises from frictional plus structural unemployment.",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "\"The economy is at full employment when actual unemployment equals the natural rate.\"",
+          "T": "N/A"
+        }
+      ]
+    },
+    "2": {
+      "branch_name": "National Income and Price Determination",
+      "nodes": [
+        {
+          "id": "2.0",
+          "keywords": [
+            "decrease",
+            "power",
+            "price",
+            "level",
+            "between",
+            "purchasing",
+            "quantity",
+            "rule",
+            "word",
+            "demanded",
+            "aggregate",
+            "relationship",
+            "increasing",
+            "output",
+            "shows",
+            "increases",
+            "wealth",
+            "ad",
+            "curve",
+            "demand",
+            "effect"
+          ],
+          "title": "Aggregate Demand (AD) Curve",
+          "C": "Shows the relationship between the aggregate price level and the quantity of aggregate output demanded.",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "\"A decrease in price level increases purchasing power (wealth effect), increasing output demanded.\"",
+          "T": "N/A"
+        },
+        {
+          "id": "2.1",
+          "keywords": [
+            "falling",
+            "word",
+            "caused",
+            "aggregate",
+            "supply",
+            "stagflation",
+            "sras",
+            "prices",
+            "combination",
+            "shift",
+            "shock",
+            "leftward",
+            "inflation",
+            "increasing",
+            "output",
+            "decreasing",
+            "negative",
+            "rule"
+          ],
+          "title": "Stagflation",
+          "C": "Combination of inflation and falling aggregate output.",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "\"Caused by a negative supply shock (leftward shift of SRAS), increasing prices and decreasing output.\"",
+          "T": "N/A"
+        },
+        {
+          "id": "2.2",
+          "keywords": [
+            "taxes",
+            "changes",
+            "change",
+            "which",
+            "gdp",
+            "form",
+            "mpc",
+            "mps",
+            "multiplier",
+            "factor",
+            "rule",
+            "real"
+          ],
+          "title": "Tax Multiplier",
+          "C": "The factor by which a change in taxes changes real GDP.",
+          "F": "-MPC / (1 - MPC) or -MPC / MPS.",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "N/A"
+        }
+      ]
+    },
+    "3": {
+      "branch_name": "Financial Sector",
+      "nodes": [
+        {
+          "id": "3.0",
+          "keywords": [
+            "held",
+            "reserves",
+            "federal",
+            "required",
+            "banks",
+            "form",
+            "currency",
+            "bank",
+            "plus",
+            "deposits",
+            "excess",
+            "reserve",
+            "rule",
+            "vaults"
+          ],
+          "title": "Bank Reserves",
+          "C": "Currency held by banks in vaults plus deposits at the Federal Reserve.",
+          "F": "Reserves = Required Reserves + Excess Reserves.",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "N/A"
+        },
+        {
+          "id": "3.1",
+          "keywords": [
+            "word",
+            "encourages",
+            "charges",
+            "supply",
+            "rate",
+            "loans",
+            "federal",
+            "increasing",
+            "money",
+            "banks",
+            "borrowing",
+            "discount",
+            "bank",
+            "reserve",
+            "rule",
+            "interest",
+            "lowering"
+          ],
+          "title": "Discount Rate",
+          "C": "The interest rate the Federal Reserve charges on loans to banks.",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "\"Lowering the discount rate encourages bank borrowing, increasing the money supply.\"",
+          "T": "N/A"
+        },
+        {
+          "id": "3.2",
+          "keywords": [
+            "budget",
+            "increase",
+            "hypothetical",
+            "supply",
+            "raising",
+            "where",
+            "rule",
+            "real",
+            "word",
+            "market",
+            "borrowers",
+            "deficit",
+            "loanable",
+            "lenders",
+            "from",
+            "interest",
+            "rates",
+            "increases",
+            "comes",
+            "funds",
+            "demand"
+          ],
+          "title": "Loanable Funds Market",
+          "C": "A hypothetical market where demand comes from borrowers and supply from lenders.",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "\"An increase in the budget deficit increases demand for loanable funds, raising real interest rates.\"",
+          "T": "N/A"
+        }
+      ]
+    },
+    "4": {
+      "branch_name": "Long-Run Consequences of Stabilization Policies",
+      "nodes": [
+        {
+          "id": "4.0",
+          "keywords": [
+            "which",
+            "raises",
+            "private",
+            "rule",
+            "drives",
+            "word",
+            "increased",
+            "spending",
+            "reduces",
+            "deficit",
+            "government",
+            "interest",
+            "rates",
+            "occurs",
+            "when",
+            "crowding",
+            "investment",
+            "borrowing",
+            "crowds"
+          ],
+          "title": "Crowding Out",
+          "C": "Occurs when government deficit spending drives up interest rates and reduces private investment.",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "\"Increased gov borrowing raises interest rates, which 'crowds out' private investment spending.\"",
+          "T": "N/A"
+        }
+      ]
+    },
+    "5": {
+      "branch_name": "Open Economy-International Trade and Finance",
+      "nodes": [
+        {
+          "id": "5.0",
+          "keywords": [
+            "balance",
+            "financial",
+            "with",
+            "current",
+            "account",
+            "other",
+            "summary",
+            "country",
+            "payments",
+            "form",
+            "countries",
+            "rule",
+            "transactions"
+          ],
+          "title": "Balance of Payments",
+          "C": "A summary of a country's transactions with other countries.",
+          "F": "Current Account + Financial Account = 0.",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "N/A"
+        }
+      ]
+    },
+    "6": {
+      "branch_name": "Tutorials",
+      "nodes": [
+        {
+          "id": "T.0",
+          "keywords": [
+            "ad",
+            "as",
+            "drawing",
+            "shifts"
+          ],
+          "title": "Drawing AD/AS Shifts",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "CALC: Shift AD right for expansionary policy. Shift SRAS left for negative supply shocks."
+        }
+      ]
+    },
+    "7": {
+      "branch_name": "FRQ Guide",
+      "nodes": [
+        {
+          "id": "F.0",
+          "keywords": [
+            "policy",
+            "fiscal",
+            "monetary",
+            "vs"
+          ],
+          "title": "Fiscal vs Monetary Policy",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "\"Fiscal policy uses G and T; Monetary policy uses Open Market Ops and interest rates.\"",
+          "T": "N/A"
+        }
+      ]
+    }
+  }
+}

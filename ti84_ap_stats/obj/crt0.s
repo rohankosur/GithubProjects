@@ -11,6 +11,10 @@ _ti_Open:
  .type _ti_Close, @function
 _ti_Close:
  jp 9
+ .global _ti_GetSize
+ .type _ti_GetSize, @function
+_ti_GetSize:
+ jp 48
  .global _ti_GetDataPtr
  .type _ti_GetDataPtr, @function
 _ti_GetDataPtr:
@@ -67,6 +71,10 @@ _gfx_GetStringWidth:
  .type _gfx_GetCharWidth, @function
 _gfx_GetCharWidth:
  jp 81
+ .global _gfx_HorizLine
+ .type _gfx_HorizLine, @function
+_gfx_HorizLine:
+ jp 93
  .global _gfx_FillRectangle
  .type _gfx_FillRectangle, @function
 _gfx_FillRectangle:

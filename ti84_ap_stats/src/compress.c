@@ -12,7 +12,7 @@ const char *g_compression_dict[] = {
 
 const uint8_t g_dict_size = 24;
 
-int print_compressed_string(int x, int y, int max_width, const char *compressed_str, size_t len) {
+int print_compressed_string(int x, int y, int max_width, int max_y, const char *compressed_str, size_t len) {
     char buffer[1024];
     int buf_len = 0;
     
@@ -36,6 +36,8 @@ int print_compressed_string(int x, int y, int max_width, const char *compressed_
     char *ptr = buffer;
     
     while (*ptr) {
+        if (y > max_y - 10) break;
+
         // Handle spaces
         if (*ptr == ' ') {
             x += gfx_GetCharWidth(' ');
@@ -72,7 +74,9 @@ int print_compressed_string(int x, int y, int max_width, const char *compressed_
             y += 10;
         }
         
-        gfx_PrintStringXY(ptr, x, y);
+        if (y <= max_y - 10) {
+            gfx_PrintStringXY(ptr, x, y);
+        }
         x += word_width;
         
         *end = temp;

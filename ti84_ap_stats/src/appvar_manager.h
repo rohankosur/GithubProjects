@@ -7,15 +7,15 @@
 
 typedef struct {
     uint8_t num_appvars;
-    uint8_t appvar_handles[10]; // Assuming max 10 chunks
+    uint8_t appvar_handles[10];
+    uint8_t *appvar_ptrs[10];
+    uint16_t appvar_sizes[10];
     
     uint16_t num_keywords;
-    uint8_t *index_ptr; // Pointer to start of index data in archive
+    uint8_t *index_ptr; 
     
-    // Pointer to the start of the data section in the first AppVar 
-    // (For this prototype, we'll assume the entire dataset fits in one AppVar to simplify pointers. 
-    //  If spanning multiple, we'd need an offset table.)
-    void *data_ptr; 
+    // Virtual offset of the data section
+    uint32_t data_offset;
 } APStatsDB;
 
 bool init_database(APStatsDB *db);

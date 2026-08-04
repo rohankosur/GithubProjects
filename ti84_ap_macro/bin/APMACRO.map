@@ -1,0 +1,886 @@
+
+Merging object attributes
+
+
+Discarded input sections
+
+ .comment       0x00000000      0x29c obj/APMACRO.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/APMACRO.o
+ .init.weak_crt
+                0x00000000       0x10 obj/APMACRO.o
+ .text          0x00000000        0x0 obj/crt0.o
+ .data          0x00000000        0x0 obj/crt0.o
+ .bss           0x00000000        0x0 obj/crt0.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+prgm             0x00d1a87f         0x00400000
+bss              0x00d052c6         0x0000ed12
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00d1a87f                        LOAD_ADDR = 0xd1a87f
+                0x00d052c6                        BSSHEAP_LOW = 0xd052c6
+                0x00d13fd8                        BSSHEAP_HIGH = 0xd13fd8
+                0x00d1a87e                        STACK_HIGH = 0xd1a87e
+                0x00000001                        __TICE__ = 0x1
+                0x00d1a87f                        . = LOAD_ADDR
+
+.header         0x00d1a87f       0x29
+ *(.header)
+ .header        0x00d1a87f        0x3 obj/crt0.o
+ *(.header.icon)
+ .header.icon   0x00d1a882       0x26 obj/APMACRO.o
+                0x00d1a887                ___description
+
+.init           0x00d1a8a8      0x152
+ *(.init)
+ .init          0x00d1a8a8      0x152 obj/crt0.o
+                0x00d1a8a8                __start
+                0x00d1a905                __libload_library_FILEIOC
+                0x00d1a90f                _ti_Open
+                0x00d1a913                _ti_Close
+                0x00d1a917                _ti_GetSize
+                0x00d1a91b                _ti_GetDataPtr
+                0x00d1a91f                __libload_library_GRAPHX
+                0x00d1a928                _gfx_Begin
+                0x00d1a92c                _gfx_End
+                0x00d1a930                _gfx_SetColor
+                0x00d1a934                _gfx_FillScreen
+                0x00d1a938                _gfx_SetDraw
+                0x00d1a93c                _gfx_SwapDraw
+                0x00d1a940                _gfx_PrintStringXY
+                0x00d1a944                _gfx_SetTextBGColor
+                0x00d1a948                _gfx_SetTextFGColor
+                0x00d1a94c                _gfx_SetTextTransparentColor
+                0x00d1a950                _gfx_GetStringWidth
+                0x00d1a954                _gfx_GetCharWidth
+                0x00d1a958                _gfx_HorizLine
+                0x00d1a95c                _gfx_FillRectangle
+                0x00d1a960                __libload_library_KEYPADC
+                0x00d1a96a                _kb_Scan
+                0x00d1a9be                ___exithl
+                0x00d1a9bf                _exit.sp
+
+.text           0x00d1a9fa     0x4229
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(SORT_BY_NAME(.text.sorted.*))
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00d1a9fa      0x560 obj/APMACRO.o
+                0x00d1a9fa                __land
+                0x00d1a9fe                __iand
+                0x00d1aa15                __bdivu
+                0x00d1aa1f                __bdvrmu
+                0x00d1aa20                __bdvrmu.hijack_l_dividend
+                0x00d1aa2e                __dcmp
+                0x00d1aa8c                __frameset
+                0x00d1aa9a                __frameset0
+                0x00d1aaa5                __ftod
+                0x00d1aaed                __imuls
+                0x00d1aaed                __imulu
+                0x00d1ab1d                __sneg
+                0x00d1ab1d                __ineg
+                0x00d1ab26                __snot
+                0x00d1ab26                __inot
+                0x00d1ab30                __irems
+                0x00d1ab38                __iremu
+                0x00d1ab3f                __ishl
+                0x00d1ab3f                __sshl
+                0x00d1ab65                __ishru
+                0x00d1ab6a                __ishrs
+                0x00d1aba6                __ishrs_1
+                0x00d1abb4                __ladd
+                0x00d1abba                __lcmpu
+                0x00d1abc2                __lladd
+                0x00d1abe6                __lland
+                0x00d1ac22                __llcmps
+                0x00d1ac4f                __llcmpu
+                0x00d1ac79                __llcmpzero
+                0x00d1ac79                __llequzero
+                0x00d1ac8e                __lldivu
+                0x00d1aca2                __lldvrmu
+                0x00d1aca9                __lldvrmu.hijack
+                0x00d1ad00                __llmulu
+                0x00d1ad55                __llshl
+                0x00d1ad6f                __llshru
+                0x00d1ad9f                __llshrs
+                0x00d1addb                __llxor
+                0x00d1ae17                __lmulu
+                0x00d1ae17                __lmuls
+                0x00d1ae73                __lshl
+                0x00d1ae80                __sand
+                0x00d1ae89                __setflag
+                0x00d1ae93                __lxor
+                0x00d1ae97                __ixor
+                0x00d1aeae                __idvrms
+                0x00d1aedc                __idvrmu
+                0x00d1aee0                __idvrmu.hijack_a_iters_ude_dividend
+                0x00d1aef6                ___sleep_common.1
+                0x00d1aef6                ___sleep_common
+                0x00d1aef7                ___sleep_common.2
+                0x00d1aef8                ___sleep_common.3
+                0x00d1af11                _clock
+                0x00d1af1c                _rand
+                0x00d1af29                _tolower
+                0x00d1af2c                _tolower.internal
+                0x00d1af35                _atomic_load_increasing_32
+ .text._init_database
+                0x00d1af5a      0x135 obj/APMACRO.o
+                0x00d1af5a                _init_database
+ .text._close_database
+                0x00d1b08f       0x3d obj/APMACRO.o
+                0x00d1b08f                _close_database
+ .text._get_virtual_ptr
+                0x00d1b0cc       0xaa obj/APMACRO.o
+                0x00d1b0cc                _get_virtual_ptr
+ .text._get_node_data
+                0x00d1b176      0x56a obj/APMACRO.o
+                0x00d1b176                _get_node_data
+ .text._print_compressed_string
+                0x00d1b6e0      0x5e7 obj/APMACRO.o
+                0x00d1b6e0                _print_compressed_string
+ .text._gui_init
+                0x00d1bcc7       0x2c obj/APMACRO.o
+                0x00d1bcc7                _gui_init
+ .text._print_centered
+                0x00d1bcf3       0x48 obj/APMACRO.o
+                0x00d1bcf3                _print_centered
+ .text._gui_splash
+                0x00d1bd3b       0x6c obj/APMACRO.o
+                0x00d1bd3b                _gui_splash
+ .text._gui_terms_loop
+                0x00d1bda7      0x5f2 obj/APMACRO.o
+                0x00d1bda7                _gui_terms_loop
+ .text._gui_search_loop
+                0x00d1c399      0xaf4 obj/APMACRO.o
+                0x00d1c399                _gui_search_loop
+ .text._main    0x00d1ce8d       0x5c obj/APMACRO.o
+                0x00d1ce8d                _main
+ .text._djb2_hash
+                0x00d1cee9       0x40 obj/APMACRO.o
+                0x00d1cee9                _djb2_hash
+ .text._find_best_node
+                0x00d1cf29      0x2b3 obj/APMACRO.o
+                0x00d1cf29                _find_best_node
+ .text._npf_vpprintf
+                0x00d1d1dc     0x1775 obj/APMACRO.o
+                0x00d1d1dc                _npf_vpprintf
+ .text._NPF_PUTC_IMPL
+                0x00d1e951       0x2d obj/APMACRO.o
+ .text._npf_utoa_rev
+                0x00d1e97e       0xe6 obj/APMACRO.o
+ .text._vsnprintf
+                0x00d1ea64       0x88 obj/APMACRO.o
+                0x00d1ea64                _vsnprintf
+ .text._npf_bufputc
+                0x00d1eaec       0x25 obj/APMACRO.o
+ .text._npf_bufputc_nop
+                0x00d1eb11        0x7 obj/APMACRO.o
+ .text._sprintf
+                0x00d1eb18       0x29 obj/APMACRO.o
+                0x00d1eb18                _sprintf
+ .text.__bctlz  0x00d1eb41       0x22 obj/APMACRO.o
+                0x00d1eb41                __bctlz
+ .text.__sctlz  0x00d1eb63        0xc obj/APMACRO.o
+                0x00d1eb63                __sctlz
+ .text.__ictlz  0x00d1eb6f       0x12 obj/APMACRO.o
+                0x00d1eb6f                __ictlz
+ .text.__llctlz
+                0x00d1eb81        0xe obj/APMACRO.o
+                0x00d1eb81                __llctlz
+ .text.__i48ctlz
+                0x00d1eb8f       0x15 obj/APMACRO.o
+                0x00d1eb8f                __i48ctlz
+ .text._delay   0x00d1eba4       0x2a obj/APMACRO.o
+                0x00d1eba4                _msleep
+                0x00d1eba4                _delay
+ .text._random  0x00d1ebce       0x55 obj/APMACRO.o
+                0x00d1ebce                _random
+ *(.gnu.warning)
+
+.rodata         0x00d1ec23      0xd34
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata._gui_terms_loop
+                0x00d1ec23       0x2d obj/APMACRO.o
+ .rodata._gui_search_loop
+                0x00d1ec50       0x36 obj/APMACRO.o
+ .rodata._.str  0x00d1ec86        0x6 obj/APMACRO.o
+ .rodata._.str.1.2
+                0x00d1ec8c        0xd obj/APMACRO.o
+ .rodata._.str.2
+                0x00d1ec99        0xf obj/APMACRO.o
+ .rodata._.str.3
+                0x00d1eca8        0xc obj/APMACRO.o
+ .rodata._.str.4
+                0x00d1ecb4       0x13 obj/APMACRO.o
+ .rodata._.str.5
+                0x00d1ecc7        0xb obj/APMACRO.o
+ .rodata._.str.6
+                0x00d1ecd2        0xb obj/APMACRO.o
+ .rodata._.str.7
+                0x00d1ecdd       0x14 obj/APMACRO.o
+ .rodata._.str.8
+                0x00d1ecf1        0xc obj/APMACRO.o
+ .rodata._.str.9
+                0x00d1ecfd        0x7 obj/APMACRO.o
+ .rodata._.str.10
+                0x00d1ed04        0x7 obj/APMACRO.o
+ .rodata._.str.11
+                0x00d1ed0b        0x9 obj/APMACRO.o
+ .rodata._.str.12
+                0x00d1ed14        0x9 obj/APMACRO.o
+ .rodata._.str.13
+                0x00d1ed1d        0x9 obj/APMACRO.o
+ .rodata._.str.14
+                0x00d1ed26        0x9 obj/APMACRO.o
+ .rodata._.str.15
+                0x00d1ed2f        0xc obj/APMACRO.o
+ .rodata._.str.16
+                0x00d1ed3b        0xb obj/APMACRO.o
+ .rodata._.str.17
+                0x00d1ed46        0xc obj/APMACRO.o
+ .rodata._.str.18
+                0x00d1ed52        0xa obj/APMACRO.o
+ .rodata._.str.19
+                0x00d1ed5c        0xa obj/APMACRO.o
+ .rodata._.str.20
+                0x00d1ed66        0x9 obj/APMACRO.o
+ .rodata._.str.21
+                0x00d1ed6f        0x5 obj/APMACRO.o
+ .rodata._.str.22
+                0x00d1ed74        0x7 obj/APMACRO.o
+ .rodata._.str.23
+                0x00d1ed7b        0x7 obj/APMACRO.o
+ .rodata._.str.24
+                0x00d1ed82        0xa obj/APMACRO.o
+ .rodata._.str.25
+                0x00d1ed8c        0xc obj/APMACRO.o
+ .rodata._.str.1.26
+                0x00d1ed98       0x19 obj/APMACRO.o
+ .rodata._.str.2.27
+                0x00d1edb1        0x5 obj/APMACRO.o
+ .rodata._.str.3.28
+                0x00d1edb6       0x1c obj/APMACRO.o
+ .rodata._.str.4.29
+                0x00d1edd2       0x1b obj/APMACRO.o
+ .rodata._search_terms
+                0x00d1eded      0x207 obj/APMACRO.o
+ .rodata._.str.5.30
+                0x00d1eff4        0x3 obj/APMACRO.o
+ .rodata._.str.6.31
+                0x00d1eff7        0xe obj/APMACRO.o
+ .rodata._.str.7.32
+                0x00d1f005       0x1e obj/APMACRO.o
+ .rodata.___const.gui_search_loop.chars_normal
+                0x00d1f023       0x3c obj/APMACRO.o
+ .rodata.___const.gui_search_loop.chars_alpha
+                0x00d1f05f       0x3c obj/APMACRO.o
+ .rodata._.str.8.46
+                0x00d1f09b       0x22 obj/APMACRO.o
+ .rodata._.str.9.47
+                0x00d1f0bd       0x2b obj/APMACRO.o
+ .rodata._.str.10.48
+                0x00d1f0e8       0x32 obj/APMACRO.o
+ .rodata._.str.11.49
+                0x00d1f11a       0x20 obj/APMACRO.o
+ .rodata._.str.12.50
+                0x00d1f13a       0x35 obj/APMACRO.o
+ .rodata.___const.gui_search_loop.trivia
+                0x00d1f16f        0xf obj/APMACRO.o
+ .rodata._.str.13.33
+                0x00d1f17e        0x4 obj/APMACRO.o
+ .rodata._.str.14.34
+                0x00d1f182        0xf obj/APMACRO.o
+ .rodata._.str.15.35
+                0x00d1f191        0x7 obj/APMACRO.o
+ .rodata._.str.16.36
+                0x00d1f198        0xf obj/APMACRO.o
+ .rodata._.str.17.37
+                0x00d1f1a7        0x2 obj/APMACRO.o
+ .rodata._.str.18.38
+                0x00d1f1a9       0x28 obj/APMACRO.o
+ .rodata._.str.19.39
+                0x00d1f1d1        0x4 obj/APMACRO.o
+ .rodata._.str.20.40
+                0x00d1f1d5        0x4 obj/APMACRO.o
+ .rodata._.str.21.41
+                0x00d1f1d9        0x8 obj/APMACRO.o
+ .rodata._.str.22.42
+                0x00d1f1e1       0x1e obj/APMACRO.o
+ .rodata._.str.23.43
+                0x00d1f1ff       0x22 obj/APMACRO.o
+ .rodata._.str.24.44
+                0x00d1f221       0x1e obj/APMACRO.o
+ .rodata._.str.25.45
+                0x00d1f23f        0xd obj/APMACRO.o
+ .rodata._.str.26
+                0x00d1f24c        0x8 obj/APMACRO.o
+ .rodata._.str.27
+                0x00d1f254        0x9 obj/APMACRO.o
+ .rodata._.str.28
+                0x00d1f25d        0x9 obj/APMACRO.o
+ .rodata._.str.29
+                0x00d1f266        0x9 obj/APMACRO.o
+ .rodata._.str.30
+                0x00d1f26f        0x9 obj/APMACRO.o
+ .rodata._.str.31
+                0x00d1f278        0x9 obj/APMACRO.o
+ .rodata._.str.32
+                0x00d1f281        0x9 obj/APMACRO.o
+ .rodata._.str.33
+                0x00d1f28a        0x9 obj/APMACRO.o
+ .rodata._.str.34
+                0x00d1f293        0x9 obj/APMACRO.o
+ .rodata._.str.35
+                0x00d1f29c        0x9 obj/APMACRO.o
+ .rodata._.str.36
+                0x00d1f2a5        0x9 obj/APMACRO.o
+ .rodata._.str.37
+                0x00d1f2ae        0x1 obj/APMACRO.o
+ .rodata._.str.39
+                0x00d1f2af        0xa obj/APMACRO.o
+ .rodata._.str.41
+                0x00d1f2b9        0xb obj/APMACRO.o
+ .rodata._.str.45
+                0x00d1f2c4        0x5 obj/APMACRO.o
+ .rodata._.str.47
+                0x00d1f2c9        0xc obj/APMACRO.o
+ .rodata._.str.48
+                0x00d1f2d5       0x19 obj/APMACRO.o
+ .rodata._.str.49
+                0x00d1f2ee       0x1e obj/APMACRO.o
+ .rodata._.str.50
+                0x00d1f30c        0x8 obj/APMACRO.o
+ .rodata._.str.51
+                0x00d1f314        0x9 obj/APMACRO.o
+ .rodata._.str.52
+                0x00d1f31d        0x8 obj/APMACRO.o
+ .rodata._.str.53
+                0x00d1f325        0x7 obj/APMACRO.o
+ .rodata._.str.54
+                0x00d1f32c        0x3 obj/APMACRO.o
+ .rodata._.str.55
+                0x00d1f32f        0xa obj/APMACRO.o
+ .rodata._.str.56
+                0x00d1f339        0xa obj/APMACRO.o
+ .rodata._.str.57
+                0x00d1f343        0x7 obj/APMACRO.o
+ .rodata._.str.58
+                0x00d1f34a        0x7 obj/APMACRO.o
+ .rodata._.str.59
+                0x00d1f351        0x7 obj/APMACRO.o
+ .rodata._.str.60
+                0x00d1f358        0x3 obj/APMACRO.o
+ .rodata._.str.61
+                0x00d1f35b        0x8 obj/APMACRO.o
+ .rodata._.str.62
+                0x00d1f363        0x5 obj/APMACRO.o
+ .rodata._.str.63
+                0x00d1f368        0x6 obj/APMACRO.o
+ .rodata._.str.64
+                0x00d1f36e        0x8 obj/APMACRO.o
+ .rodata._.str.65
+                0x00d1f376        0x5 obj/APMACRO.o
+ .rodata._.str.66
+                0x00d1f37b        0x8 obj/APMACRO.o
+ .rodata._.str.67
+                0x00d1f383        0xa obj/APMACRO.o
+ .rodata._.str.68
+                0x00d1f38d        0xa obj/APMACRO.o
+ .rodata._.str.69
+                0x00d1f397        0x7 obj/APMACRO.o
+ .rodata._.str.70
+                0x00d1f39e        0x5 obj/APMACRO.o
+ .rodata._.str.71
+                0x00d1f3a3        0x7 obj/APMACRO.o
+ .rodata._.str.72
+                0x00d1f3aa        0x7 obj/APMACRO.o
+ .rodata._.str.73
+                0x00d1f3b1        0x8 obj/APMACRO.o
+ .rodata._.str.74
+                0x00d1f3b9        0x8 obj/APMACRO.o
+ .rodata._.str.75
+                0x00d1f3c1        0x9 obj/APMACRO.o
+ .rodata._.str.76
+                0x00d1f3ca        0xc obj/APMACRO.o
+ .rodata._.str.77
+                0x00d1f3d6        0x6 obj/APMACRO.o
+ .rodata._.str.78
+                0x00d1f3dc        0x5 obj/APMACRO.o
+ .rodata._.str.79
+                0x00d1f3e1        0xa obj/APMACRO.o
+ .rodata._.str.80
+                0x00d1f3eb        0x8 obj/APMACRO.o
+ .rodata._.str.81
+                0x00d1f3f3        0x9 obj/APMACRO.o
+ .rodata._.str.82
+                0x00d1f3fc        0x7 obj/APMACRO.o
+ .rodata._.str.83
+                0x00d1f403        0x9 obj/APMACRO.o
+ .rodata._.str.84
+                0x00d1f40c        0x8 obj/APMACRO.o
+ .rodata._.str.85
+                0x00d1f414        0x6 obj/APMACRO.o
+ .rodata._.str.86
+                0x00d1f41a        0x9 obj/APMACRO.o
+ .rodata._.str.87
+                0x00d1f423        0xb obj/APMACRO.o
+ .rodata._.str.88
+                0x00d1f42e        0x8 obj/APMACRO.o
+ .rodata._.str.89
+                0x00d1f436        0x9 obj/APMACRO.o
+ .rodata._.str.90
+                0x00d1f43f        0x7 obj/APMACRO.o
+ .rodata._.str.91
+                0x00d1f446        0x9 obj/APMACRO.o
+ .rodata._.str.92
+                0x00d1f44f        0x9 obj/APMACRO.o
+ .rodata._.str.93
+                0x00d1f458        0x9 obj/APMACRO.o
+ .rodata._.str.94
+                0x00d1f461        0x9 obj/APMACRO.o
+ .rodata._.str.95
+                0x00d1f46a        0x8 obj/APMACRO.o
+ .rodata._.str.96
+                0x00d1f472        0x7 obj/APMACRO.o
+ .rodata._.str.97
+                0x00d1f479        0x7 obj/APMACRO.o
+ .rodata._.str.98
+                0x00d1f480        0x8 obj/APMACRO.o
+ .rodata._.str.99
+                0x00d1f488        0x7 obj/APMACRO.o
+ .rodata._.str.100
+                0x00d1f48f        0xb obj/APMACRO.o
+ .rodata._.str.101
+                0x00d1f49a        0xb obj/APMACRO.o
+ .rodata._.str.102
+                0x00d1f4a5        0x6 obj/APMACRO.o
+ .rodata._.str.103
+                0x00d1f4ab        0x7 obj/APMACRO.o
+ .rodata._.str.104
+                0x00d1f4b2        0x7 obj/APMACRO.o
+ .rodata._.str.105
+                0x00d1f4b9        0x7 obj/APMACRO.o
+ .rodata._.str.106
+                0x00d1f4c0        0x8 obj/APMACRO.o
+ .rodata._.str.107
+                0x00d1f4c8        0x8 obj/APMACRO.o
+ .rodata._.str.108
+                0x00d1f4d0        0x6 obj/APMACRO.o
+ .rodata._.str.109
+                0x00d1f4d6        0xa obj/APMACRO.o
+ .rodata._.str.110
+                0x00d1f4e0        0x7 obj/APMACRO.o
+ .rodata._.str.111
+                0x00d1f4e7        0x5 obj/APMACRO.o
+ .rodata._.str.112
+                0x00d1f4ec        0xb obj/APMACRO.o
+ .rodata._.str.113
+                0x00d1f4f7        0x5 obj/APMACRO.o
+ .rodata._.str.114
+                0x00d1f4fc        0x5 obj/APMACRO.o
+ .rodata._.str.115
+                0x00d1f501        0x6 obj/APMACRO.o
+ .rodata._.str.116
+                0x00d1f507        0x4 obj/APMACRO.o
+ .rodata._.str.117
+                0x00d1f50b        0x5 obj/APMACRO.o
+ .rodata._.str.118
+                0x00d1f510        0x6 obj/APMACRO.o
+ .rodata._.str.119
+                0x00d1f516        0x5 obj/APMACRO.o
+ .rodata._.str.120
+                0x00d1f51b        0x6 obj/APMACRO.o
+ .rodata._.str.121
+                0x00d1f521        0xb obj/APMACRO.o
+ .rodata._.str.122
+                0x00d1f52c        0x6 obj/APMACRO.o
+ .rodata._.str.123
+                0x00d1f532        0x5 obj/APMACRO.o
+ .rodata._.str.124
+                0x00d1f537        0xd obj/APMACRO.o
+ .rodata._.str.125
+                0x00d1f544        0x9 obj/APMACRO.o
+ .rodata._.str.126
+                0x00d1f54d        0xa obj/APMACRO.o
+ .rodata._.str.127
+                0x00d1f557        0xa obj/APMACRO.o
+ .rodata._.str.128
+                0x00d1f561        0xb obj/APMACRO.o
+ .rodata._.str.129
+                0x00d1f56c        0x6 obj/APMACRO.o
+ .rodata._.str.130
+                0x00d1f572        0xa obj/APMACRO.o
+ .rodata._.str.131
+                0x00d1f57c        0x9 obj/APMACRO.o
+ .rodata._.str.132
+                0x00d1f585        0xb obj/APMACRO.o
+ .rodata._.str.133
+                0x00d1f590        0x5 obj/APMACRO.o
+ .rodata._.str.134
+                0x00d1f595        0x6 obj/APMACRO.o
+ .rodata._.str.135
+                0x00d1f59b        0x6 obj/APMACRO.o
+ .rodata._.str.136
+                0x00d1f5a1        0x9 obj/APMACRO.o
+ .rodata._.str.137
+                0x00d1f5aa        0x8 obj/APMACRO.o
+ .rodata._.str.138
+                0x00d1f5b2        0x6 obj/APMACRO.o
+ .rodata._.str.139
+                0x00d1f5b8        0x9 obj/APMACRO.o
+ .rodata._.str.140
+                0x00d1f5c1        0x6 obj/APMACRO.o
+ .rodata._.str.141
+                0x00d1f5c7        0x9 obj/APMACRO.o
+ .rodata._.str.142
+                0x00d1f5d0        0x7 obj/APMACRO.o
+ .rodata._.str.143
+                0x00d1f5d7        0x8 obj/APMACRO.o
+ .rodata._.str.144
+                0x00d1f5df        0x9 obj/APMACRO.o
+ .rodata._.str.145
+                0x00d1f5e8        0x6 obj/APMACRO.o
+ .rodata._.str.146
+                0x00d1f5ee        0x5 obj/APMACRO.o
+ .rodata._.str.147
+                0x00d1f5f3        0x4 obj/APMACRO.o
+ .rodata._.str.148
+                0x00d1f5f7        0x4 obj/APMACRO.o
+ .rodata._.str.149
+                0x00d1f5fb        0xb obj/APMACRO.o
+ .rodata._.str.150
+                0x00d1f606        0x5 obj/APMACRO.o
+ .rodata._.str.151
+                0x00d1f60b        0x8 obj/APMACRO.o
+ .rodata._.str.152
+                0x00d1f613        0x9 obj/APMACRO.o
+ .rodata._.str.153
+                0x00d1f61c        0x5 obj/APMACRO.o
+ .rodata._.str.154
+                0x00d1f621        0x8 obj/APMACRO.o
+ .rodata._.str.155
+                0x00d1f629        0x7 obj/APMACRO.o
+ .rodata._.str.156
+                0x00d1f630        0xc obj/APMACRO.o
+ .rodata._.str.157
+                0x00d1f63c        0x6 obj/APMACRO.o
+ .rodata._.str.158
+                0x00d1f642        0x7 obj/APMACRO.o
+ .rodata._.str.159
+                0x00d1f649        0x7 obj/APMACRO.o
+ .rodata._.str.160
+                0x00d1f650        0x9 obj/APMACRO.o
+ .rodata._.str.161
+                0x00d1f659        0x8 obj/APMACRO.o
+ .rodata._.str.162
+                0x00d1f661        0x7 obj/APMACRO.o
+ .rodata._.str.163
+                0x00d1f668        0x5 obj/APMACRO.o
+ .rodata._.str.164
+                0x00d1f66d        0x7 obj/APMACRO.o
+ .rodata._.str.165
+                0x00d1f674        0x6 obj/APMACRO.o
+ .rodata._.str.166
+                0x00d1f67a        0x6 obj/APMACRO.o
+ .rodata._.str.167
+                0x00d1f680        0x7 obj/APMACRO.o
+ .rodata._.str.168
+                0x00d1f687        0x8 obj/APMACRO.o
+ .rodata._.str.169
+                0x00d1f68f        0x5 obj/APMACRO.o
+ .rodata._.str.170
+                0x00d1f694        0x8 obj/APMACRO.o
+ .rodata._.str.171
+                0x00d1f69c        0x9 obj/APMACRO.o
+ .rodata._.str.172
+                0x00d1f6a5        0x9 obj/APMACRO.o
+ .rodata._.str.173
+                0x00d1f6ae        0x8 obj/APMACRO.o
+ .rodata._.str.174
+                0x00d1f6b6        0xb obj/APMACRO.o
+ .rodata._.str.175
+                0x00d1f6c1        0x9 obj/APMACRO.o
+ .rodata._.str.176
+                0x00d1f6ca        0x7 obj/APMACRO.o
+ .rodata._.str.177
+                0x00d1f6d1        0x8 obj/APMACRO.o
+ .rodata._.str.178
+                0x00d1f6d9        0x5 obj/APMACRO.o
+ .rodata._.str.179
+                0x00d1f6de        0x6 obj/APMACRO.o
+ .rodata._.str.180
+                0x00d1f6e4        0x6 obj/APMACRO.o
+ .rodata._.str.181
+                0x00d1f6ea        0x5 obj/APMACRO.o
+ .rodata._.str.182
+                0x00d1f6ef        0x8 obj/APMACRO.o
+ .rodata._.str.183
+                0x00d1f6f7        0xd obj/APMACRO.o
+ .rodata._.str.184
+                0x00d1f704        0x9 obj/APMACRO.o
+ .rodata._.str.185
+                0x00d1f70d        0x8 obj/APMACRO.o
+ .rodata._.str.186
+                0x00d1f715        0x9 obj/APMACRO.o
+ .rodata._.str.187
+                0x00d1f71e        0xa obj/APMACRO.o
+ .rodata._.str.188
+                0x00d1f728        0x5 obj/APMACRO.o
+ .rodata._.str.189
+                0x00d1f72d        0x5 obj/APMACRO.o
+ .rodata._.str.190
+                0x00d1f732        0x8 obj/APMACRO.o
+ .rodata._.str.191
+                0x00d1f73a        0x9 obj/APMACRO.o
+ .rodata._.str.192
+                0x00d1f743        0x6 obj/APMACRO.o
+ .rodata._.str.193
+                0x00d1f749        0x7 obj/APMACRO.o
+ .rodata._.str.194
+                0x00d1f750        0x6 obj/APMACRO.o
+ .rodata._.str.195
+                0x00d1f756        0x6 obj/APMACRO.o
+ .rodata._.str.196
+                0x00d1f75c        0x9 obj/APMACRO.o
+ .rodata._.str.197
+                0x00d1f765        0x5 obj/APMACRO.o
+ .rodata._.str.198
+                0x00d1f76a        0xc obj/APMACRO.o
+ .rodata._.str.199
+                0x00d1f776        0xb obj/APMACRO.o
+ .rodata._.str.200
+                0x00d1f781        0x8 obj/APMACRO.o
+ .rodata._.str.201
+                0x00d1f789        0x7 obj/APMACRO.o
+ .rodata._.str.202
+                0x00d1f790        0x6 obj/APMACRO.o
+ .rodata._.str.203
+                0x00d1f796        0x5 obj/APMACRO.o
+ .rodata._.str.204
+                0x00d1f79b        0x5 obj/APMACRO.o
+ .rodata._.str.205
+                0x00d1f7a0        0x6 obj/APMACRO.o
+ .rodata._.str.206
+                0x00d1f7a6        0x6 obj/APMACRO.o
+ .rodata._.str.207
+                0x00d1f7ac        0xd obj/APMACRO.o
+ .rodata._.str.208
+                0x00d1f7b9        0xd obj/APMACRO.o
+ .rodata._.str.209
+                0x00d1f7c6        0x6 obj/APMACRO.o
+ .rodata._.str.210
+                0x00d1f7cc        0x6 obj/APMACRO.o
+ .rodata._.str.211
+                0x00d1f7d2        0x6 obj/APMACRO.o
+ .rodata._.str.212
+                0x00d1f7d8        0x7 obj/APMACRO.o
+ .rodata._.str.213
+                0x00d1f7df        0x3 obj/APMACRO.o
+ .rodata._.str.214
+                0x00d1f7e2        0x7 obj/APMACRO.o
+ .rodata._.str.215
+                0x00d1f7e9        0x5 obj/APMACRO.o
+ .rodata._.str.216
+                0x00d1f7ee        0x5 obj/APMACRO.o
+ .rodata._.str.217
+                0x00d1f7f3        0x6 obj/APMACRO.o
+ .rodata._.str.218
+                0x00d1f7f9        0x6 obj/APMACRO.o
+ .rodata._.str.219
+                0x00d1f7ff        0x5 obj/APMACRO.o
+ .rodata._.str.220
+                0x00d1f804        0x5 obj/APMACRO.o
+ .rodata._.str.221
+                0x00d1f809        0x5 obj/APMACRO.o
+ .rodata._.str.222
+                0x00d1f80e       0x1f obj/APMACRO.o
+ .rodata._.str.225
+                0x00d1f82d        0x2 obj/APMACRO.o
+ .rodata._npf_vpprintf
+                0x00d1f82f      0x102 obj/APMACRO.o
+ .rodata._.str.1
+                0x00d1f931        0x4 obj/APMACRO.o
+ .rodata.libload
+                0x00d1f935       0x22 obj/crt0.o
+
+.init_array     0x00d1f957        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(.preinit_array)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x00d1f957        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x00d1f957                        ___data_low = .
+
+.data           0x00d1f957       0x5b
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00d1f957       0x10 obj/APMACRO.o
+ .data._g_compression_dict
+                0x00d1f967       0x4b obj/APMACRO.o
+                0x00d1f967                _g_compression_dict
+ *(.data1)
+                0x00d1f9b2                        ___runprgm_reloc_start = .
+ *(.runprgm.reloc)
+                0x00d1f9b2                        ___runprgm_reloc_end = .
+                0x00d1f9b2                        ___data_high = .
+                0x0000005b                        ___data_len = (___data_high - ___data_low)
+                0x00d052c6                        . = BSSHEAP_LOW
+                0x00d052c6                        ___bss_low = .
+
+.bss            0x00d052c6       0x53
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss._dark_mode
+                0x00d052c6        0x1 obj/APMACRO.o
+                0x00d052c6                _dark_mode
+ .bss._stealth_mode
+                0x00d052c7        0x1 obj/APMACRO.o
+                0x00d052c7                _stealth_mode
+ .bss._g_db     0x00d052c8       0x48 obj/APMACRO.o
+                0x00d052c8                _g_db
+ .bss._pc_cnt.0
+                0x00d05310        0x3 obj/APMACRO.o
+ .bss._pc_cnt.1
+                0x00d05313        0x3 obj/APMACRO.o
+ .bss._pc_cnt.2
+                0x00d05316        0x3 obj/APMACRO.o
+ *(COMMON)
+                0x00d05319                        ___bss_high = .
+                0x00000053                        ___bss_len = (___bss_high - ___bss_low)
+                0x00000001                        ASSERT ((. <= BSSHEAP_HIGH), Error: BSS exceed BSSHEAP_HIGH limit)
+                0x00d05319                        ___heap_low = .
+                0x00d13fd8                        . = BSSHEAP_HIGH
+                0x00d13fd8                        ___heap_high = .
+
+.runprgm
+ *(.runprgm.reloc)
+
+.debug_info
+ *(.debug_info .debug_info.*)
+
+.debug_abbrev
+ *(.debug_abbrev .debug_abbrev.*)
+
+.debug_line
+ *(.debug_line .debug_line.*)
+
+.debug_line_str
+ *(.debug_line_str .debug_line_str.*)
+
+.debug_str
+ *(.debug_str .debug_str.*)
+
+.debug_str_offsets
+ *(.debug_str_offsets .debug_str_offsets.*)
+
+.debug_addr
+ *(.debug_addr .debug_addr.*)
+
+.debug_aranges
+ *(.debug_aranges .debug_aranges.*)
+
+.debug_ranges
+ *(.debug_ranges .debug_ranges.*)
+
+.debug_rnglists
+ *(.debug_rnglists .debug_rnglists.*)
+
+.debug_loc
+ *(.debug_loc .debug_loc.*)
+
+.debug_loclists
+ *(.debug_loclists .debug_loclists.*)
+
+.debug_frame
+ *(.debug_frame .debug_frame.*)
+
+.debug_macro
+ *(.debug_macro .debug_macro.*)
+
+.debug_macinfo
+ *(.debug_macinfo .debug_macinfo.*)
+
+.debug_names
+ *(.debug_names .debug_names.*)
+
+.debug_pubnames
+ *(.debug_pubnames .debug_pubnames.*)
+
+.debug_pubtypes
+ *(.debug_pubtypes .debug_pubtypes.*)
+
+.debug_types
+ *(.debug_types .debug_types.*)
+
+.debug_sup
+ *(.debug_sup .debug_sup.*)
+
+.debug_cu_index
+ *(.debug_cu_index .debug_cu_index.*)
+
+.debug_tu_index
+ *(.debug_tu_index .debug_tu_index.*)
+
+.gdb_index
+ *(.gdb_index)
+
+.debug_gdb_scripts
+ *(.debug_gdb_scripts)
+
+.debug_abbrev.dwo
+ *(.debug_abbrev.dwo .debug_abbrev.dwo.*)
+
+.debug_info.dwo
+ *(.debug_info.dwo .debug_info.dwo.*)
+
+.debug_line.dwo
+ *(.debug_line.dwo .debug_line.dwo.*)
+
+.debug_loclists.dwo
+ *(.debug_loclists.dwo .debug_loclists.dwo.*)
+
+.debug_macro.dwo
+ *(.debug_macro.dwo .debug_macro.dwo.*)
+
+.debug_rnglists.dwo
+ *(.debug_rnglists.dwo .debug_rnglists.dwo.*)
+
+.debug_str.dwo
+ *(.debug_str.dwo .debug_str.dwo.*)
+
+.debug_str_offsets.dwo
+ *(.debug_str_offsets.dwo .debug_str_offsets.dwo.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+/DISCARD/
+ *(.comment)
+ *(.note*)
+                [!provide]                        PROVIDE (___runprgm_reloc_len = (___runprgm_reloc_end - ___runprgm_reloc_start))
+LOAD obj/APMACRO.o
+LOAD obj/crt0.o
+START GROUP
+LOAD /Users/rohankosur/CEdev/lib/libc/allocator_standard.a
+LOAD /Users/rohankosur/CEdev/lib/crt/libcrt.a
+LOAD /Users/rohankosur/CEdev/lib/ce/libce.a
+LOAD /Users/rohankosur/CEdev/lib/softfloat/libsoftfloat.a
+LOAD /Users/rohankosur/CEdev/lib/libc/libc_os.a
+LOAD /Users/rohankosur/CEdev/lib/libcxx/libcxx.a
+END GROUP
+OUTPUT(bin/APMACRO.obj elf32-z80)
