@@ -1,0 +1,2116 @@
+
+Merging object attributes
+
+
+Discarded input sections
+
+ .comment       0x00000000      0x29c obj/APSTATS.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/APSTATS.o
+ .init.weak_crt
+                0x00000000       0x10 obj/APSTATS.o
+ .text          0x00000000        0x0 obj/crt0.o
+ .data          0x00000000        0x0 obj/crt0.o
+ .bss           0x00000000        0x0 obj/crt0.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+prgm             0x00d1a87f         0x00400000
+bss              0x00d052c6         0x0000ed12
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00d1a87f                        LOAD_ADDR = 0xd1a87f
+                0x00d052c6                        BSSHEAP_LOW = 0xd052c6
+                0x00d13fd8                        BSSHEAP_HIGH = 0xd13fd8
+                0x00d1a87e                        STACK_HIGH = 0xd1a87e
+                0x00000001                        __TICE__ = 0x1
+                0x00d1a87f                        . = LOAD_ADDR
+
+.header         0x00d1a87f       0x25
+ *(.header)
+ .header        0x00d1a87f        0x3 obj/crt0.o
+ *(.header.icon)
+ .header.icon   0x00d1a882       0x22 obj/APSTATS.o
+                0x00d1a887                ___description
+
+.init           0x00d1a8a4      0x14a
+ *(.init)
+ .init          0x00d1a8a4      0x14a obj/crt0.o
+                0x00d1a8a4                __start
+                0x00d1a901                __libload_library_FILEIOC
+                0x00d1a90b                _ti_Open
+                0x00d1a90f                _ti_Close
+                0x00d1a913                _ti_GetDataPtr
+                0x00d1a917                __libload_library_GRAPHX
+                0x00d1a920                _gfx_Begin
+                0x00d1a924                _gfx_End
+                0x00d1a928                _gfx_SetColor
+                0x00d1a92c                _gfx_FillScreen
+                0x00d1a930                _gfx_SetDraw
+                0x00d1a934                _gfx_SwapDraw
+                0x00d1a938                _gfx_PrintStringXY
+                0x00d1a93c                _gfx_SetTextBGColor
+                0x00d1a940                _gfx_SetTextFGColor
+                0x00d1a944                _gfx_SetTextTransparentColor
+                0x00d1a948                _gfx_GetStringWidth
+                0x00d1a94c                _gfx_GetCharWidth
+                0x00d1a950                _gfx_FillRectangle
+                0x00d1a954                __libload_library_KEYPADC
+                0x00d1a95e                _kb_Scan
+                0x00d1a9b2                ___exithl
+                0x00d1a9b3                _exit.sp
+
+.text           0x00d1a9ee     0x3474
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(SORT_BY_NAME(.text.sorted.*))
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00d1a9ee      0x52a obj/APSTATS.o
+                0x00d1a9ee                __land
+                0x00d1a9f2                __iand
+                0x00d1aa09                __dcmp
+                0x00d1aa67                __frameset
+                0x00d1aa75                __frameset0
+                0x00d1aa80                __ftod
+                0x00d1aac8                __imuls
+                0x00d1aac8                __imulu
+                0x00d1aaf8                __ineg
+                0x00d1aaf8                __sneg
+                0x00d1ab01                __irems
+                0x00d1ab09                __sshl
+                0x00d1ab09                __ishl
+                0x00d1ab2f                __ishru
+                0x00d1ab34                __ishrs
+                0x00d1ab70                __ishrs_1
+                0x00d1ab7e                __ladd
+                0x00d1ab84                __lcmpu
+                0x00d1ab8c                __lladd
+                0x00d1abb0                __lland
+                0x00d1abec                __llcmps
+                0x00d1ac19                __llcmpu
+                0x00d1ac43                __llequzero
+                0x00d1ac43                __llcmpzero
+                0x00d1ac58                __lldivu
+                0x00d1ac6c                __lldvrmu
+                0x00d1ac73                __lldvrmu.hijack
+                0x00d1acca                __llmulu
+                0x00d1ad1f                __llshl
+                0x00d1ad39                __llshru
+                0x00d1ad69                __llshrs
+                0x00d1ada5                __llxor
+                0x00d1ade1                __lmuls
+                0x00d1ade1                __lmulu
+                0x00d1ae3d                __lshl
+                0x00d1ae4a                __sand
+                0x00d1ae53                __setflag
+                0x00d1ae5d                __lxor
+                0x00d1ae61                __ixor
+                0x00d1ae78                __idvrms
+                0x00d1aea6                __idvrmu
+                0x00d1aeaa                __idvrmu.hijack_a_iters_ude_dividend
+                0x00d1aec0                ___sleep_common
+                0x00d1aec0                ___sleep_common.1
+                0x00d1aec1                ___sleep_common.2
+                0x00d1aec2                ___sleep_common.3
+                0x00d1aedb                _clock
+                0x00d1aee6                _rand
+                0x00d1aef3                _atomic_load_increasing_32
+ .text._init_database
+                0x00d1af18       0x98 obj/APSTATS.o
+                0x00d1af18                _init_database
+ .text._close_database
+                0x00d1afb0       0x3d obj/APSTATS.o
+                0x00d1afb0                _close_database
+ .text._get_node_data
+                0x00d1afed      0x181 obj/APSTATS.o
+                0x00d1afed                _get_node_data
+ .text._print_compressed_string
+                0x00d1b16e      0x4fb obj/APSTATS.o
+                0x00d1b16e                _print_compressed_string
+ .text._gui_init
+                0x00d1b669       0x2c obj/APSTATS.o
+                0x00d1b669                _gui_init
+ .text._print_centered
+                0x00d1b695       0x48 obj/APSTATS.o
+                0x00d1b695                _print_centered
+ .text._gui_splash
+                0x00d1b6dd       0x6c obj/APSTATS.o
+                0x00d1b6dd                _gui_splash
+ .text._gui_terms_loop
+                0x00d1b749      0x20e obj/APSTATS.o
+                0x00d1b749                _gui_terms_loop
+ .text._gui_search_loop
+                0x00d1b957      0x91f obj/APSTATS.o
+                0x00d1b957                _gui_search_loop
+ .text._main    0x00d1c276       0x5c obj/APSTATS.o
+                0x00d1c276                _main
+ .text._djb2_hash
+                0x00d1c2d2       0x3f obj/APSTATS.o
+                0x00d1c2d2                _djb2_hash
+ .text._binary_search_keyword
+                0x00d1c311      0x10a obj/APSTATS.o
+                0x00d1c311                _binary_search_keyword
+ .text._npf_vpprintf
+                0x00d1c41b     0x1775 obj/APSTATS.o
+                0x00d1c41b                _npf_vpprintf
+ .text._NPF_PUTC_IMPL
+                0x00d1db90       0x2d obj/APSTATS.o
+ .text._npf_utoa_rev
+                0x00d1dbbd       0xe6 obj/APSTATS.o
+ .text._vsnprintf
+                0x00d1dca3       0x88 obj/APSTATS.o
+                0x00d1dca3                _vsnprintf
+ .text._npf_bufputc
+                0x00d1dd2b       0x25 obj/APSTATS.o
+ .text._npf_bufputc_nop
+                0x00d1dd50        0x7 obj/APSTATS.o
+ .text._sprintf
+                0x00d1dd57       0x29 obj/APSTATS.o
+                0x00d1dd57                _sprintf
+ .text.__bctlz  0x00d1dd80       0x22 obj/APSTATS.o
+                0x00d1dd80                __bctlz
+ .text.__sctlz  0x00d1dda2        0xc obj/APSTATS.o
+                0x00d1dda2                __sctlz
+ .text.__ictlz  0x00d1ddae       0x12 obj/APSTATS.o
+                0x00d1ddae                __ictlz
+ .text.__llctlz
+                0x00d1ddc0        0xe obj/APSTATS.o
+                0x00d1ddc0                __llctlz
+ .text.__i48ctlz
+                0x00d1ddce       0x15 obj/APSTATS.o
+                0x00d1ddce                __i48ctlz
+ .text._delay   0x00d1dde3       0x2a obj/APSTATS.o
+                0x00d1dde3                _msleep
+                0x00d1dde3                _delay
+ .text._random  0x00d1de0d       0x55 obj/APSTATS.o
+                0x00d1de0d                _random
+ *(.gnu.warning)
+
+.rodata         0x00d1de62     0x1fce
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata._gui_search_loop
+                0x00d1de62        0xf obj/APSTATS.o
+ .rodata._.str  0x00d1de71        0xd obj/APSTATS.o
+ .rodata._.str.1
+                0x00d1de7e        0x6 obj/APSTATS.o
+ .rodata._.str.2
+                0x00d1de84        0x5 obj/APSTATS.o
+ .rodata._.str.4
+                0x00d1de89       0x13 obj/APSTATS.o
+ .rodata._.str.7
+                0x00d1de9c       0x14 obj/APSTATS.o
+ .rodata._.str.25
+                0x00d1deb0        0x6 obj/APSTATS.o
+ .rodata._.str.1.26
+                0x00d1deb6        0x6 obj/APSTATS.o
+ .rodata._.str.2.27
+                0x00d1debc        0xa obj/APSTATS.o
+ .rodata._.str.3.28
+                0x00d1dec6        0xa obj/APSTATS.o
+ .rodata._.str.4.29
+                0x00d1ded0        0x9 obj/APSTATS.o
+ .rodata._.str.5.30
+                0x00d1ded9        0x7 obj/APSTATS.o
+ .rodata._.str.6.31
+                0x00d1dee0        0x7 obj/APSTATS.o
+ .rodata._.str.7.32
+                0x00d1dee7        0x8 obj/APSTATS.o
+ .rodata._.str.8.33
+                0x00d1deef        0x7 obj/APSTATS.o
+ .rodata._.str.9.34
+                0x00d1def6        0x9 obj/APSTATS.o
+ .rodata._.str.10.35
+                0x00d1deff        0x5 obj/APSTATS.o
+ .rodata._.str.11.36
+                0x00d1df04        0x7 obj/APSTATS.o
+ .rodata._.str.12.37
+                0x00d1df0b        0x9 obj/APSTATS.o
+ .rodata._.str.13.38
+                0x00d1df14        0x8 obj/APSTATS.o
+ .rodata._.str.14.39
+                0x00d1df1c        0x6 obj/APSTATS.o
+ .rodata._.str.15.40
+                0x00d1df22        0x7 obj/APSTATS.o
+ .rodata._.str.16.41
+                0x00d1df29        0x6 obj/APSTATS.o
+ .rodata._.str.17.42
+                0x00d1df2f        0x8 obj/APSTATS.o
+ .rodata._.str.18.43
+                0x00d1df37        0x5 obj/APSTATS.o
+ .rodata._.str.19.44
+                0x00d1df3c        0xc obj/APSTATS.o
+ .rodata._.str.20.45
+                0x00d1df48        0x7 obj/APSTATS.o
+ .rodata._.str.21.46
+                0x00d1df4f        0x8 obj/APSTATS.o
+ .rodata._.str.22.47
+                0x00d1df57        0x8 obj/APSTATS.o
+ .rodata._.str.23.48
+                0x00d1df5f        0x7 obj/APSTATS.o
+ .rodata._.str.24.49
+                0x00d1df66        0x8 obj/APSTATS.o
+ .rodata._.str.25.50
+                0x00d1df6e        0x9 obj/APSTATS.o
+ .rodata._.str.26
+                0x00d1df77        0xc obj/APSTATS.o
+ .rodata._.str.27
+                0x00d1df83        0x8 obj/APSTATS.o
+ .rodata._.str.28
+                0x00d1df8b        0x6 obj/APSTATS.o
+ .rodata._.str.29
+                0x00d1df91        0xb obj/APSTATS.o
+ .rodata._.str.30
+                0x00d1df9c        0xe obj/APSTATS.o
+ .rodata._.str.31
+                0x00d1dfaa        0x8 obj/APSTATS.o
+ .rodata._.str.32
+                0x00d1dfb2        0x5 obj/APSTATS.o
+ .rodata._.str.33
+                0x00d1dfb7        0x7 obj/APSTATS.o
+ .rodata._.str.34
+                0x00d1dfbe        0x7 obj/APSTATS.o
+ .rodata._.str.35
+                0x00d1dfc5        0xa obj/APSTATS.o
+ .rodata._.str.36
+                0x00d1dfcf        0x5 obj/APSTATS.o
+ .rodata._.str.37
+                0x00d1dfd4        0x9 obj/APSTATS.o
+ .rodata._.str.38
+                0x00d1dfdd        0xb obj/APSTATS.o
+ .rodata._.str.39
+                0x00d1dfe8        0xb obj/APSTATS.o
+ .rodata._.str.40
+                0x00d1dff3        0xc obj/APSTATS.o
+ .rodata._.str.41
+                0x00d1dfff        0x7 obj/APSTATS.o
+ .rodata._.str.42
+                0x00d1e006        0x8 obj/APSTATS.o
+ .rodata._.str.43
+                0x00d1e00e        0x9 obj/APSTATS.o
+ .rodata._.str.44
+                0x00d1e017        0xc obj/APSTATS.o
+ .rodata._.str.45
+                0x00d1e023        0xe obj/APSTATS.o
+ .rodata._.str.46
+                0x00d1e031        0x8 obj/APSTATS.o
+ .rodata._.str.47
+                0x00d1e039        0x5 obj/APSTATS.o
+ .rodata._.str.48
+                0x00d1e03e        0x5 obj/APSTATS.o
+ .rodata._.str.49
+                0x00d1e043        0x8 obj/APSTATS.o
+ .rodata._.str.50
+                0x00d1e04b        0x5 obj/APSTATS.o
+ .rodata._.str.51
+                0x00d1e050        0x5 obj/APSTATS.o
+ .rodata._.str.52
+                0x00d1e055        0x5 obj/APSTATS.o
+ .rodata._.str.53
+                0x00d1e05a        0x6 obj/APSTATS.o
+ .rodata._.str.54
+                0x00d1e060        0x9 obj/APSTATS.o
+ .rodata._.str.55
+                0x00d1e069        0x8 obj/APSTATS.o
+ .rodata._.str.56
+                0x00d1e071        0x8 obj/APSTATS.o
+ .rodata._.str.57
+                0x00d1e079        0x7 obj/APSTATS.o
+ .rodata._.str.58
+                0x00d1e080        0x9 obj/APSTATS.o
+ .rodata._.str.59
+                0x00d1e089        0x6 obj/APSTATS.o
+ .rodata._.str.60
+                0x00d1e08f        0x8 obj/APSTATS.o
+ .rodata._.str.61
+                0x00d1e097        0x6 obj/APSTATS.o
+ .rodata._.str.62
+                0x00d1e09d        0x5 obj/APSTATS.o
+ .rodata._.str.63
+                0x00d1e0a2        0x5 obj/APSTATS.o
+ .rodata._.str.64
+                0x00d1e0a7        0x6 obj/APSTATS.o
+ .rodata._.str.65
+                0x00d1e0ad        0x8 obj/APSTATS.o
+ .rodata._.str.66
+                0x00d1e0b5        0x5 obj/APSTATS.o
+ .rodata._.str.67
+                0x00d1e0ba        0x7 obj/APSTATS.o
+ .rodata._.str.68
+                0x00d1e0c1        0x7 obj/APSTATS.o
+ .rodata._.str.69
+                0x00d1e0c8        0x6 obj/APSTATS.o
+ .rodata._.str.70
+                0x00d1e0ce        0x9 obj/APSTATS.o
+ .rodata._.str.71
+                0x00d1e0d7        0x9 obj/APSTATS.o
+ .rodata._.str.72
+                0x00d1e0e0        0x9 obj/APSTATS.o
+ .rodata._.str.73
+                0x00d1e0e9        0x5 obj/APSTATS.o
+ .rodata._.str.74
+                0x00d1e0ee        0x5 obj/APSTATS.o
+ .rodata._.str.75
+                0x00d1e0f3        0x9 obj/APSTATS.o
+ .rodata._.str.76
+                0x00d1e0fc        0x5 obj/APSTATS.o
+ .rodata._.str.77
+                0x00d1e101        0x6 obj/APSTATS.o
+ .rodata._.str.78
+                0x00d1e107        0x8 obj/APSTATS.o
+ .rodata._.str.79
+                0x00d1e10f        0x9 obj/APSTATS.o
+ .rodata._.str.80
+                0x00d1e118        0x7 obj/APSTATS.o
+ .rodata._.str.81
+                0x00d1e11f        0x6 obj/APSTATS.o
+ .rodata._.str.82
+                0x00d1e125        0xc obj/APSTATS.o
+ .rodata._.str.83
+                0x00d1e131        0xa obj/APSTATS.o
+ .rodata._.str.84
+                0x00d1e13b        0xb obj/APSTATS.o
+ .rodata._.str.85
+                0x00d1e146        0xc obj/APSTATS.o
+ .rodata._.str.86
+                0x00d1e152        0xd obj/APSTATS.o
+ .rodata._.str.87
+                0x00d1e15f        0xb obj/APSTATS.o
+ .rodata._.str.88
+                0x00d1e16a        0x7 obj/APSTATS.o
+ .rodata._.str.89
+                0x00d1e171        0x8 obj/APSTATS.o
+ .rodata._.str.90
+                0x00d1e179        0x9 obj/APSTATS.o
+ .rodata._.str.91
+                0x00d1e182        0xc obj/APSTATS.o
+ .rodata._.str.92
+                0x00d1e18e        0xb obj/APSTATS.o
+ .rodata._.str.93
+                0x00d1e199        0x9 obj/APSTATS.o
+ .rodata._.str.94
+                0x00d1e1a2        0x6 obj/APSTATS.o
+ .rodata._.str.95
+                0x00d1e1a8        0x5 obj/APSTATS.o
+ .rodata._.str.96
+                0x00d1e1ad        0x5 obj/APSTATS.o
+ .rodata._.str.97
+                0x00d1e1b2        0x7 obj/APSTATS.o
+ .rodata._.str.98
+                0x00d1e1b9        0x8 obj/APSTATS.o
+ .rodata._.str.99
+                0x00d1e1c1        0x8 obj/APSTATS.o
+ .rodata._.str.100
+                0x00d1e1c9        0x7 obj/APSTATS.o
+ .rodata._.str.101
+                0x00d1e1d0        0x7 obj/APSTATS.o
+ .rodata._.str.102
+                0x00d1e1d7        0x8 obj/APSTATS.o
+ .rodata._.str.103
+                0x00d1e1df        0x8 obj/APSTATS.o
+ .rodata._.str.104
+                0x00d1e1e7        0x9 obj/APSTATS.o
+ .rodata._.str.105
+                0x00d1e1f0       0x10 obj/APSTATS.o
+ .rodata._.str.106
+                0x00d1e200        0x6 obj/APSTATS.o
+ .rodata._.str.107
+                0x00d1e206        0x7 obj/APSTATS.o
+ .rodata._.str.108
+                0x00d1e20d        0x6 obj/APSTATS.o
+ .rodata._.str.109
+                0x00d1e213        0x9 obj/APSTATS.o
+ .rodata._.str.110
+                0x00d1e21c        0x9 obj/APSTATS.o
+ .rodata._.str.111
+                0x00d1e225        0x7 obj/APSTATS.o
+ .rodata._.str.112
+                0x00d1e22c        0x6 obj/APSTATS.o
+ .rodata._.str.113
+                0x00d1e232        0x8 obj/APSTATS.o
+ .rodata._.str.114
+                0x00d1e23a        0x6 obj/APSTATS.o
+ .rodata._.str.115
+                0x00d1e240        0x9 obj/APSTATS.o
+ .rodata._.str.116
+                0x00d1e249        0x8 obj/APSTATS.o
+ .rodata._.str.117
+                0x00d1e251        0x7 obj/APSTATS.o
+ .rodata._.str.118
+                0x00d1e258        0x8 obj/APSTATS.o
+ .rodata._.str.119
+                0x00d1e260        0x9 obj/APSTATS.o
+ .rodata._.str.120
+                0x00d1e269        0xc obj/APSTATS.o
+ .rodata._.str.121
+                0x00d1e275        0xb obj/APSTATS.o
+ .rodata._.str.122
+                0x00d1e280        0x5 obj/APSTATS.o
+ .rodata._.str.123
+                0x00d1e285        0x7 obj/APSTATS.o
+ .rodata._.str.124
+                0x00d1e28c        0xd obj/APSTATS.o
+ .rodata._.str.125
+                0x00d1e299        0x8 obj/APSTATS.o
+ .rodata._.str.126
+                0x00d1e2a1        0x9 obj/APSTATS.o
+ .rodata._.str.127
+                0x00d1e2aa        0xa obj/APSTATS.o
+ .rodata._.str.128
+                0x00d1e2b4        0x6 obj/APSTATS.o
+ .rodata._.str.129
+                0x00d1e2ba        0x8 obj/APSTATS.o
+ .rodata._.str.130
+                0x00d1e2c2        0x7 obj/APSTATS.o
+ .rodata._.str.131
+                0x00d1e2c9        0x8 obj/APSTATS.o
+ .rodata._.str.132
+                0x00d1e2d1        0x9 obj/APSTATS.o
+ .rodata._.str.133
+                0x00d1e2da        0xa obj/APSTATS.o
+ .rodata._.str.134
+                0x00d1e2e4        0xb obj/APSTATS.o
+ .rodata._.str.135
+                0x00d1e2ef        0xb obj/APSTATS.o
+ .rodata._.str.136
+                0x00d1e2fa        0xb obj/APSTATS.o
+ .rodata._.str.137
+                0x00d1e305        0x9 obj/APSTATS.o
+ .rodata._.str.138
+                0x00d1e30e        0x8 obj/APSTATS.o
+ .rodata._.str.139
+                0x00d1e316        0xb obj/APSTATS.o
+ .rodata._.str.140
+                0x00d1e321        0xb obj/APSTATS.o
+ .rodata._.str.141
+                0x00d1e32c        0xc obj/APSTATS.o
+ .rodata._.str.142
+                0x00d1e338        0xa obj/APSTATS.o
+ .rodata._.str.143
+                0x00d1e342        0xc obj/APSTATS.o
+ .rodata._.str.144
+                0x00d1e34e        0xb obj/APSTATS.o
+ .rodata._.str.145
+                0x00d1e359        0xb obj/APSTATS.o
+ .rodata._.str.146
+                0x00d1e364        0xa obj/APSTATS.o
+ .rodata._.str.147
+                0x00d1e36e        0x8 obj/APSTATS.o
+ .rodata._.str.148
+                0x00d1e376        0xc obj/APSTATS.o
+ .rodata._.str.149
+                0x00d1e382        0xb obj/APSTATS.o
+ .rodata._.str.150
+                0x00d1e38d        0x9 obj/APSTATS.o
+ .rodata._.str.151
+                0x00d1e396        0xa obj/APSTATS.o
+ .rodata._.str.152
+                0x00d1e3a0        0x9 obj/APSTATS.o
+ .rodata._.str.153
+                0x00d1e3a9        0x8 obj/APSTATS.o
+ .rodata._.str.154
+                0x00d1e3b1        0xb obj/APSTATS.o
+ .rodata._.str.155
+                0x00d1e3bc        0xd obj/APSTATS.o
+ .rodata._.str.156
+                0x00d1e3c9        0x8 obj/APSTATS.o
+ .rodata._.str.157
+                0x00d1e3d1        0xb obj/APSTATS.o
+ .rodata._.str.158
+                0x00d1e3dc        0x8 obj/APSTATS.o
+ .rodata._.str.159
+                0x00d1e3e4        0xa obj/APSTATS.o
+ .rodata._.str.160
+                0x00d1e3ee        0xc obj/APSTATS.o
+ .rodata._.str.161
+                0x00d1e3fa        0x6 obj/APSTATS.o
+ .rodata._.str.162
+                0x00d1e400        0x7 obj/APSTATS.o
+ .rodata._.str.163
+                0x00d1e407        0x7 obj/APSTATS.o
+ .rodata._.str.164
+                0x00d1e40e        0x7 obj/APSTATS.o
+ .rodata._.str.165
+                0x00d1e415        0x5 obj/APSTATS.o
+ .rodata._.str.166
+                0x00d1e41a        0x9 obj/APSTATS.o
+ .rodata._.str.167
+                0x00d1e423        0xb obj/APSTATS.o
+ .rodata._.str.168
+                0x00d1e42e        0x6 obj/APSTATS.o
+ .rodata._.str.169
+                0x00d1e434        0x7 obj/APSTATS.o
+ .rodata._.str.170
+                0x00d1e43b        0x7 obj/APSTATS.o
+ .rodata._.str.171
+                0x00d1e442        0x5 obj/APSTATS.o
+ .rodata._.str.172
+                0x00d1e447        0x9 obj/APSTATS.o
+ .rodata._.str.173
+                0x00d1e450        0x9 obj/APSTATS.o
+ .rodata._.str.174
+                0x00d1e459        0x9 obj/APSTATS.o
+ .rodata._.str.175
+                0x00d1e462        0xa obj/APSTATS.o
+ .rodata._.str.176
+                0x00d1e46c        0x7 obj/APSTATS.o
+ .rodata._.str.177
+                0x00d1e473        0x7 obj/APSTATS.o
+ .rodata._.str.178
+                0x00d1e47a        0xb obj/APSTATS.o
+ .rodata._.str.179
+                0x00d1e485        0xc obj/APSTATS.o
+ .rodata._.str.180
+                0x00d1e491        0x8 obj/APSTATS.o
+ .rodata._.str.181
+                0x00d1e499        0xc obj/APSTATS.o
+ .rodata._.str.182
+                0x00d1e4a5        0x8 obj/APSTATS.o
+ .rodata._.str.183
+                0x00d1e4ad        0x8 obj/APSTATS.o
+ .rodata._.str.184
+                0x00d1e4b5        0x9 obj/APSTATS.o
+ .rodata._.str.185
+                0x00d1e4be        0xa obj/APSTATS.o
+ .rodata._.str.186
+                0x00d1e4c8        0xa obj/APSTATS.o
+ .rodata._.str.187
+                0x00d1e4d2        0xb obj/APSTATS.o
+ .rodata._.str.188
+                0x00d1e4dd        0xc obj/APSTATS.o
+ .rodata._.str.189
+                0x00d1e4e9        0x7 obj/APSTATS.o
+ .rodata._.str.190
+                0x00d1e4f0        0xe obj/APSTATS.o
+ .rodata._.str.191
+                0x00d1e4fe        0xa obj/APSTATS.o
+ .rodata._.str.192
+                0x00d1e508        0xc obj/APSTATS.o
+ .rodata._.str.193
+                0x00d1e514        0xe obj/APSTATS.o
+ .rodata._.str.194
+                0x00d1e522        0x9 obj/APSTATS.o
+ .rodata._.str.195
+                0x00d1e52b        0xa obj/APSTATS.o
+ .rodata._.str.196
+                0x00d1e535        0xb obj/APSTATS.o
+ .rodata._.str.197
+                0x00d1e540        0x3 obj/APSTATS.o
+ .rodata._.str.198
+                0x00d1e543        0xd obj/APSTATS.o
+ .rodata._.str.199
+                0x00d1e550        0x5 obj/APSTATS.o
+ .rodata._.str.200
+                0x00d1e555        0xb obj/APSTATS.o
+ .rodata._.str.201
+                0x00d1e560        0xc obj/APSTATS.o
+ .rodata._.str.202
+                0x00d1e56c        0xa obj/APSTATS.o
+ .rodata._.str.203
+                0x00d1e576        0xb obj/APSTATS.o
+ .rodata._.str.204
+                0x00d1e581        0x9 obj/APSTATS.o
+ .rodata._.str.205
+                0x00d1e58a        0x9 obj/APSTATS.o
+ .rodata._.str.206
+                0x00d1e593        0x9 obj/APSTATS.o
+ .rodata._.str.207
+                0x00d1e59c        0x9 obj/APSTATS.o
+ .rodata._.str.208
+                0x00d1e5a5        0xd obj/APSTATS.o
+ .rodata._.str.209
+                0x00d1e5b2        0xe obj/APSTATS.o
+ .rodata._.str.210
+                0x00d1e5c0        0x8 obj/APSTATS.o
+ .rodata._.str.211
+                0x00d1e5c8        0x9 obj/APSTATS.o
+ .rodata._.str.212
+                0x00d1e5d1        0x5 obj/APSTATS.o
+ .rodata._.str.213
+                0x00d1e5d6        0x7 obj/APSTATS.o
+ .rodata._.str.214
+                0x00d1e5dd        0x5 obj/APSTATS.o
+ .rodata._.str.215
+                0x00d1e5e2        0x9 obj/APSTATS.o
+ .rodata._.str.216
+                0x00d1e5eb        0x6 obj/APSTATS.o
+ .rodata._.str.217
+                0x00d1e5f1        0x5 obj/APSTATS.o
+ .rodata._.str.218
+                0x00d1e5f6        0x6 obj/APSTATS.o
+ .rodata._.str.219
+                0x00d1e5fc        0x7 obj/APSTATS.o
+ .rodata._.str.220
+                0x00d1e603        0x8 obj/APSTATS.o
+ .rodata._.str.221
+                0x00d1e60b        0x7 obj/APSTATS.o
+ .rodata._.str.222
+                0x00d1e612        0x8 obj/APSTATS.o
+ .rodata._.str.223
+                0x00d1e61a        0xa obj/APSTATS.o
+ .rodata._.str.224
+                0x00d1e624        0x7 obj/APSTATS.o
+ .rodata._.str.225
+                0x00d1e62b        0x7 obj/APSTATS.o
+ .rodata._.str.226
+                0x00d1e632        0x7 obj/APSTATS.o
+ .rodata._.str.227
+                0x00d1e639        0x8 obj/APSTATS.o
+ .rodata._.str.228
+                0x00d1e641        0x7 obj/APSTATS.o
+ .rodata._.str.229
+                0x00d1e648        0x8 obj/APSTATS.o
+ .rodata._.str.230
+                0x00d1e650        0x6 obj/APSTATS.o
+ .rodata._.str.231
+                0x00d1e656        0x9 obj/APSTATS.o
+ .rodata._.str.232
+                0x00d1e65f        0xb obj/APSTATS.o
+ .rodata._.str.233
+                0x00d1e66a        0x6 obj/APSTATS.o
+ .rodata._.str.234
+                0x00d1e670        0x7 obj/APSTATS.o
+ .rodata._.str.235
+                0x00d1e677        0x9 obj/APSTATS.o
+ .rodata._.str.236
+                0x00d1e680        0xa obj/APSTATS.o
+ .rodata._.str.237
+                0x00d1e68a        0xa obj/APSTATS.o
+ .rodata._.str.238
+                0x00d1e694        0xa obj/APSTATS.o
+ .rodata._.str.239
+                0x00d1e69e        0x5 obj/APSTATS.o
+ .rodata._.str.240
+                0x00d1e6a3        0x6 obj/APSTATS.o
+ .rodata._.str.241
+                0x00d1e6a9        0x7 obj/APSTATS.o
+ .rodata._.str.242
+                0x00d1e6b0        0x6 obj/APSTATS.o
+ .rodata._.str.243
+                0x00d1e6b6        0x9 obj/APSTATS.o
+ .rodata._.str.244
+                0x00d1e6bf        0x6 obj/APSTATS.o
+ .rodata._.str.245
+                0x00d1e6c5        0x8 obj/APSTATS.o
+ .rodata._.str.246
+                0x00d1e6cd        0x5 obj/APSTATS.o
+ .rodata._.str.247
+                0x00d1e6d2        0xa obj/APSTATS.o
+ .rodata._.str.248
+                0x00d1e6dc        0x8 obj/APSTATS.o
+ .rodata._.str.249
+                0x00d1e6e4        0xa obj/APSTATS.o
+ .rodata._.str.250
+                0x00d1e6ee        0x6 obj/APSTATS.o
+ .rodata._.str.251
+                0x00d1e6f4        0x7 obj/APSTATS.o
+ .rodata._.str.252
+                0x00d1e6fb        0x7 obj/APSTATS.o
+ .rodata._.str.253
+                0x00d1e702        0x9 obj/APSTATS.o
+ .rodata._.str.254
+                0x00d1e70b        0xb obj/APSTATS.o
+ .rodata._.str.255
+                0x00d1e716        0xd obj/APSTATS.o
+ .rodata._.str.256
+                0x00d1e723        0xc obj/APSTATS.o
+ .rodata._.str.257
+                0x00d1e72f        0x8 obj/APSTATS.o
+ .rodata._.str.258
+                0x00d1e737        0xa obj/APSTATS.o
+ .rodata._.str.259
+                0x00d1e741        0xb obj/APSTATS.o
+ .rodata._.str.260
+                0x00d1e74c        0xc obj/APSTATS.o
+ .rodata._.str.261
+                0x00d1e758        0xc obj/APSTATS.o
+ .rodata._.str.262
+                0x00d1e764        0x9 obj/APSTATS.o
+ .rodata._.str.263
+                0x00d1e76d        0xb obj/APSTATS.o
+ .rodata._.str.264
+                0x00d1e778        0x6 obj/APSTATS.o
+ .rodata._.str.265
+                0x00d1e77e        0xe obj/APSTATS.o
+ .rodata._.str.266
+                0x00d1e78c        0xe obj/APSTATS.o
+ .rodata._.str.267
+                0x00d1e79a        0x8 obj/APSTATS.o
+ .rodata._.str.268
+                0x00d1e7a2        0x7 obj/APSTATS.o
+ .rodata._.str.269
+                0x00d1e7a9        0xb obj/APSTATS.o
+ .rodata._.str.270
+                0x00d1e7b4        0x5 obj/APSTATS.o
+ .rodata._.str.271
+                0x00d1e7b9        0x8 obj/APSTATS.o
+ .rodata._.str.272
+                0x00d1e7c1        0x6 obj/APSTATS.o
+ .rodata._.str.273
+                0x00d1e7c7        0x6 obj/APSTATS.o
+ .rodata._.str.274
+                0x00d1e7cd        0x7 obj/APSTATS.o
+ .rodata._.str.275
+                0x00d1e7d4        0x6 obj/APSTATS.o
+ .rodata._.str.276
+                0x00d1e7da        0x5 obj/APSTATS.o
+ .rodata._.str.277
+                0x00d1e7df        0x8 obj/APSTATS.o
+ .rodata._.str.278
+                0x00d1e7e7        0x6 obj/APSTATS.o
+ .rodata._.str.279
+                0x00d1e7ed        0x5 obj/APSTATS.o
+ .rodata._.str.280
+                0x00d1e7f2        0x6 obj/APSTATS.o
+ .rodata._.str.281
+                0x00d1e7f8        0x7 obj/APSTATS.o
+ .rodata._.str.282
+                0x00d1e7ff        0x7 obj/APSTATS.o
+ .rodata._.str.283
+                0x00d1e806        0xb obj/APSTATS.o
+ .rodata._.str.284
+                0x00d1e811        0x8 obj/APSTATS.o
+ .rodata._.str.285
+                0x00d1e819        0x9 obj/APSTATS.o
+ .rodata._.str.286
+                0x00d1e822        0x5 obj/APSTATS.o
+ .rodata._.str.287
+                0x00d1e827        0x6 obj/APSTATS.o
+ .rodata._.str.288
+                0x00d1e82d        0xa obj/APSTATS.o
+ .rodata._.str.289
+                0x00d1e837        0x8 obj/APSTATS.o
+ .rodata._.str.290
+                0x00d1e83f        0xa obj/APSTATS.o
+ .rodata._.str.291
+                0x00d1e849        0x5 obj/APSTATS.o
+ .rodata._.str.292
+                0x00d1e84e        0x5 obj/APSTATS.o
+ .rodata._.str.293
+                0x00d1e853        0x5 obj/APSTATS.o
+ .rodata._.str.294
+                0x00d1e858        0xb obj/APSTATS.o
+ .rodata._.str.295
+                0x00d1e863        0xb obj/APSTATS.o
+ .rodata._.str.296
+                0x00d1e86e        0xb obj/APSTATS.o
+ .rodata._.str.297
+                0x00d1e879        0xa obj/APSTATS.o
+ .rodata._.str.298
+                0x00d1e883        0xa obj/APSTATS.o
+ .rodata._.str.299
+                0x00d1e88d        0x5 obj/APSTATS.o
+ .rodata._.str.300
+                0x00d1e892        0x8 obj/APSTATS.o
+ .rodata._.str.301
+                0x00d1e89a        0x5 obj/APSTATS.o
+ .rodata._.str.302
+                0x00d1e89f        0x6 obj/APSTATS.o
+ .rodata._.str.303
+                0x00d1e8a5        0x6 obj/APSTATS.o
+ .rodata._.str.304
+                0x00d1e8ab        0x5 obj/APSTATS.o
+ .rodata._.str.305
+                0x00d1e8b0        0x7 obj/APSTATS.o
+ .rodata._.str.306
+                0x00d1e8b7        0x9 obj/APSTATS.o
+ .rodata._.str.307
+                0x00d1e8c0        0x6 obj/APSTATS.o
+ .rodata._.str.308
+                0x00d1e8c6        0x6 obj/APSTATS.o
+ .rodata._.str.309
+                0x00d1e8cc        0x8 obj/APSTATS.o
+ .rodata._.str.310
+                0x00d1e8d4        0x6 obj/APSTATS.o
+ .rodata._.str.311
+                0x00d1e8da        0x9 obj/APSTATS.o
+ .rodata._.str.312
+                0x00d1e8e3        0x7 obj/APSTATS.o
+ .rodata._.str.313
+                0x00d1e8ea        0x3 obj/APSTATS.o
+ .rodata._.str.314
+                0x00d1e8ed        0x5 obj/APSTATS.o
+ .rodata._.str.315
+                0x00d1e8f2        0x8 obj/APSTATS.o
+ .rodata._.str.316
+                0x00d1e8fa        0x7 obj/APSTATS.o
+ .rodata._.str.317
+                0x00d1e901        0x8 obj/APSTATS.o
+ .rodata._.str.318
+                0x00d1e909        0x5 obj/APSTATS.o
+ .rodata._.str.319
+                0x00d1e90e        0x5 obj/APSTATS.o
+ .rodata._.str.320
+                0x00d1e913        0x5 obj/APSTATS.o
+ .rodata._.str.321
+                0x00d1e918        0x6 obj/APSTATS.o
+ .rodata._.str.322
+                0x00d1e91e        0x5 obj/APSTATS.o
+ .rodata._.str.323
+                0x00d1e923        0xe obj/APSTATS.o
+ .rodata._.str.324
+                0x00d1e931        0x5 obj/APSTATS.o
+ .rodata._.str.325
+                0x00d1e936        0x7 obj/APSTATS.o
+ .rodata._.str.326
+                0x00d1e93d        0xa obj/APSTATS.o
+ .rodata._.str.327
+                0x00d1e947        0xb obj/APSTATS.o
+ .rodata._.str.328
+                0x00d1e952        0x8 obj/APSTATS.o
+ .rodata._.str.329
+                0x00d1e95a        0xc obj/APSTATS.o
+ .rodata._.str.330
+                0x00d1e966        0x8 obj/APSTATS.o
+ .rodata._.str.331
+                0x00d1e96e        0xb obj/APSTATS.o
+ .rodata._.str.332
+                0x00d1e979        0xb obj/APSTATS.o
+ .rodata._.str.333
+                0x00d1e984        0xc obj/APSTATS.o
+ .rodata._.str.334
+                0x00d1e990        0x9 obj/APSTATS.o
+ .rodata._.str.335
+                0x00d1e999        0xc obj/APSTATS.o
+ .rodata._.str.336
+                0x00d1e9a5        0x8 obj/APSTATS.o
+ .rodata._.str.337
+                0x00d1e9ad        0xb obj/APSTATS.o
+ .rodata._.str.338
+                0x00d1e9b8        0xc obj/APSTATS.o
+ .rodata._.str.339
+                0x00d1e9c4        0x8 obj/APSTATS.o
+ .rodata._.str.340
+                0x00d1e9cc        0x9 obj/APSTATS.o
+ .rodata._.str.341
+                0x00d1e9d5        0x9 obj/APSTATS.o
+ .rodata._.str.342
+                0x00d1e9de        0xa obj/APSTATS.o
+ .rodata._.str.343
+                0x00d1e9e8        0xb obj/APSTATS.o
+ .rodata._.str.344
+                0x00d1e9f3        0xd obj/APSTATS.o
+ .rodata._.str.345
+                0x00d1ea00        0xc obj/APSTATS.o
+ .rodata._.str.346
+                0x00d1ea0c        0x9 obj/APSTATS.o
+ .rodata._.str.347
+                0x00d1ea15        0xb obj/APSTATS.o
+ .rodata._.str.348
+                0x00d1ea20        0xc obj/APSTATS.o
+ .rodata._.str.349
+                0x00d1ea2c        0xa obj/APSTATS.o
+ .rodata._.str.350
+                0x00d1ea36        0xb obj/APSTATS.o
+ .rodata._.str.351
+                0x00d1ea41        0xc obj/APSTATS.o
+ .rodata._.str.352
+                0x00d1ea4d        0x8 obj/APSTATS.o
+ .rodata._.str.353
+                0x00d1ea55        0x8 obj/APSTATS.o
+ .rodata._.str.354
+                0x00d1ea5d        0xa obj/APSTATS.o
+ .rodata._.str.355
+                0x00d1ea67        0xa obj/APSTATS.o
+ .rodata._.str.356
+                0x00d1ea71        0x9 obj/APSTATS.o
+ .rodata._.str.357
+                0x00d1ea7a        0xa obj/APSTATS.o
+ .rodata._.str.358
+                0x00d1ea84        0xf obj/APSTATS.o
+ .rodata._.str.359
+                0x00d1ea93        0xd obj/APSTATS.o
+ .rodata._.str.360
+                0x00d1eaa0        0x9 obj/APSTATS.o
+ .rodata._.str.361
+                0x00d1eaa9        0xa obj/APSTATS.o
+ .rodata._.str.362
+                0x00d1eab3        0xc obj/APSTATS.o
+ .rodata._.str.363
+                0x00d1eabf        0x5 obj/APSTATS.o
+ .rodata._.str.364
+                0x00d1eac4        0xb obj/APSTATS.o
+ .rodata._.str.365
+                0x00d1eacf        0x8 obj/APSTATS.o
+ .rodata._.str.366
+                0x00d1ead7        0xe obj/APSTATS.o
+ .rodata._.str.367
+                0x00d1eae5        0x8 obj/APSTATS.o
+ .rodata._.str.368
+                0x00d1eaed        0x5 obj/APSTATS.o
+ .rodata._.str.369
+                0x00d1eaf2        0x5 obj/APSTATS.o
+ .rodata._.str.370
+                0x00d1eaf7        0xe obj/APSTATS.o
+ .rodata._.str.371
+                0x00d1eb05        0x8 obj/APSTATS.o
+ .rodata._.str.372
+                0x00d1eb0d        0x5 obj/APSTATS.o
+ .rodata._.str.373
+                0x00d1eb12        0xa obj/APSTATS.o
+ .rodata._.str.374
+                0x00d1eb1c        0x6 obj/APSTATS.o
+ .rodata._.str.375
+                0x00d1eb22        0x7 obj/APSTATS.o
+ .rodata._.str.376
+                0x00d1eb29        0x9 obj/APSTATS.o
+ .rodata._.str.377
+                0x00d1eb32        0x6 obj/APSTATS.o
+ .rodata._.str.378
+                0x00d1eb38        0x7 obj/APSTATS.o
+ .rodata._.str.379
+                0x00d1eb3f        0x5 obj/APSTATS.o
+ .rodata._.str.380
+                0x00d1eb44        0x6 obj/APSTATS.o
+ .rodata._.str.381
+                0x00d1eb4a        0x6 obj/APSTATS.o
+ .rodata._.str.382
+                0x00d1eb50        0x5 obj/APSTATS.o
+ .rodata._.str.383
+                0x00d1eb55        0x7 obj/APSTATS.o
+ .rodata._.str.384
+                0x00d1eb5c        0x5 obj/APSTATS.o
+ .rodata._.str.385
+                0x00d1eb61        0x6 obj/APSTATS.o
+ .rodata._.str.386
+                0x00d1eb67        0x7 obj/APSTATS.o
+ .rodata._.str.387
+                0x00d1eb6e        0x5 obj/APSTATS.o
+ .rodata._.str.388
+                0x00d1eb73        0x7 obj/APSTATS.o
+ .rodata._.str.389
+                0x00d1eb7a        0x6 obj/APSTATS.o
+ .rodata._.str.390
+                0x00d1eb80        0x5 obj/APSTATS.o
+ .rodata._.str.391
+                0x00d1eb85        0x7 obj/APSTATS.o
+ .rodata._.str.392
+                0x00d1eb8c        0xa obj/APSTATS.o
+ .rodata._.str.393
+                0x00d1eb96        0x6 obj/APSTATS.o
+ .rodata._.str.394
+                0x00d1eb9c        0x5 obj/APSTATS.o
+ .rodata._.str.395
+                0x00d1eba1        0xc obj/APSTATS.o
+ .rodata._.str.396
+                0x00d1ebad        0x5 obj/APSTATS.o
+ .rodata._.str.397
+                0x00d1ebb2        0x6 obj/APSTATS.o
+ .rodata._.str.398
+                0x00d1ebb8        0x8 obj/APSTATS.o
+ .rodata._.str.399
+                0x00d1ebc0        0x6 obj/APSTATS.o
+ .rodata._.str.400
+                0x00d1ebc6        0x5 obj/APSTATS.o
+ .rodata._.str.401
+                0x00d1ebcb        0x5 obj/APSTATS.o
+ .rodata._.str.402
+                0x00d1ebd0        0x8 obj/APSTATS.o
+ .rodata._.str.403
+                0x00d1ebd8        0x6 obj/APSTATS.o
+ .rodata._.str.404
+                0x00d1ebde        0x5 obj/APSTATS.o
+ .rodata._.str.405
+                0x00d1ebe3        0x8 obj/APSTATS.o
+ .rodata._.str.406
+                0x00d1ebeb        0x5 obj/APSTATS.o
+ .rodata._.str.407
+                0x00d1ebf0        0x6 obj/APSTATS.o
+ .rodata._.str.408
+                0x00d1ebf6        0x7 obj/APSTATS.o
+ .rodata._.str.409
+                0x00d1ebfd        0x5 obj/APSTATS.o
+ .rodata._.str.410
+                0x00d1ec02        0x7 obj/APSTATS.o
+ .rodata._.str.411
+                0x00d1ec09        0x7 obj/APSTATS.o
+ .rodata._.str.412
+                0x00d1ec10        0x8 obj/APSTATS.o
+ .rodata._.str.413
+                0x00d1ec18        0x5 obj/APSTATS.o
+ .rodata._.str.414
+                0x00d1ec1d        0xd obj/APSTATS.o
+ .rodata._.str.415
+                0x00d1ec2a        0x7 obj/APSTATS.o
+ .rodata._.str.416
+                0x00d1ec31        0x7 obj/APSTATS.o
+ .rodata._.str.417
+                0x00d1ec38        0x8 obj/APSTATS.o
+ .rodata._.str.418
+                0x00d1ec40        0x5 obj/APSTATS.o
+ .rodata._.str.419
+                0x00d1ec45        0x8 obj/APSTATS.o
+ .rodata._.str.420
+                0x00d1ec4d        0x6 obj/APSTATS.o
+ .rodata._.str.421
+                0x00d1ec53        0x8 obj/APSTATS.o
+ .rodata._.str.422
+                0x00d1ec5b        0xd obj/APSTATS.o
+ .rodata._.str.423
+                0x00d1ec68        0x9 obj/APSTATS.o
+ .rodata._.str.424
+                0x00d1ec71        0xa obj/APSTATS.o
+ .rodata._.str.425
+                0x00d1ec7b        0xa obj/APSTATS.o
+ .rodata._.str.426
+                0x00d1ec85        0x7 obj/APSTATS.o
+ .rodata._.str.427
+                0x00d1ec8c        0x8 obj/APSTATS.o
+ .rodata._.str.428
+                0x00d1ec94        0x7 obj/APSTATS.o
+ .rodata._.str.429
+                0x00d1ec9b        0x7 obj/APSTATS.o
+ .rodata._.str.430
+                0x00d1eca2       0x10 obj/APSTATS.o
+ .rodata._.str.431
+                0x00d1ecb2        0x9 obj/APSTATS.o
+ .rodata._.str.432
+                0x00d1ecbb        0x6 obj/APSTATS.o
+ .rodata._.str.433
+                0x00d1ecc1        0x7 obj/APSTATS.o
+ .rodata._.str.434
+                0x00d1ecc8        0x9 obj/APSTATS.o
+ .rodata._.str.435
+                0x00d1ecd1        0x5 obj/APSTATS.o
+ .rodata._.str.436
+                0x00d1ecd6        0x5 obj/APSTATS.o
+ .rodata._.str.437
+                0x00d1ecdb        0x5 obj/APSTATS.o
+ .rodata._.str.438
+                0x00d1ece0        0x5 obj/APSTATS.o
+ .rodata._.str.439
+                0x00d1ece5        0x5 obj/APSTATS.o
+ .rodata._.str.440
+                0x00d1ecea        0x5 obj/APSTATS.o
+ .rodata._.str.441
+                0x00d1ecef        0x5 obj/APSTATS.o
+ .rodata._.str.442
+                0x00d1ecf4        0x9 obj/APSTATS.o
+ .rodata._.str.443
+                0x00d1ecfd        0xf obj/APSTATS.o
+ .rodata._.str.444
+                0x00d1ed0c        0xb obj/APSTATS.o
+ .rodata._.str.445
+                0x00d1ed17        0x9 obj/APSTATS.o
+ .rodata._.str.446
+                0x00d1ed20        0x5 obj/APSTATS.o
+ .rodata._.str.447
+                0x00d1ed25        0x9 obj/APSTATS.o
+ .rodata._.str.448
+                0x00d1ed2e        0x7 obj/APSTATS.o
+ .rodata._.str.449
+                0x00d1ed35        0x5 obj/APSTATS.o
+ .rodata._.str.450
+                0x00d1ed3a        0x6 obj/APSTATS.o
+ .rodata._.str.451
+                0x00d1ed40        0x9 obj/APSTATS.o
+ .rodata._.str.452
+                0x00d1ed49        0x7 obj/APSTATS.o
+ .rodata._.str.453
+                0x00d1ed50        0x9 obj/APSTATS.o
+ .rodata._.str.454
+                0x00d1ed59        0x7 obj/APSTATS.o
+ .rodata._.str.455
+                0x00d1ed60        0xa obj/APSTATS.o
+ .rodata._.str.456
+                0x00d1ed6a        0xc obj/APSTATS.o
+ .rodata._.str.457
+                0x00d1ed76        0x5 obj/APSTATS.o
+ .rodata._.str.458
+                0x00d1ed7b        0x8 obj/APSTATS.o
+ .rodata._.str.459
+                0x00d1ed83        0xb obj/APSTATS.o
+ .rodata._.str.460
+                0x00d1ed8e        0x5 obj/APSTATS.o
+ .rodata._.str.461
+                0x00d1ed93        0x7 obj/APSTATS.o
+ .rodata._.str.462
+                0x00d1ed9a        0x8 obj/APSTATS.o
+ .rodata._.str.463
+                0x00d1eda2        0xa obj/APSTATS.o
+ .rodata._.str.464
+                0x00d1edac        0x9 obj/APSTATS.o
+ .rodata._.str.465
+                0x00d1edb5        0x7 obj/APSTATS.o
+ .rodata._.str.466
+                0x00d1edbc        0xa obj/APSTATS.o
+ .rodata._.str.467
+                0x00d1edc6        0x6 obj/APSTATS.o
+ .rodata._.str.468
+                0x00d1edcc        0x9 obj/APSTATS.o
+ .rodata._.str.469
+                0x00d1edd5        0xa obj/APSTATS.o
+ .rodata._.str.470
+                0x00d1eddf        0x6 obj/APSTATS.o
+ .rodata._.str.471
+                0x00d1ede5        0x6 obj/APSTATS.o
+ .rodata._.str.472
+                0x00d1edeb        0x7 obj/APSTATS.o
+ .rodata._.str.473
+                0x00d1edf2        0x5 obj/APSTATS.o
+ .rodata._.str.474
+                0x00d1edf7        0x8 obj/APSTATS.o
+ .rodata._.str.475
+                0x00d1edff        0x9 obj/APSTATS.o
+ .rodata._.str.476
+                0x00d1ee08        0x8 obj/APSTATS.o
+ .rodata._.str.477
+                0x00d1ee10        0x9 obj/APSTATS.o
+ .rodata._.str.478
+                0x00d1ee19        0x7 obj/APSTATS.o
+ .rodata._.str.479
+                0x00d1ee20        0x8 obj/APSTATS.o
+ .rodata._.str.480
+                0x00d1ee28        0x5 obj/APSTATS.o
+ .rodata._.str.481
+                0x00d1ee2d        0xc obj/APSTATS.o
+ .rodata._.str.482
+                0x00d1ee39        0x2 obj/APSTATS.o
+ .rodata._.str.483
+                0x00d1ee3b        0x6 obj/APSTATS.o
+ .rodata._.str.484
+                0x00d1ee41        0x6 obj/APSTATS.o
+ .rodata._.str.485
+                0x00d1ee47        0x6 obj/APSTATS.o
+ .rodata._.str.486
+                0x00d1ee4d        0xa obj/APSTATS.o
+ .rodata._.str.487
+                0x00d1ee57        0xa obj/APSTATS.o
+ .rodata._.str.488
+                0x00d1ee61        0xb obj/APSTATS.o
+ .rodata._.str.489
+                0x00d1ee6c        0x5 obj/APSTATS.o
+ .rodata._.str.490
+                0x00d1ee71        0x8 obj/APSTATS.o
+ .rodata._.str.491
+                0x00d1ee79        0xc obj/APSTATS.o
+ .rodata._.str.492
+                0x00d1ee85        0x6 obj/APSTATS.o
+ .rodata._.str.493
+                0x00d1ee8b        0x5 obj/APSTATS.o
+ .rodata._.str.494
+                0x00d1ee90        0x8 obj/APSTATS.o
+ .rodata._.str.495
+                0x00d1ee98        0x7 obj/APSTATS.o
+ .rodata._.str.496
+                0x00d1ee9f        0x8 obj/APSTATS.o
+ .rodata._.str.497
+                0x00d1eea7        0xb obj/APSTATS.o
+ .rodata._.str.498
+                0x00d1eeb2        0xa obj/APSTATS.o
+ .rodata._.str.499
+                0x00d1eebc        0x8 obj/APSTATS.o
+ .rodata._.str.500
+                0x00d1eec4        0x7 obj/APSTATS.o
+ .rodata._.str.501
+                0x00d1eecb        0x9 obj/APSTATS.o
+ .rodata._.str.502
+                0x00d1eed4        0xb obj/APSTATS.o
+ .rodata._.str.503
+                0x00d1eedf        0x9 obj/APSTATS.o
+ .rodata._.str.504
+                0x00d1eee8        0x6 obj/APSTATS.o
+ .rodata._.str.505
+                0x00d1eeee        0x8 obj/APSTATS.o
+ .rodata._.str.506
+                0x00d1eef6        0x5 obj/APSTATS.o
+ .rodata._.str.507
+                0x00d1eefb        0x6 obj/APSTATS.o
+ .rodata._.str.508
+                0x00d1ef01        0x5 obj/APSTATS.o
+ .rodata._.str.509
+                0x00d1ef06        0x7 obj/APSTATS.o
+ .rodata._.str.510
+                0x00d1ef0d        0x8 obj/APSTATS.o
+ .rodata._.str.511
+                0x00d1ef15        0xb obj/APSTATS.o
+ .rodata._.str.512
+                0x00d1ef20        0xc obj/APSTATS.o
+ .rodata._.str.513
+                0x00d1ef2c        0x9 obj/APSTATS.o
+ .rodata._.str.514
+                0x00d1ef35        0x9 obj/APSTATS.o
+ .rodata._.str.515
+                0x00d1ef3e        0x6 obj/APSTATS.o
+ .rodata._.str.516
+                0x00d1ef44        0xa obj/APSTATS.o
+ .rodata._.str.517
+                0x00d1ef4e        0x8 obj/APSTATS.o
+ .rodata._.str.518
+                0x00d1ef56        0xa obj/APSTATS.o
+ .rodata._.str.519
+                0x00d1ef60        0x8 obj/APSTATS.o
+ .rodata._.str.520
+                0x00d1ef68        0xc obj/APSTATS.o
+ .rodata._.str.521
+                0x00d1ef74        0xa obj/APSTATS.o
+ .rodata._.str.522
+                0x00d1ef7e        0xb obj/APSTATS.o
+ .rodata._.str.523
+                0x00d1ef89        0xb obj/APSTATS.o
+ .rodata._.str.524
+                0x00d1ef94        0xb obj/APSTATS.o
+ .rodata._.str.525
+                0x00d1ef9f        0x7 obj/APSTATS.o
+ .rodata._.str.526
+                0x00d1efa6        0x7 obj/APSTATS.o
+ .rodata._.str.527
+                0x00d1efad        0x7 obj/APSTATS.o
+ .rodata._.str.528
+                0x00d1efb4        0xe obj/APSTATS.o
+ .rodata._.str.529
+                0x00d1efc2        0xe obj/APSTATS.o
+ .rodata._.str.530
+                0x00d1efd0        0xc obj/APSTATS.o
+ .rodata._.str.531
+                0x00d1efdc        0x8 obj/APSTATS.o
+ .rodata._.str.532
+                0x00d1efe4        0xa obj/APSTATS.o
+ .rodata._.str.533
+                0x00d1efee        0x8 obj/APSTATS.o
+ .rodata._.str.534
+                0x00d1eff6        0x8 obj/APSTATS.o
+ .rodata._.str.535
+                0x00d1effe        0x7 obj/APSTATS.o
+ .rodata._.str.536
+                0x00d1f005        0xb obj/APSTATS.o
+ .rodata._.str.537
+                0x00d1f010        0xc obj/APSTATS.o
+ .rodata._.str.538
+                0x00d1f01c        0x6 obj/APSTATS.o
+ .rodata._.str.539
+                0x00d1f022        0x8 obj/APSTATS.o
+ .rodata._.str.540
+                0x00d1f02a        0x9 obj/APSTATS.o
+ .rodata._.str.541
+                0x00d1f033        0x8 obj/APSTATS.o
+ .rodata._.str.542
+                0x00d1f03b        0xd obj/APSTATS.o
+ .rodata._.str.543
+                0x00d1f048        0x9 obj/APSTATS.o
+ .rodata._.str.544
+                0x00d1f051        0x7 obj/APSTATS.o
+ .rodata._.str.545
+                0x00d1f058        0xa obj/APSTATS.o
+ .rodata._.str.546
+                0x00d1f062        0x9 obj/APSTATS.o
+ .rodata._.str.547
+                0x00d1f06b        0x6 obj/APSTATS.o
+ .rodata._.str.548
+                0x00d1f071        0x7 obj/APSTATS.o
+ .rodata._.str.549
+                0x00d1f078        0x8 obj/APSTATS.o
+ .rodata._.str.550
+                0x00d1f080        0x8 obj/APSTATS.o
+ .rodata._.str.551
+                0x00d1f088        0x8 obj/APSTATS.o
+ .rodata._.str.552
+                0x00d1f090        0x5 obj/APSTATS.o
+ .rodata._.str.553
+                0x00d1f095        0x8 obj/APSTATS.o
+ .rodata._.str.554
+                0x00d1f09d        0xa obj/APSTATS.o
+ .rodata._.str.555
+                0x00d1f0a7        0x7 obj/APSTATS.o
+ .rodata._.str.556
+                0x00d1f0ae        0x8 obj/APSTATS.o
+ .rodata._.str.557
+                0x00d1f0b6        0x9 obj/APSTATS.o
+ .rodata._.str.558
+                0x00d1f0bf        0x7 obj/APSTATS.o
+ .rodata._.str.559
+                0x00d1f0c6        0xb obj/APSTATS.o
+ .rodata._.str.560
+                0x00d1f0d1        0xb obj/APSTATS.o
+ .rodata._.str.561
+                0x00d1f0dc        0x7 obj/APSTATS.o
+ .rodata._.str.562
+                0x00d1f0e3        0xa obj/APSTATS.o
+ .rodata._.str.563
+                0x00d1f0ed        0x7 obj/APSTATS.o
+ .rodata._.str.564
+                0x00d1f0f4        0x9 obj/APSTATS.o
+ .rodata._.str.565
+                0x00d1f0fd        0xd obj/APSTATS.o
+ .rodata._.str.566
+                0x00d1f10a        0x9 obj/APSTATS.o
+ .rodata._.str.567
+                0x00d1f113        0x9 obj/APSTATS.o
+ .rodata._.str.568
+                0x00d1f11c        0xa obj/APSTATS.o
+ .rodata._.str.569
+                0x00d1f126        0x8 obj/APSTATS.o
+ .rodata._.str.570
+                0x00d1f12e        0x8 obj/APSTATS.o
+ .rodata._.str.571
+                0x00d1f136        0x8 obj/APSTATS.o
+ .rodata._.str.572
+                0x00d1f13e        0xc obj/APSTATS.o
+ .rodata._.str.573
+                0x00d1f14a        0xc obj/APSTATS.o
+ .rodata._.str.574
+                0x00d1f156        0xa obj/APSTATS.o
+ .rodata._.str.575
+                0x00d1f160        0x9 obj/APSTATS.o
+ .rodata._.str.576
+                0x00d1f169        0x9 obj/APSTATS.o
+ .rodata._.str.577
+                0x00d1f172        0xa obj/APSTATS.o
+ .rodata._.str.578
+                0x00d1f17c        0xa obj/APSTATS.o
+ .rodata._.str.579
+                0x00d1f186        0x9 obj/APSTATS.o
+ .rodata._.str.580
+                0x00d1f18f        0x7 obj/APSTATS.o
+ .rodata._.str.581
+                0x00d1f196        0x8 obj/APSTATS.o
+ .rodata._.str.582
+                0x00d1f19e        0x6 obj/APSTATS.o
+ .rodata._.str.583
+                0x00d1f1a4        0xb obj/APSTATS.o
+ .rodata._.str.584
+                0x00d1f1af        0x8 obj/APSTATS.o
+ .rodata._.str.585
+                0x00d1f1b7        0x5 obj/APSTATS.o
+ .rodata._.str.586
+                0x00d1f1bc        0x5 obj/APSTATS.o
+ .rodata._.str.587
+                0x00d1f1c1        0x6 obj/APSTATS.o
+ .rodata._.str.588
+                0x00d1f1c7        0x5 obj/APSTATS.o
+ .rodata._.str.589
+                0x00d1f1cc        0x7 obj/APSTATS.o
+ .rodata._.str.590
+                0x00d1f1d3        0x8 obj/APSTATS.o
+ .rodata._.str.591
+                0x00d1f1db        0x9 obj/APSTATS.o
+ .rodata._.str.592
+                0x00d1f1e4        0x7 obj/APSTATS.o
+ .rodata._.str.593
+                0x00d1f1eb        0x7 obj/APSTATS.o
+ .rodata._.str.594
+                0x00d1f1f2        0xc obj/APSTATS.o
+ .rodata._.str.595
+                0x00d1f1fe        0x6 obj/APSTATS.o
+ .rodata._.str.596
+                0x00d1f204        0x6 obj/APSTATS.o
+ .rodata._.str.597
+                0x00d1f20a        0x7 obj/APSTATS.o
+ .rodata._.str.598
+                0x00d1f211        0x8 obj/APSTATS.o
+ .rodata._.str.599
+                0x00d1f219        0x3 obj/APSTATS.o
+ .rodata._.str.600
+                0x00d1f21c        0x5 obj/APSTATS.o
+ .rodata._.str.601
+                0x00d1f221        0x9 obj/APSTATS.o
+ .rodata._.str.602
+                0x00d1f22a        0x5 obj/APSTATS.o
+ .rodata._.str.603
+                0x00d1f22f        0x5 obj/APSTATS.o
+ .rodata._.str.604
+                0x00d1f234        0x7 obj/APSTATS.o
+ .rodata._.str.605
+                0x00d1f23b        0x9 obj/APSTATS.o
+ .rodata._.str.606
+                0x00d1f244        0xa obj/APSTATS.o
+ .rodata._.str.607
+                0x00d1f24e        0xa obj/APSTATS.o
+ .rodata._.str.608
+                0x00d1f258        0x6 obj/APSTATS.o
+ .rodata._.str.609
+                0x00d1f25e        0x9 obj/APSTATS.o
+ .rodata._.str.610
+                0x00d1f267        0x9 obj/APSTATS.o
+ .rodata._.str.611
+                0x00d1f270        0x8 obj/APSTATS.o
+ .rodata._.str.612
+                0x00d1f278        0x6 obj/APSTATS.o
+ .rodata._.str.613
+                0x00d1f27e        0x8 obj/APSTATS.o
+ .rodata._.str.614
+                0x00d1f286        0x6 obj/APSTATS.o
+ .rodata._.str.615
+                0x00d1f28c        0x6 obj/APSTATS.o
+ .rodata._.str.616
+                0x00d1f292        0x7 obj/APSTATS.o
+ .rodata._.str.617
+                0x00d1f299        0x5 obj/APSTATS.o
+ .rodata._.str.618
+                0x00d1f29e        0x8 obj/APSTATS.o
+ .rodata._.str.619
+                0x00d1f2a6        0x6 obj/APSTATS.o
+ .rodata._.str.620
+                0x00d1f2ac        0x6 obj/APSTATS.o
+ .rodata._.str.621
+                0x00d1f2b2        0x5 obj/APSTATS.o
+ .rodata._.str.622
+                0x00d1f2b7        0x6 obj/APSTATS.o
+ .rodata._.str.623
+                0x00d1f2bd        0x6 obj/APSTATS.o
+ .rodata._.str.624
+                0x00d1f2c3        0x7 obj/APSTATS.o
+ .rodata._.str.625
+                0x00d1f2ca        0x7 obj/APSTATS.o
+ .rodata._.str.626
+                0x00d1f2d1        0x8 obj/APSTATS.o
+ .rodata._.str.627
+                0x00d1f2d9        0x8 obj/APSTATS.o
+ .rodata._.str.628
+                0x00d1f2e1        0xd obj/APSTATS.o
+ .rodata._.str.629
+                0x00d1f2ee        0xc obj/APSTATS.o
+ .rodata._.str.630
+                0x00d1f2fa        0xe obj/APSTATS.o
+ .rodata._.str.631
+                0x00d1f308        0x8 obj/APSTATS.o
+ .rodata._.str.632
+                0x00d1f310        0xd obj/APSTATS.o
+ .rodata._.str.633
+                0x00d1f31d        0x7 obj/APSTATS.o
+ .rodata._.str.634
+                0x00d1f324        0x7 obj/APSTATS.o
+ .rodata._.str.635
+                0x00d1f32b        0xb obj/APSTATS.o
+ .rodata._.str.636
+                0x00d1f336        0xc obj/APSTATS.o
+ .rodata._.str.637
+                0x00d1f342        0x6 obj/APSTATS.o
+ .rodata._.str.638
+                0x00d1f348        0x7 obj/APSTATS.o
+ .rodata._.str.639
+                0x00d1f34f        0x5 obj/APSTATS.o
+ .rodata._.str.640
+                0x00d1f354        0x6 obj/APSTATS.o
+ .rodata._.str.641
+                0x00d1f35a        0x6 obj/APSTATS.o
+ .rodata._.str.642
+                0x00d1f360        0x5 obj/APSTATS.o
+ .rodata._.str.643
+                0x00d1f365        0x7 obj/APSTATS.o
+ .rodata._.str.644
+                0x00d1f36c        0x5 obj/APSTATS.o
+ .rodata._.str.645
+                0x00d1f371        0x9 obj/APSTATS.o
+ .rodata._.str.646
+                0x00d1f37a        0x6 obj/APSTATS.o
+ .rodata._.str.647
+                0x00d1f380        0x6 obj/APSTATS.o
+ .rodata._.str.648
+                0x00d1f386        0x6 obj/APSTATS.o
+ .rodata._.str.649
+                0x00d1f38c        0x9 obj/APSTATS.o
+ .rodata._.str.650
+                0x00d1f395        0x5 obj/APSTATS.o
+ .rodata._.str.651
+                0x00d1f39a        0x5 obj/APSTATS.o
+ .rodata._.str.652
+                0x00d1f39f        0x8 obj/APSTATS.o
+ .rodata._.str.653
+                0x00d1f3a7        0xa obj/APSTATS.o
+ .rodata._.str.654
+                0x00d1f3b1        0x5 obj/APSTATS.o
+ .rodata._.str.655
+                0x00d1f3b6        0x9 obj/APSTATS.o
+ .rodata._.str.656
+                0x00d1f3bf        0xd obj/APSTATS.o
+ .rodata._.str.657
+                0x00d1f3cc        0xa obj/APSTATS.o
+ .rodata._.str.658
+                0x00d1f3d6        0x6 obj/APSTATS.o
+ .rodata._.str.659
+                0x00d1f3dc        0xa obj/APSTATS.o
+ .rodata._.str.660
+                0x00d1f3e6        0x7 obj/APSTATS.o
+ .rodata._.str.661
+                0x00d1f3ed        0x5 obj/APSTATS.o
+ .rodata._.str.662
+                0x00d1f3f2        0x7 obj/APSTATS.o
+ .rodata._.str.663
+                0x00d1f3f9        0x7 obj/APSTATS.o
+ .rodata._.str.664
+                0x00d1f400        0x9 obj/APSTATS.o
+ .rodata._.str.665
+                0x00d1f409        0xc obj/APSTATS.o
+ .rodata._.str.666
+                0x00d1f415        0xe obj/APSTATS.o
+ .rodata._.str.667
+                0x00d1f423        0x5 obj/APSTATS.o
+ .rodata._.str.668
+                0x00d1f428        0x9 obj/APSTATS.o
+ .rodata._.str.669
+                0x00d1f431        0x5 obj/APSTATS.o
+ .rodata._.str.670
+                0x00d1f436        0x6 obj/APSTATS.o
+ .rodata._.str.671
+                0x00d1f43c        0xa obj/APSTATS.o
+ .rodata._.str.672
+                0x00d1f446        0x8 obj/APSTATS.o
+ .rodata._.str.673
+                0x00d1f44e        0xa obj/APSTATS.o
+ .rodata._.str.674
+                0x00d1f458        0xc obj/APSTATS.o
+ .rodata._.str.675
+                0x00d1f464        0xe obj/APSTATS.o
+ .rodata._.str.676
+                0x00d1f472        0xb obj/APSTATS.o
+ .rodata._.str.677
+                0x00d1f47d        0x6 obj/APSTATS.o
+ .rodata._.str.678
+                0x00d1f483        0x9 obj/APSTATS.o
+ .rodata._.str.679
+                0x00d1f48c        0x5 obj/APSTATS.o
+ .rodata._.str.680
+                0x00d1f491        0x6 obj/APSTATS.o
+ .rodata._.str.681
+                0x00d1f497        0x6 obj/APSTATS.o
+ .rodata._.str.682
+                0x00d1f49d        0x6 obj/APSTATS.o
+ .rodata._.str.683
+                0x00d1f4a3        0x7 obj/APSTATS.o
+ .rodata._.str.684
+                0x00d1f4aa        0x7 obj/APSTATS.o
+ .rodata._.str.685
+                0x00d1f4b1        0x9 obj/APSTATS.o
+ .rodata._.str.686
+                0x00d1f4ba        0xb obj/APSTATS.o
+ .rodata._.str.687
+                0x00d1f4c5        0x9 obj/APSTATS.o
+ .rodata._.str.688
+                0x00d1f4ce        0x7 obj/APSTATS.o
+ .rodata._.str.689
+                0x00d1f4d5        0x7 obj/APSTATS.o
+ .rodata._.str.690
+                0x00d1f4dc        0x9 obj/APSTATS.o
+ .rodata._.str.691
+                0x00d1f4e5        0x9 obj/APSTATS.o
+ .rodata._.str.692
+                0x00d1f4ee        0x8 obj/APSTATS.o
+ .rodata._.str.693
+                0x00d1f4f6        0x6 obj/APSTATS.o
+ .rodata._.str.694
+                0x00d1f4fc        0x9 obj/APSTATS.o
+ .rodata._.str.695
+                0x00d1f505        0xb obj/APSTATS.o
+ .rodata._.str.696
+                0x00d1f510        0xd obj/APSTATS.o
+ .rodata._.str.697
+                0x00d1f51d        0x8 obj/APSTATS.o
+ .rodata._.str.698
+                0x00d1f525        0xa obj/APSTATS.o
+ .rodata._.str.699
+                0x00d1f52f        0x8 obj/APSTATS.o
+ .rodata._.str.700
+                0x00d1f537        0xa obj/APSTATS.o
+ .rodata._.str.701
+                0x00d1f541        0x8 obj/APSTATS.o
+ .rodata._.str.702
+                0x00d1f549        0x5 obj/APSTATS.o
+ .rodata._.str.703
+                0x00d1f54e        0x7 obj/APSTATS.o
+ .rodata._.str.704
+                0x00d1f555        0x7 obj/APSTATS.o
+ .rodata._.str.705
+                0x00d1f55c        0xa obj/APSTATS.o
+ .rodata._.str.706
+                0x00d1f566        0x7 obj/APSTATS.o
+ .rodata._.str.707
+                0x00d1f56d        0x7 obj/APSTATS.o
+ .rodata._.str.708
+                0x00d1f574        0xb obj/APSTATS.o
+ .rodata._.str.709
+                0x00d1f57f        0x2 obj/APSTATS.o
+ .rodata._.str.710
+                0x00d1f581        0x6 obj/APSTATS.o
+ .rodata._.str.711
+                0x00d1f587        0x5 obj/APSTATS.o
+ .rodata._.str.712
+                0x00d1f58c        0x7 obj/APSTATS.o
+ .rodata._.str.713
+                0x00d1f593        0x5 obj/APSTATS.o
+ .rodata._.str.714
+                0x00d1f598        0x9 obj/APSTATS.o
+ .rodata._.str.715
+                0x00d1f5a1        0x5 obj/APSTATS.o
+ .rodata._.str.716
+                0x00d1f5a6        0x5 obj/APSTATS.o
+ .rodata._.str.717
+                0x00d1f5ab        0x8 obj/APSTATS.o
+ .rodata._.str.718
+                0x00d1f5b3        0x6 obj/APSTATS.o
+ .rodata._.str.719
+                0x00d1f5b9        0x5 obj/APSTATS.o
+ .rodata._.str.720
+                0x00d1f5be        0x5 obj/APSTATS.o
+ .rodata._.str.721
+                0x00d1f5c3        0x5 obj/APSTATS.o
+ .rodata._.str.722
+                0x00d1f5c8        0x5 obj/APSTATS.o
+ .rodata._.str.723
+                0x00d1f5cd        0x8 obj/APSTATS.o
+ .rodata._.str.724
+                0x00d1f5d5        0x6 obj/APSTATS.o
+ .rodata._.str.725
+                0x00d1f5db        0x6 obj/APSTATS.o
+ .rodata._.str.726
+                0x00d1f5e1        0x5 obj/APSTATS.o
+ .rodata._.str.727
+                0x00d1f5e6        0x5 obj/APSTATS.o
+ .rodata._.str.728
+                0x00d1f5eb        0xb obj/APSTATS.o
+ .rodata._.str.729
+                0x00d1f5f6        0x6 obj/APSTATS.o
+ .rodata._.str.730
+                0x00d1f5fc        0x6 obj/APSTATS.o
+ .rodata._.str.731
+                0x00d1f602        0xa obj/APSTATS.o
+ .rodata._.str.732
+                0x00d1f60c        0x8 obj/APSTATS.o
+ .rodata._.str.733
+                0x00d1f614        0x6 obj/APSTATS.o
+ .rodata._.str.734
+                0x00d1f61a        0x5 obj/APSTATS.o
+ .rodata._.str.735
+                0x00d1f61f        0x6 obj/APSTATS.o
+ .rodata._.str.736
+                0x00d1f625        0x9 obj/APSTATS.o
+ .rodata._.str.737
+                0x00d1f62e        0x6 obj/APSTATS.o
+ .rodata._.str.738
+                0x00d1f634        0x6 obj/APSTATS.o
+ .rodata._.str.739
+                0x00d1f63a        0xc obj/APSTATS.o
+ .rodata._.str.740
+                0x00d1f646        0xd obj/APSTATS.o
+ .rodata._.str.741
+                0x00d1f653        0x5 obj/APSTATS.o
+ .rodata._.str.742
+                0x00d1f658        0x8 obj/APSTATS.o
+ .rodata._.str.743
+                0x00d1f660        0xa obj/APSTATS.o
+ .rodata._.str.744
+                0x00d1f66a        0xb obj/APSTATS.o
+ .rodata._.str.745
+                0x00d1f675        0x7 obj/APSTATS.o
+ .rodata._.str.746
+                0x00d1f67c        0x6 obj/APSTATS.o
+ .rodata._.str.747
+                0x00d1f682        0x5 obj/APSTATS.o
+ .rodata._.str.748
+                0x00d1f687        0xa obj/APSTATS.o
+ .rodata._.str.749
+                0x00d1f691        0x6 obj/APSTATS.o
+ .rodata._.str.750
+                0x00d1f697        0x5 obj/APSTATS.o
+ .rodata._.str.751
+                0x00d1f69c        0x6 obj/APSTATS.o
+ .rodata._.str.752
+                0x00d1f6a2        0x8 obj/APSTATS.o
+ .rodata._.str.753
+                0x00d1f6aa        0x9 obj/APSTATS.o
+ .rodata._.str.754
+                0x00d1f6b3        0xa obj/APSTATS.o
+ .rodata._.str.755
+                0x00d1f6bd        0xe obj/APSTATS.o
+ .rodata._.str.756
+                0x00d1f6cb        0xb obj/APSTATS.o
+ .rodata._.str.757
+                0x00d1f6d6        0x6 obj/APSTATS.o
+ .rodata._.str.758
+                0x00d1f6dc        0x5 obj/APSTATS.o
+ .rodata._.str.759
+                0x00d1f6e1        0x6 obj/APSTATS.o
+ .rodata._.str.760
+                0x00d1f6e7        0xb obj/APSTATS.o
+ .rodata._.str.761
+                0x00d1f6f2        0x9 obj/APSTATS.o
+ .rodata._.str.762
+                0x00d1f6fb        0xb obj/APSTATS.o
+ .rodata._.str.763
+                0x00d1f706        0x9 obj/APSTATS.o
+ .rodata._.str.764
+                0x00d1f70f        0xb obj/APSTATS.o
+ .rodata._.str.765
+                0x00d1f71a        0x6 obj/APSTATS.o
+ .rodata._.str.766
+                0x00d1f720        0x6 obj/APSTATS.o
+ .rodata._.str.767
+                0x00d1f726        0x5 obj/APSTATS.o
+ .rodata._.str.768
+                0x00d1f72b        0x6 obj/APSTATS.o
+ .rodata._.str.769
+                0x00d1f731        0x8 obj/APSTATS.o
+ .rodata._.str.770
+                0x00d1f739        0x6 obj/APSTATS.o
+ .rodata._.str.771
+                0x00d1f73f        0x6 obj/APSTATS.o
+ .rodata._.str.772
+                0x00d1f745        0x8 obj/APSTATS.o
+ .rodata._.str.773
+                0x00d1f74d        0x8 obj/APSTATS.o
+ .rodata._.str.774
+                0x00d1f755        0x8 obj/APSTATS.o
+ .rodata._.str.775
+                0x00d1f75d        0x7 obj/APSTATS.o
+ .rodata._.str.776
+                0x00d1f764        0xc obj/APSTATS.o
+ .rodata._.str.777
+                0x00d1f770        0x9 obj/APSTATS.o
+ .rodata._.str.778
+                0x00d1f779        0xa obj/APSTATS.o
+ .rodata._.str.779
+                0x00d1f783        0x9 obj/APSTATS.o
+ .rodata._.str.780
+                0x00d1f78c        0xa obj/APSTATS.o
+ .rodata._.str.781
+                0x00d1f796        0xa obj/APSTATS.o
+ .rodata._.str.782
+                0x00d1f7a0        0x7 obj/APSTATS.o
+ .rodata._.str.783
+                0x00d1f7a7        0x5 obj/APSTATS.o
+ .rodata._.str.784
+                0x00d1f7ac        0x6 obj/APSTATS.o
+ .rodata._.str.785
+                0x00d1f7b2        0x7 obj/APSTATS.o
+ .rodata._.str.786
+                0x00d1f7b9        0x9 obj/APSTATS.o
+ .rodata._.str.787
+                0x00d1f7c2        0x5 obj/APSTATS.o
+ .rodata._.str.788
+                0x00d1f7c7        0x5 obj/APSTATS.o
+ .rodata._.str.789
+                0x00d1f7cc        0x7 obj/APSTATS.o
+ .rodata._.str.790
+                0x00d1f7d3        0xa obj/APSTATS.o
+ .rodata._.str.791
+                0x00d1f7dd        0x5 obj/APSTATS.o
+ .rodata._.str.792
+                0x00d1f7e2        0x5 obj/APSTATS.o
+ .rodata._.str.793
+                0x00d1f7e7        0x5 obj/APSTATS.o
+ .rodata._.str.794
+                0x00d1f7ec        0x6 obj/APSTATS.o
+ .rodata._.str.795
+                0x00d1f7f2        0x8 obj/APSTATS.o
+ .rodata._.str.796
+                0x00d1f7fa        0x6 obj/APSTATS.o
+ .rodata._.str.797
+                0x00d1f800        0x6 obj/APSTATS.o
+ .rodata._.str.798
+                0x00d1f806        0x6 obj/APSTATS.o
+ .rodata._.str.799
+                0x00d1f80c        0x6 obj/APSTATS.o
+ .rodata._.str.800
+                0x00d1f812        0x5 obj/APSTATS.o
+ .rodata._.str.801
+                0x00d1f817        0x5 obj/APSTATS.o
+ .rodata._.str.802
+                0x00d1f81c        0x7 obj/APSTATS.o
+ .rodata._.str.803
+                0x00d1f823        0x8 obj/APSTATS.o
+ .rodata._.str.804
+                0x00d1f82b        0x8 obj/APSTATS.o
+ .rodata._.str.805
+                0x00d1f833        0x6 obj/APSTATS.o
+ .rodata._.str.806
+                0x00d1f839        0x5 obj/APSTATS.o
+ .rodata._.str.807
+                0x00d1f83e        0x6 obj/APSTATS.o
+ .rodata._.str.808
+                0x00d1f844        0x6 obj/APSTATS.o
+ .rodata._.str.809
+                0x00d1f84a        0x8 obj/APSTATS.o
+ .rodata._.str.810
+                0x00d1f852        0x6 obj/APSTATS.o
+ .rodata._.str.811
+                0x00d1f858        0x5 obj/APSTATS.o
+ .rodata._.str.812
+                0x00d1f85d        0x2 obj/APSTATS.o
+ .rodata._.str.813
+                0x00d1f85f        0x5 obj/APSTATS.o
+ .rodata._.str.814
+                0x00d1f864        0xc obj/APSTATS.o
+ .rodata._.str.815
+                0x00d1f870       0x15 obj/APSTATS.o
+ .rodata._.str.816
+                0x00d1f885        0x5 obj/APSTATS.o
+ .rodata._.str.817
+                0x00d1f88a       0x1c obj/APSTATS.o
+ .rodata._.str.818
+                0x00d1f8a6       0x2f obj/APSTATS.o
+ .rodata._.str.819
+                0x00d1f8d5        0xe obj/APSTATS.o
+ .rodata._.str.820
+                0x00d1f8e3       0x1e obj/APSTATS.o
+ .rodata.___const.gui_search_loop.chars_normal
+                0x00d1f901       0x3c obj/APSTATS.o
+ .rodata.___const.gui_search_loop.chars_alpha
+                0x00d1f93d       0x3c obj/APSTATS.o
+ .rodata._.str.821
+                0x00d1f979       0x34 obj/APSTATS.o
+ .rodata._.str.822
+                0x00d1f9ad       0x2a obj/APSTATS.o
+ .rodata._.str.823
+                0x00d1f9d7       0x2d obj/APSTATS.o
+ .rodata._.str.824
+                0x00d1fa04       0x24 obj/APSTATS.o
+ .rodata._.str.825
+                0x00d1fa28       0x28 obj/APSTATS.o
+ .rodata.___const.gui_search_loop.trivia
+                0x00d1fa50        0xf obj/APSTATS.o
+ .rodata._.str.826
+                0x00d1fa5f        0x4 obj/APSTATS.o
+ .rodata._.str.827
+                0x00d1fa63        0xf obj/APSTATS.o
+ .rodata._.str.828
+                0x00d1fa72        0x7 obj/APSTATS.o
+ .rodata._.str.829
+                0x00d1fa79        0xf obj/APSTATS.o
+ .rodata._.str.830
+                0x00d1fa88        0x2 obj/APSTATS.o
+ .rodata._.str.831
+                0x00d1fa8a       0x24 obj/APSTATS.o
+ .rodata._.str.832
+                0x00d1faae        0x4 obj/APSTATS.o
+ .rodata._.str.833
+                0x00d1fab2        0x4 obj/APSTATS.o
+ .rodata._.str.834
+                0x00d1fab6        0x8 obj/APSTATS.o
+ .rodata._.str.835
+                0x00d1fabe       0x1e obj/APSTATS.o
+ .rodata._.str.836
+                0x00d1fadc       0x22 obj/APSTATS.o
+ .rodata._.str.837
+                0x00d1fafe       0x22 obj/APSTATS.o
+ .rodata._.str.838
+                0x00d1fb20       0x1a obj/APSTATS.o
+ .rodata._.str.839
+                0x00d1fb3a        0x8 obj/APSTATS.o
+ .rodata._.str.840
+                0x00d1fb42        0x9 obj/APSTATS.o
+ .rodata._.str.841
+                0x00d1fb4b        0x9 obj/APSTATS.o
+ .rodata._.str.842
+                0x00d1fb54        0x9 obj/APSTATS.o
+ .rodata._.str.843
+                0x00d1fb5d        0x9 obj/APSTATS.o
+ .rodata._.str.844
+                0x00d1fb66        0x9 obj/APSTATS.o
+ .rodata._.str.845
+                0x00d1fb6f        0x9 obj/APSTATS.o
+ .rodata._.str.846
+                0x00d1fb78        0x9 obj/APSTATS.o
+ .rodata._.str.847
+                0x00d1fb81        0x9 obj/APSTATS.o
+ .rodata._.str.848
+                0x00d1fb8a        0x9 obj/APSTATS.o
+ .rodata._.str.849
+                0x00d1fb93        0x9 obj/APSTATS.o
+ .rodata._.str.850
+                0x00d1fb9c       0x36 obj/APSTATS.o
+ .rodata._.str.851
+                0x00d1fbd2       0x33 obj/APSTATS.o
+ .rodata._.str.852
+                0x00d1fc05       0x2e obj/APSTATS.o
+ .rodata._.str.853
+                0x00d1fc33       0x35 obj/APSTATS.o
+ .rodata._.str.854
+                0x00d1fc68       0x1d obj/APSTATS.o
+ .rodata._.str.855
+                0x00d1fc85        0xc obj/APSTATS.o
+ .rodata._.str.856
+                0x00d1fc91       0x10 obj/APSTATS.o
+ .rodata._.str.857
+                0x00d1fca1       0x15 obj/APSTATS.o
+ .rodata._.str.860
+                0x00d1fcb6       0x19 obj/APSTATS.o
+ .rodata._.str.861
+                0x00d1fccf       0x1e obj/APSTATS.o
+ .rodata._.str.858
+                0x00d1fced       0x1f obj/APSTATS.o
+ .rodata._npf_vpprintf
+                0x00d1fd0c      0x102 obj/APSTATS.o
+ .rodata.libload
+                0x00d1fe0e       0x22 obj/crt0.o
+
+.init_array     0x00d1fe30        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(.preinit_array)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x00d1fe30        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x00d1fe30                        ___data_low = .
+
+.data           0x00d1fe30      0x9e5
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00d1fe30       0x10 obj/APSTATS.o
+ .data._g_compression_dict
+                0x00d1fe40       0x4b obj/APSTATS.o
+                0x00d1fe40                _g_compression_dict
+ .data._search_terms
+                0x00d1fe8b      0x98a obj/APSTATS.o
+                0x00d1fe8b                _search_terms
+ *(.data1)
+                0x00d20815                        ___runprgm_reloc_start = .
+ *(.runprgm.reloc)
+                0x00d20815                        ___runprgm_reloc_end = .
+                0x00d20815                        ___data_high = .
+                0x000009e5                        ___data_len = (___data_high - ___data_low)
+                0x00d052c6                        . = BSSHEAP_LOW
+                0x00d052c6                        ___bss_low = .
+
+.bss            0x00d052c6       0x1f
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss._dark_mode
+                0x00d052c6        0x1 obj/APSTATS.o
+                0x00d052c6                _dark_mode
+ .bss._stealth_mode
+                0x00d052c7        0x1 obj/APSTATS.o
+                0x00d052c7                _stealth_mode
+ .bss._g_db     0x00d052c8       0x14 obj/APSTATS.o
+                0x00d052c8                _g_db
+ .bss._pc_cnt.0
+                0x00d052dc        0x3 obj/APSTATS.o
+ .bss._pc_cnt.1
+                0x00d052df        0x3 obj/APSTATS.o
+ .bss._pc_cnt.2
+                0x00d052e2        0x3 obj/APSTATS.o
+ *(COMMON)
+                0x00d052e5                        ___bss_high = .
+                0x0000001f                        ___bss_len = (___bss_high - ___bss_low)
+                0x00000001                        ASSERT ((. <= BSSHEAP_HIGH), Error: BSS exceed BSSHEAP_HIGH limit)
+                0x00d052e5                        ___heap_low = .
+                0x00d13fd8                        . = BSSHEAP_HIGH
+                0x00d13fd8                        ___heap_high = .
+
+.runprgm
+ *(.runprgm.reloc)
+
+.debug_info
+ *(.debug_info .debug_info.*)
+
+.debug_abbrev
+ *(.debug_abbrev .debug_abbrev.*)
+
+.debug_line
+ *(.debug_line .debug_line.*)
+
+.debug_line_str
+ *(.debug_line_str .debug_line_str.*)
+
+.debug_str
+ *(.debug_str .debug_str.*)
+
+.debug_str_offsets
+ *(.debug_str_offsets .debug_str_offsets.*)
+
+.debug_addr
+ *(.debug_addr .debug_addr.*)
+
+.debug_aranges
+ *(.debug_aranges .debug_aranges.*)
+
+.debug_ranges
+ *(.debug_ranges .debug_ranges.*)
+
+.debug_rnglists
+ *(.debug_rnglists .debug_rnglists.*)
+
+.debug_loc
+ *(.debug_loc .debug_loc.*)
+
+.debug_loclists
+ *(.debug_loclists .debug_loclists.*)
+
+.debug_frame
+ *(.debug_frame .debug_frame.*)
+
+.debug_macro
+ *(.debug_macro .debug_macro.*)
+
+.debug_macinfo
+ *(.debug_macinfo .debug_macinfo.*)
+
+.debug_names
+ *(.debug_names .debug_names.*)
+
+.debug_pubnames
+ *(.debug_pubnames .debug_pubnames.*)
+
+.debug_pubtypes
+ *(.debug_pubtypes .debug_pubtypes.*)
+
+.debug_types
+ *(.debug_types .debug_types.*)
+
+.debug_sup
+ *(.debug_sup .debug_sup.*)
+
+.debug_cu_index
+ *(.debug_cu_index .debug_cu_index.*)
+
+.debug_tu_index
+ *(.debug_tu_index .debug_tu_index.*)
+
+.gdb_index
+ *(.gdb_index)
+
+.debug_gdb_scripts
+ *(.debug_gdb_scripts)
+
+.debug_abbrev.dwo
+ *(.debug_abbrev.dwo .debug_abbrev.dwo.*)
+
+.debug_info.dwo
+ *(.debug_info.dwo .debug_info.dwo.*)
+
+.debug_line.dwo
+ *(.debug_line.dwo .debug_line.dwo.*)
+
+.debug_loclists.dwo
+ *(.debug_loclists.dwo .debug_loclists.dwo.*)
+
+.debug_macro.dwo
+ *(.debug_macro.dwo .debug_macro.dwo.*)
+
+.debug_rnglists.dwo
+ *(.debug_rnglists.dwo .debug_rnglists.dwo.*)
+
+.debug_str.dwo
+ *(.debug_str.dwo .debug_str.dwo.*)
+
+.debug_str_offsets.dwo
+ *(.debug_str_offsets.dwo .debug_str_offsets.dwo.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+/DISCARD/
+ *(.comment)
+ *(.note*)
+                [!provide]                        PROVIDE (___runprgm_reloc_len = (___runprgm_reloc_end - ___runprgm_reloc_start))
+LOAD obj/APSTATS.o
+LOAD obj/crt0.o
+START GROUP
+LOAD /Users/rohankosur/CEdev/lib/libc/allocator_standard.a
+LOAD /Users/rohankosur/CEdev/lib/crt/libcrt.a
+LOAD /Users/rohankosur/CEdev/lib/ce/libce.a
+LOAD /Users/rohankosur/CEdev/lib/softfloat/libsoftfloat.a
+LOAD /Users/rohankosur/CEdev/lib/libc/libc_os.a
+LOAD /Users/rohankosur/CEdev/lib/libcxx/libcxx.a
+END GROUP
+OUTPUT(bin/APSTATS.obj elf32-z80)

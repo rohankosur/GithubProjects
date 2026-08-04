@@ -1,0 +1,213 @@
+{
+  "units": [
+    {
+      "id": 1,
+      "name": "Unit 1: Univariate Data and Distributions",
+      "subtopics": [
+        {
+          "name": "Descriptive Statistics",
+          "trigger": "\"Five-number summary\", \"Center and spread\", \"Identify outliers\"",
+          "context": "Hospital length of stay (2021 FRQ Q1)",
+          "pathway": "[STAT] -> CALC -> 1:1-Var Stats L1",
+          "tech_specs": "Scroll to view Min, Q1, Med, Q3, Max. Use Q1-1.5(IQR) for lower outlier bounds."
+        },
+        {
+          "name": "Normal Curve Area",
+          "trigger": "\"Normally distributed\", \"Probability that\", \"Proportion between\"",
+          "context": "Cleo Gold Necklaces (2023 FRQ Q6)",
+          "pathway": "[2nd] -> 2:normalcdf(lower, upper, mean, stddev)",
+          "tech_specs": "Utilize -1E99 for negative infinity bounds and 1E99 for positive infinity."
+        },
+        {
+          "name": "Inverse Normal",
+          "trigger": "\"Percentile\", \"Top 10 percent\", \"Cutoff value\"",
+          "context": "Assessing Normality (2011 FRQ Q1)",
+          "pathway": "[2nd] -> 3:invNorm(area, mean, stddev, tail)",
+          "tech_specs": "Area must be input as a decimal. Select LEFT tail for standard percentiles."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Unit 2: Bivariate Data and Regression",
+      "subtopics": [
+        {
+          "name": "Linear Regression",
+          "trigger": "\"Equation of the line\", \"Interpret slope\", \"Correlation\"",
+          "context": "Tule Elk scatterplot (2023 FRQ Q5)",
+          "pathway": "[STAT] -> CALC -> 8:LinReg(a+bx) L1, L2",
+          "tech_specs": "DiagnosticOn must be active via [CATALOG] to output r and r^2 coefficients."
+        },
+        {
+          "name": "Residual Analysis",
+          "trigger": "\"Calculate the residual\", \"Largest residual\", \"Predicted\"",
+          "context": "Acne treatments (2022 FRQ Q1)",
+          "pathway": "[2nd] -> Plot1 -> Scatter -> Ylist: RESID",
+          "tech_specs": "RESID list is dynamically generated in [2nd] after a LinReg calculation."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Unit 3 & 4: Data Collection and Probability Models",
+      "subtopics": [
+        {
+          "name": "Random Assignment",
+          "trigger": "\"Simulation\", \"Random chance explanation\"",
+          "context": "Dark vs White Chocolate (2022 FRQ Q5)",
+          "pathway": "[MATH] -> PROB -> 5:randInt(lower, upper, n)",
+          "tech_specs": "Generates n integers. Requires manual filtering for repeated values if sampling without replacement."
+        },
+        {
+          "name": "Binomial Probability",
+          "trigger": "\"Exactly X successes\", \"Fixed probability\", \"Independent trials\"",
+          "context": "Gift card lottery (2021 FRQ Q3)",
+          "pathway": "[2nd] -> A:binompdf(n, p, x)",
+          "tech_specs": "Calculates exact probability. Use B:binomcdf for \"at most\" cumulative probabilities."
+        },
+        {
+          "name": "Expected Value",
+          "trigger": "\"Expected count\", \"Long-run average payout\"",
+          "context": "Bath Fizzys (2023 FRQ Q3)",
+          "pathway": "[STAT] -> CALC -> 1:1-Var Stats L1, L2",
+          "tech_specs": "Input discrete outcomes in L1 and corresponding probabilities in L2. Output is mean(x)."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Unit 6 & 7: Inferential Testing for Proportions and Means",
+      "subtopics": [
+        {
+          "name": "1-Sample Prop Test",
+          "trigger": "\"Is there convincing evidence\", \"True proportion differs\"",
+          "context": "Application usage at high school (2025 FRQ Q4)",
+          "pathway": "[STAT] -> TESTS -> 5:1-PropZTest",
+          "tech_specs": "Requires null p0, integer successes x, and total n. Output yields z statistic and p-value."
+        },
+        {
+          "name": "2-Sample Prop Test",
+          "trigger": "\"Difference in proportions\", \"Comparing two groups\"",
+          "context": "2 proportion z test (2024 FRQ Q1)",
+          "pathway": "[STAT] -> TESTS -> 6:2-PropZTest",
+          "tech_specs": "Both x1 and x2 must be whole integers. Verify large counts condition for both samples."
+        },
+        {
+          "name": "1-Sample T-Interval",
+          "trigger": "\"Estimate the true mean\", \"Confidence interval\"",
+          "context": "House prices with pools (2010 FRQ Q6)",
+          "pathway": "[STAT] -> TESTS -> 8:TInterval",
+          "tech_specs": "Input raw data via Data or summary statistics (mean, sx, n) via Stats."
+        },
+        {
+          "name": "2-Sample T-Test",
+          "trigger": "\"Mean difference\", \"Independent random samples\"",
+          "context": "Two-sample t test (2011 FRQ Q4)",
+          "pathway": "[STAT] -> TESTS -> 4:2-SampTTest",
+          "tech_specs": "Ensure Pooled is set to No. Calculates unpooled fractional degrees of freedom."
+        },
+        {
+          "name": "Matched Pairs T-Test",
+          "trigger": "\"Difference between paired observations\", \"Before and after\"",
+          "context": "OMEGA-3 Supplement (2023 FRQ Q4)",
+          "pathway": "[STAT] -> EDIT (L3 = L1 - L2) -> TESTS -> 2:T-Test",
+          "tech_specs": "A matched pairs test is mechanically a 1-Sample T-Test conducted on the differences."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Unit 8 & 9: Chi-Square and Regression Inference",
+      "subtopics": [
+        {
+          "name": "Chi-Square GOF",
+          "trigger": "\"Matches theoretical distribution\", \"Observed vs Expected\"",
+          "context": "Goodness of Fit Test (Unit 8.2)",
+          "pathway": "[STAT] -> TESTS -> D:chi^2GOF-Test",
+          "tech_specs": "Observed in L1, Expected in L2. Must manually input df=(categories-1)."
+        },
+        {
+          "name": "Chi-Square Independence",
+          "trigger": "\"Association\", \"Independence\", \"Two-way table\"",
+          "context": "Baseball Cards (2024 FRQ Q5)",
+          "pathway": "[2nd][x^-1] (MATRIX) -> Edit [A] -> [STAT] -> TESTS -> C:chi^2-Test",
+          "tech_specs": "Calculator automatically generates expected counts matrix in [B]."
+        },
+        {
+          "name": "LinReg T-Test",
+          "trigger": "\"True slope\", \"Linear relationship exists\"",
+          "context": "Tule Elk slope p-value (2023 FRQ Q5)",
+          "pathway": "[STAT] -> TESTS -> E:LinRegTTest",
+          "tech_specs": "Explanatory in L1, Response in L2. Set beta and rho alternative hypothesis parameters."
+        }
+    },
+    {
+      "id": 10,
+      "name": "Unit 10: Final Prep for a 5",
+      "subtopics": [
+        {
+          "name": "Interpretation Templates",
+          "trigger": "\"Interpret the slope\", \"Standard deviation of residuals\", \"r-squared\"",
+          "context": "Securing full credit on FRQs (All Years)",
+          "pathway": "[READ CAREFULLY]",
+          "tech_specs": "Slope: For every 1 unit increase in x, y is predicted to increase by [slope]. r^2: [r^2]% of the variation in y is explained by the LSRL on x. S: The typical distance between observed y and predicted y is [s]."
+        },
+        {
+          "name": "Experimental Design",
+          "trigger": "\"Confounding\", \"Blocking vs Stratifying\", \"Blinding\"",
+          "context": "Acne Treatment Study (2022 FRQ Q1)",
+          "pathway": "[Logic Check]",
+          "tech_specs": "Blocking: Grouping similar experimental units. Stratifying: Grouping similar population units for sampling. Blinding: Subject doesn't know treatment. Double Blind: Researcher also doesn't know."
+        },
+        {
+          "name": "Probability Shortcuts",
+          "trigger": "\"At least one\", \"Conditional probability\", \"Independence\"",
+          "context": "Multiple Choice and FRQ Unit 4",
+          "pathway": "1 - P(none)",
+          "tech_specs": "P(at least 1) = 1 - P(none)^n. For Independence: P(A|B) must equal P(A). Mutually Exclusive: P(A and B) = 0."
+        },
+        {
+          "name": "Confidence vs Level",
+          "trigger": "\"Confidence level interpretation\", \"95% confident\"",
+          "context": "House prices (2010 FRQ Q6)",
+          "pathway": "[Precision check]",
+          "tech_specs": "Interval: We are 95% confident the true [parameter] is between [low] and [high]. Level: If we took many samples, 95% of resulting intervals would capture the true [parameter]."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Unit 11: FRQ Action Verbs (Grading Rubric)",
+      "subtopics": [
+        {
+          "name": "Identify vs Determine",
+          "trigger": "\"Identify\", \"Indicate\", \"Determine\"",
+          "context": "Standard exam instruction (Low-Stakes)",
+          "pathway": "Direct Answer",
+          "tech_specs": "Identify: Just name it (e.g., 'Mean=12.5'). Determine: Arrive at answer through logic. Show the numbers you used, but no paragraph justification needed."
+        },
+        {
+          "name": "Describe vs Construct",
+          "trigger": "\"Describe\", \"SOCS\", \"Construct\", \"Draw\"",
+          "context": "Univariate graphs (Mid-Stakes)",
+          "pathway": "SOCS / Visual",
+          "tech_specs": "Describe: Provide detail using SOCS + Context. Construct: Create a visual model (e.g., Boxplot) consistent with data and the 1.5*IQR whisker rule."
+        },
+        {
+          "name": "Explain vs Justify",
+          "trigger": "\"Explain\", \"Justify\", \"Because\"",
+          "context": "Inference and Probability (High-Stakes)",
+          "pathway": "Cause + Effect",
+          "tech_specs": "Explain: Use 'Because' to show cause/effect. Justify: Defend a claim by linking specific data to a specific statistical rule."
+        },
+        {
+          "name": "Compare vs Verify",
+          "trigger": "\"Compare\", \"Higher than\", \"Verify\"",
+          "context": "Group comparisons (High-Stakes)",
+          "pathway": "Linking Rule",
+          "tech_specs": "Compare: Mention both groups in one sentence using words like 'higher' or 'similar'. Verify: Confirm conditions via math (e.g., show np >= 10 calculation)."
+        }
+      ]
+    }
+  ]
+}

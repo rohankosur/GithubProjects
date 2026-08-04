@@ -1,0 +1,5384 @@
+{
+  "system_config": {
+    "appvar_max_bytes": 200000,
+    "compression_dictionary": [
+      "distribution",
+      "population",
+      "probability",
+      "standard deviation",
+      "proportion",
+      "hypothesis",
+      "confidence interval",
+      "significant",
+      "random",
+      "sample",
+      "variable",
+      "expected",
+      "observed",
+      "residual",
+      "correlation",
+      "regression",
+      "independent",
+      "statistic",
+      "parameter",
+      "evidence",
+      "mean",
+      "median",
+      "normal",
+      "condition"
+    ]
+  },
+  "database": {
+    "0": {
+      "branch_name": "Data Exploration (0.x)",
+      "nodes": [
+        {
+          "id": "0.0",
+          "keywords": [
+            "what",
+            "rule",
+            "calculate",
+            "upper",
+            "outside",
+            "data",
+            "point",
+            "outliers",
+            "bound",
+            "outlier",
+            "this",
+            "lower",
+            "determining",
+            "boxplot"
+          ],
+          "title": "What is the rule for determining outliers in a boxplot?",
+          "C": "N/A",
+          "F": "Calculate IQR = Q3 - Q1. Lower Bound: Q1 - 1.5(IQR). Upper Bound: Q3 + 1.5(IQR). Any data point outside this is an outlier.",
+          "K": "N/A",
+          "I": "Calculate IQR = Q3 - Q1. Lower Bound: Q1 - 1.5(IQR). Upper Bound: Q3 + 1.5(IQR). Any data point outside this is an outlier.",
+          "T": "N/A"
+        },
+        {
+          "id": "0.1",
+          "keywords": [
+            "should",
+            "over",
+            "outliers",
+            "median",
+            "mean",
+            "when",
+            "skewed",
+            "with",
+            "distributions",
+            "measure",
+            "center",
+            "resistant",
+            "those"
+          ],
+          "title": "When should you use Median over Mean?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Use Median for skewed distributions or those with outliers, as it is a resistant measure of center.",
+          "T": "N/A"
+        },
+        {
+          "id": "0.2",
+          "keywords": [
+            "what",
+            "rule",
+            "normal",
+            "proportions",
+            "distributions",
+            "within",
+            "empirical",
+            "sigma"
+          ],
+          "title": "What are the proportions of the Empirical Rule?",
+          "C": "N/A",
+          "F": "For Normal distributions: 68% within 1sigma, 95% within 2sigma, 99.7% within 3sigma.",
+          "K": "For Normal distributions: 68% within 1sigma, 95% within 2sigma, 99.7% within 3sigma.",
+          "I": "For Normal distributions: 68% within 1sigma, 95% within 2sigma, 99.7% within 3sigma.",
+          "T": "N/A"
+        },
+        {
+          "id": "0.3",
+          "keywords": [
+            "calculate",
+            "mnemonic",
+            "actual",
+            "predicted",
+            "residual"
+          ],
+          "title": "How do you calculate a residual?",
+          "C": "N/A",
+          "F": "Residual = Actual (y) - Predicted (y-hat). Mnemonic: RAP (Residual = Actual - Predicted).",
+          "K": "N/A",
+          "I": "Residual = Actual (y) - Predicted (y-hat). Mnemonic: RAP (Residual = Actual - Predicted).",
+          "T": "N/A"
+        },
+        {
+          "id": "0.4",
+          "keywords": [
+            "what",
+            "percent",
+            "variable",
+            "response",
+            "relating",
+            "variation",
+            "determination",
+            "accounted",
+            "model",
+            "explanatory",
+            "coefficient",
+            "interpretation",
+            "linear"
+          ],
+          "title": "What is the interpretation of r^2 (Coefficient of Determination)?",
+          "C": "N/A",
+          "F": "\"r^2 percent of the variation in the [response variable] is accounted for by the linear model relating it to the [explanatory variable].\"",
+          "K": "N/A",
+          "I": "\"r^2 percent of the variation in the [response variable] is accounted for by the linear model relating it to the [explanatory variable].\"",
+          "T": "N/A"
+        },
+        {
+          "id": "0.5",
+          "keywords": [
+            "what",
+            "intercept",
+            "point",
+            "slope",
+            "significantly",
+            "regression",
+            "that",
+            "influential",
+            "removed",
+            "definition",
+            "correlation",
+            "coefficient",
+            "changes"
+          ],
+          "title": "What is the definition of an influential point in regression?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "A point that, if removed, significantly changes the slope, y-intercept, or correlation coefficient.",
+          "T": "N/A"
+        },
+        {
+          "id": "0.6",
+          "keywords": [
+            "what",
+            "quantitative",
+            "data",
+            "histogram",
+            "bins",
+            "charts",
+            "chart",
+            "t",
+            "histograms",
+            "touch",
+            "difference",
+            "between",
+            "categorical",
+            "bars"
+          ],
+          "title": "What is the difference between a histogram and a bar chart?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Histograms are for quantitative data (bins touch); bar charts are for categorical data (bars don't touch).",
+          "T": "N/A"
+        },
+        {
+          "id": "0.7",
+          "keywords": [
+            "what",
+            "error",
+            "from",
+            "residuals",
+            "standard",
+            "using",
+            "lsrl",
+            "vertical",
+            "does",
+            "distance",
+            "when",
+            "predict",
+            "represent",
+            "size",
+            "deviation",
+            "prediction",
+            "typical"
+          ],
+          "title": "What does the standard deviation of residuals (s) represent?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The typical size of the \"error\" (prediction vertical distance) when using the LSRL to predict Y from X.",
+          "T": "N/A"
+        },
+        {
+          "id": "0.8",
+          "keywords": [
+            "what",
+            "happens",
+            "both",
+            "standard",
+            "every",
+            "mean",
+            "that",
+            "multiply",
+            "constant",
+            "multiplied",
+            "deviation",
+            "value"
+          ],
+          "title": "What happens to the mean and standard deviation if you multiply every value by a constant?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Both the mean and standard deviation are multiplied by that constant.",
+          "T": "N/A"
+        },
+        {
+          "id": "0.9",
+          "keywords": [
+            "what",
+            "intercept",
+            "context",
+            "outside",
+            "data",
+            "practical",
+            "range",
+            "predicted",
+            "when",
+            "meaning",
+            "interpretation",
+            "often",
+            "zero",
+            "value"
+          ],
+          "title": "What is the y-intercept interpretation in context?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The predicted value of Y when X is zero. Often has no practical meaning if X=0 is outside the data range.",
+          "T": "N/A"
+        },
+        {
+          "id": "0.10",
+          "keywords": [
+            "what",
+            "from",
+            "standard",
+            "lsrl",
+            "slope",
+            "sample",
+            "estimates",
+            "varies",
+            "error",
+            "much"
+          ],
+          "title": "What is the \"Standard Error of the Slope\"?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "It estimates how much the slope of the LSRL varies from sample to sample.",
+          "T": "N/A"
+        },
+        {
+          "id": "0.11",
+          "keywords": [
+            "what",
+            "specific",
+            "frequency",
+            "total",
+            "column",
+            "cell",
+            "relative",
+            "divided",
+            "conditional",
+            "value"
+          ],
+          "title": "What is conditional relative frequency?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The value in a specific cell divided by the total of its row or column.",
+          "T": "N/A"
+        },
+        {
+          "id": "0.12",
+          "keywords": [
+            "what",
+            "quantitative",
+            "variables",
+            "side",
+            "comparing",
+            "used",
+            "distributions",
+            "back",
+            "stemplot"
+          ],
+          "title": "What is back-to-back stemplot used for?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Comparing the distributions of two quantitative variables side-by-side.",
+          "T": "N/A"
+        }
+      ]
+    },
+    "1": {
+      "branch_name": "Sampling & Design (1.x)",
+      "nodes": [
+        {
+          "id": "1.0",
+          "keywords": [
+            "what",
+            "bias",
+            "group",
+            "sample",
+            "every",
+            "equal",
+            "selected",
+            "goal",
+            "chance",
+            "give",
+            "random",
+            "being",
+            "size",
+            "reducing",
+            "simple"
+          ],
+          "title": "What is the goal of a Simple Random Sample (SRS)?",
+          "C": "N/A",
+          "F": "To give every group of size n an equal chance of being selected, reducing bias.",
+          "K": "N/A",
+          "I": "To give every group of size n an equal chance of being selected, reducing bias.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.1",
+          "keywords": [
+            "cluster",
+            "into",
+            "groups",
+            "heterogeneous",
+            "define",
+            "population",
+            "clusters",
+            "splitting",
+            "sampling",
+            "randomly",
+            "entire",
+            "selecting"
+          ],
+          "title": "Define Cluster Sampling.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Splitting the population into heterogeneous groups (clusters) and randomly selecting entire clusters.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.2",
+          "keywords": [
+            "effects",
+            "experiments",
+            "groups",
+            "equivalent",
+            "confounding",
+            "create",
+            "variables",
+            "used",
+            "roughly",
+            "balance",
+            "random",
+            "assignment"
+          ],
+          "title": "Why is random assignment used in experiments?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "To create roughly equivalent groups and balance the effects of confounding variables.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.3",
+          "keywords": [
+            "what",
+            "group",
+            "purpose",
+            "treatment",
+            "comparison",
+            "baseline",
+            "effect",
+            "real",
+            "provide",
+            "control"
+          ],
+          "title": "What is the purpose of a control group?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "To provide a baseline for comparison to see if the treatment has a real effect.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.4",
+          "keywords": [
+            "bias",
+            "members",
+            "some",
+            "sample",
+            "define",
+            "process",
+            "population",
+            "left",
+            "when",
+            "choosing",
+            "undercoverage"
+          ],
+          "title": "Define Undercoverage bias.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "When some members of the population are left out of the process of choosing the sample.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.5",
+          "keywords": [
+            "bias",
+            "answers",
+            "response",
+            "define",
+            "interviewer",
+            "behavior",
+            "when",
+            "wording",
+            "influences",
+            "question"
+          ],
+          "title": "Define Response bias.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "When the behavior of the interviewer or the wording of the question influences the answers.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.6",
+          "keywords": [
+            "what",
+            "similar",
+            "variable",
+            "experiment",
+            "together",
+            "experimental",
+            "response",
+            "blocking",
+            "reduce",
+            "grouping",
+            "units",
+            "variability"
+          ],
+          "title": "What is \"Blocking\" in an experiment?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Grouping similar experimental units together to reduce the variability of the response variable.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.7",
+          "keywords": [
+            "from",
+            "were",
+            "population",
+            "that",
+            "when",
+            "results",
+            "selected",
+            "randomly",
+            "generalize",
+            "individuals"
+          ],
+          "title": "When can you generalize results to a population?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "When the individuals were randomly selected from that population.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.8",
+          "keywords": [
+            "what",
+            "from",
+            "actual",
+            "sample",
+            "sampling",
+            "which",
+            "frame",
+            "list",
+            "drawn",
+            "individuals"
+          ],
+          "title": "What is a sampling frame?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The actual list of individuals from which the sample is drawn.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.9",
+          "keywords": [
+            "what",
+            "random",
+            "from",
+            "point",
+            "every",
+            "individual",
+            "after",
+            "systematic",
+            "starting",
+            "sampling",
+            "list",
+            "selecting"
+          ],
+          "title": "What is systematic random sampling?",
+          "C": "N/A",
+          "F": "Selecting every kth individual from a list after a random starting point.",
+          "K": "N/A",
+          "I": "Selecting every kth individual from a list after a random starting point.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.10",
+          "keywords": [
+            "large",
+            "bias",
+            "voluntary",
+            "more",
+            "result",
+            "gives",
+            "response",
+            "biased",
+            "sample",
+            "just",
+            "does",
+            "reduce",
+            "like",
+            "method",
+            "sampling",
+            "size",
+            "precise"
+          ],
+          "title": "Does a large sample size reduce bias?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "No. If the sampling method is biased (like voluntary response), a large sample just gives a more \"precise\" biased result.",
+          "T": "N/A"
+        },
+        {
+          "id": "1.11",
+          "keywords": [
+            "what",
+            "factor",
+            "dosage",
+            "variable",
+            "experiment",
+            "explanatory"
+          ],
+          "title": "What is a factor in an experiment?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The explanatory variable (e.g., dosage).",
+          "T": "N/A"
+        },
+        {
+          "id": "1.12",
+          "keywords": [
+            "what",
+            "scope",
+            "apply",
+            "results",
+            "claimed",
+            "inference",
+            "limit",
+            "whether",
+            "cause",
+            "effect"
+          ],
+          "title": "What is the scope of inference?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The limit of who the results apply to and whether cause-and-effect can be claimed.",
+          "T": "N/A"
+        }
+      ]
+    },
+    "2": {
+      "branch_name": "Probability & Random Variables (2.x)",
+      "nodes": [
+        {
+          "id": "2.0",
+          "keywords": [
+            "cannot",
+            "p",
+            "define",
+            "happen",
+            "that",
+            "disjoint",
+            "exclusive",
+            "mutually",
+            "same",
+            "time",
+            "events"
+          ],
+          "title": "Define Mutually Exclusive (Disjoint) events.",
+          "C": "N/A",
+          "F": "Events that cannot happen at the same time. P(A AND B) = 0.",
+          "K": "N/A",
+          "I": "Events that cannot happen at the same time. P(A AND B) = 0.",
+          "T": "N/A"
+        },
+        {
+          "id": "2.1",
+          "keywords": [
+            "what",
+            "test",
+            "p",
+            "independence",
+            "cdot"
+          ],
+          "title": "What is the test for Independence?",
+          "C": "N/A",
+          "F": "P(A|B) = P(A) or P(A AND B) = P(A) * P(B).",
+          "K": "N/A",
+          "I": "P(A|B) = P(A) or P(A AND B) = P(A) * P(B).",
+          "T": "N/A"
+        },
+        {
+          "id": "2.2",
+          "keywords": [
+            "what",
+            "rule",
+            "p",
+            "complement"
+          ],
+          "title": "What is the Complement Rule?",
+          "C": "N/A",
+          "F": "P(A^c) = 1 - P(A).",
+          "K": "N/A",
+          "I": "P(A^c) = 1 - P(A).",
+          "T": "N/A"
+        },
+        {
+          "id": "2.3",
+          "keywords": [
+            "random",
+            "variable",
+            "expected",
+            "p",
+            "define",
+            "long",
+            "cdot",
+            "average",
+            "mu_x",
+            "value"
+          ],
+          "title": "Define Expected Value (E(X) or mux).",
+          "C": "N/A",
+          "F": "The long-run average of a random variable: Sum [x * P(x)].",
+          "K": "N/A",
+          "I": "The long-run average of a random variable: Sum [x * P(x)].",
+          "T": "N/A"
+        },
+        {
+          "id": "2.4",
+          "keywords": [
+            "calculate",
+            "probability",
+            "p",
+            "exactly",
+            "successes",
+            "calculator",
+            "binomial",
+            "binompdf"
+          ],
+          "title": "How do you calculate Binomial probability for exactly k successes?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "Use binompdf(n, p, k) on the calculator.",
+          "I": "Use binompdf(n, p, k) on the calculator.",
+          "T": "N/A"
+        },
+        {
+          "id": "2.5",
+          "keywords": [
+            "what",
+            "geometric",
+            "probability",
+            "until",
+            "first",
+            "binary",
+            "independent",
+            "conditions",
+            "distribution",
+            "success",
+            "same",
+            "bits",
+            "trials"
+          ],
+          "title": "What are the BITS conditions for a Geometric distribution?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Binary, Independent, Trials until first success, Same probability.",
+          "T": "N/A"
+        },
+        {
+          "id": "2.6",
+          "keywords": [
+            "calculate",
+            "standard",
+            "binomial",
+            "p",
+            "distribution",
+            "deviation",
+            "sqrt",
+            "sigma"
+          ],
+          "title": "How do you calculate the standard deviation of a Binomial distribution?",
+          "C": "N/A",
+          "F": "sigma = sqrt(np(1-p)).",
+          "K": "N/A",
+          "I": "sigma = sqrt(np(1-p)).",
+          "T": "N/A"
+        },
+        {
+          "id": "2.7",
+          "keywords": [
+            "random",
+            "always",
+            "variables",
+            "independent",
+            "variance",
+            "variances",
+            "find",
+            "combine",
+            "sigma"
+          ],
+          "title": "If you combine two independent random variables X and Y, how do you find the new variance?",
+          "C": "N/A",
+          "F": "sigma^2X +/- Y = sigma^2X + sigma^2Y. (Variances always add).",
+          "K": "N/A",
+          "I": "sigma^2X +/- Y = sigma^2X + sigma^2Y. (Variances always add).",
+          "T": "N/A"
+        },
+        {
+          "id": "2.8",
+          "keywords": [
+            "what",
+            "probabilities",
+            "must",
+            "exactly",
+            "distribution",
+            "discrete"
+          ],
+          "title": "What must the sum of probabilities in a discrete distribution be?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Exactly 1.",
+          "T": "N/A"
+        },
+        {
+          "id": "2.9",
+          "keywords": [
+            "variable",
+            "numerical",
+            "define",
+            "outcome",
+            "process",
+            "random"
+          ],
+          "title": "Define a \"Random Variable\".",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "A numerical outcome of a random process.",
+          "T": "N/A"
+        },
+        {
+          "id": "2.10",
+          "keywords": [
+            "point",
+            "matter",
+            "p",
+            "does",
+            "distribution",
+            "single",
+            "continuous"
+          ],
+          "title": "Does P(X = k) matter in a continuous distribution?",
+          "C": "N/A",
+          "F": "No, P(X = k) = 0 for any single point in a continuous distribution.",
+          "K": "N/A",
+          "I": "No, P(X = k) = 0 for any single point in a continuous distribution.",
+          "T": "N/A"
+        },
+        {
+          "id": "2.11",
+          "keywords": [
+            "what",
+            "without",
+            "independent",
+            "independence",
+            "condition",
+            "when",
+            "replacement",
+            "sampling",
+            "assume",
+            "trials"
+          ],
+          "title": "What is the \"10% Condition\" for independence when sampling?",
+          "C": "N/A",
+          "F": "When sampling without replacement, you can assume trials are independent if n <= 0.10N.",
+          "K": "N/A",
+          "I": "When sampling without replacement, you can assume trials are independent if n <= 0.10N.",
+          "T": "N/A"
+        },
+        {
+          "id": "2.12",
+          "keywords": [
+            "p",
+            "independent",
+            "find",
+            "events",
+            "cdot"
+          ],
+          "title": "How do you find P(A AND B) for independent events?",
+          "C": "N/A",
+          "F": "P(A) * P(B).",
+          "K": "N/A",
+          "I": "P(A) * P(B).",
+          "T": "N/A"
+        }
+      ]
+    },
+    "3": {
+      "branch_name": "Inference (3.x)",
+      "nodes": [
+        {
+          "id": "3.0",
+          "keywords": [
+            "what",
+            "from",
+            "distribution",
+            "statistic",
+            "samples",
+            "same",
+            "possible",
+            "sampling",
+            "values",
+            "size"
+          ],
+          "title": "What is a Sampling Distribution?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The distribution of all possible values of a statistic from all possible samples of the same size.",
+          "T": "N/A"
+        },
+        {
+          "id": "3.1",
+          "keywords": [
+            "what",
+            "ours",
+            "assuming",
+            "probability",
+            "getting",
+            "result",
+            "p",
+            "true",
+            "hypothesis",
+            "extreme",
+            "null",
+            "value"
+          ],
+          "title": "What is a P-value?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The probability of getting a result as extreme as ours, assuming the null hypothesis is true.",
+          "T": "N/A"
+        },
+        {
+          "id": "3.2",
+          "keywords": [
+            "what",
+            "evidence",
+            "reject",
+            "enough",
+            "alpha",
+            "p",
+            "there",
+            "fail",
+            "conclusion",
+            "value"
+          ],
+          "title": "If P-value > alpha, what is the conclusion?",
+          "C": "N/A",
+          "F": "Fail to reject H0; there is not enough evidence for Ha.",
+          "K": "N/A",
+          "I": "Fail to reject H0; there is not enough evidence for Ha.",
+          "T": "N/A"
+        },
+        {
+          "id": "3.3",
+          "keywords": [
+            "what",
+            "reject",
+            "negative",
+            "failing",
+            "false",
+            "when",
+            "actually",
+            "error",
+            "type"
+          ],
+          "title": "What is a Type II Error?",
+          "C": "N/A",
+          "F": "Failing to reject H0 when it is actually false (False Negative).",
+          "K": "N/A",
+          "I": "Failing to reject H0 when it is actually false (False Negative).",
+          "T": "N/A"
+        },
+        {
+          "id": "3.4",
+          "keywords": [
+            "context",
+            "captures",
+            "from",
+            "confident",
+            "high",
+            "interval",
+            "interpret",
+            "that",
+            "true",
+            "confidence",
+            "parameter"
+          ],
+          "title": "How do you interpret a Confidence Interval?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "\"We are 95% confident that the interval from [Low] to [High] captures the true [parameter in context].\"",
+          "T": "N/A"
+        },
+        {
+          "id": "3.5",
+          "keywords": [
+            "what",
+            "happens",
+            "narrower",
+            "sample",
+            "interval",
+            "gets",
+            "increases",
+            "size"
+          ],
+          "title": "What happens to an interval as sample size increases?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The interval gets narrower.",
+          "T": "N/A"
+        },
+        {
+          "id": "3.6",
+          "keywords": [
+            "what",
+            "large",
+            "three",
+            "independent",
+            "normal",
+            "conditions",
+            "inference",
+            "random",
+            "counts"
+          ],
+          "title": "What are the three conditions for inference?",
+          "C": "N/A",
+          "F": "Random, Independent (10%), and Normal (Large Counts or n >= 30).",
+          "K": "Random, Independent (10%), and Normal (Large Counts or n >= 30).",
+          "I": "Random, Independent (10%), and Normal (Large Counts or n >= 30).",
+          "T": "N/A"
+        },
+        {
+          "id": "3.7",
+          "keywords": [
+            "what",
+            "test",
+            "probability",
+            "significance",
+            "false",
+            "correctly",
+            "power",
+            "hypothesis",
+            "rejecting",
+            "null"
+          ],
+          "title": "What is \"Power\" in a significance test?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The probability of correctly rejecting a false null hypothesis.",
+          "T": "N/A"
+        },
+        {
+          "id": "3.8",
+          "keywords": [
+            "what",
+            "test",
+            "square",
+            "variables",
+            "population",
+            "there",
+            "hypothesis",
+            "independence",
+            "between",
+            "association",
+            "null"
+          ],
+          "title": "What is the null hypothesis for a Chi-Square Test of Independence?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "There is no association between the two variables in the population.",
+          "T": "N/A"
+        },
+        {
+          "id": "3.9",
+          "keywords": [
+            "calculate",
+            "rows",
+            "degrees",
+            "square",
+            "freedom",
+            "cols",
+            "df",
+            "independence"
+          ],
+          "title": "How do you calculate degrees of freedom for Chi-Square Independence?",
+          "C": "N/A",
+          "F": "df = (rows - 1)(cols - 1).",
+          "K": "N/A",
+          "I": "df = (rows - 1)(cols - 1).",
+          "T": "N/A"
+        },
+        {
+          "id": "3.10",
+          "keywords": [
+            "what",
+            "point",
+            "sample",
+            "p",
+            "estimate",
+            "used",
+            "population",
+            "statistic",
+            "parameter"
+          ],
+          "title": "What is the point estimate?",
+          "C": "N/A",
+          "F": "The sample statistic (x-bar or p-hat) used to estimate the population parameter.",
+          "K": "N/A",
+          "I": "The sample statistic (x-bar or p-hat) used to estimate the population parameter.",
+          "T": "N/A"
+        },
+        {
+          "id": "3.11",
+          "keywords": [
+            "what",
+            "test",
+            "slope",
+            "relationship",
+            "hypothesis",
+            "beta",
+            "linear",
+            "null"
+          ],
+          "title": "What is the null hypothesis for a test of slope?",
+          "C": "N/A",
+          "F": "H0: beta = 0 (No linear relationship).",
+          "K": "N/A",
+          "I": "H0: beta = 0 (No linear relationship).",
+          "T": "N/A"
+        },
+        {
+          "id": "3.12",
+          "keywords": [
+            "calculate",
+            "total",
+            "expected",
+            "square",
+            "text",
+            "column",
+            "grand",
+            "cdot",
+            "counts"
+          ],
+          "title": "How do you calculate \"Expected Counts\" for Chi-Square?",
+          "C": "N/A",
+          "F": "(Row Total * Column Total) / Grand Total.",
+          "K": "N/A",
+          "I": "(Row Total * Column Total) / Grand Total.",
+          "T": "N/A"
+        }
+      ]
+    },
+    "4": {
+      "branch_name": "Sampling Distributions & Foundations of Inference (3.1.x)",
+      "nodes": [
+        {
+          "id": "4.0",
+          "keywords": [
+            "what",
+            "describes",
+            "sample",
+            "p",
+            "that",
+            "statistic",
+            "number"
+          ],
+          "title": "What is a statistic?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "A number that describes a sample (e.g., x-bar or p-hat).",
+          "T": "N/A"
+        },
+        {
+          "id": "4.1",
+          "keywords": [
+            "whose",
+            "define",
+            "estimator",
+            "mean",
+            "estimated",
+            "statistic",
+            "distribution",
+            "true",
+            "unbiased",
+            "sampling",
+            "being",
+            "parameter",
+            "equal"
+          ],
+          "title": "Define an unbiased estimator.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "A statistic whose sampling distribution's mean is equal to the true parameter being estimated.",
+          "T": "N/A"
+        },
+        {
+          "id": "4.2",
+          "keywords": [
+            "what",
+            "standard",
+            "p",
+            "formula",
+            "deviation",
+            "sqrt"
+          ],
+          "title": "What is the formula for the standard deviation of p-hat?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "sqrt( p(1-p) / n ).",
+          "T": "N/A"
+        },
+        {
+          "id": "4.3",
+          "keywords": [
+            "what",
+            "standard",
+            "formula",
+            "deviation",
+            "sqrt",
+            "sigma"
+          ],
+          "title": "What is the formula for the standard deviation of x-bar?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "sigma / sqrt(n).",
+          "T": "N/A"
+        },
+        {
+          "id": "4.4",
+          "keywords": [
+            "what",
+            "shape",
+            "central",
+            "theorem",
+            "approximately",
+            "does",
+            "normal",
+            "population",
+            "distribution",
+            "regardless",
+            "limit",
+            "sampling",
+            "about"
+          ],
+          "title": "What does the Central Limit Theorem (CLT) say about the shape of x-bar?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "If n >= 30, the sampling distribution of x-bar is approximately Normal regardless of the population shape.",
+          "I": "If n >= 30, the sampling distribution of x-bar is approximately Normal regardless of the population shape.",
+          "T": "N/A"
+        },
+        {
+          "id": "4.5",
+          "keywords": [
+            "what",
+            "sigma1",
+            "standard",
+            "bar1",
+            "sample",
+            "bar2",
+            "mean",
+            "sigma2",
+            "sd",
+            "difference",
+            "means",
+            "deviation",
+            "sqrt"
+          ],
+          "title": "What are the mean and standard deviation of the difference in sample means (x-bar1 - x-bar2)?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Mean = mu1 - mu2; SD = sqrt( (sigma1^2 / n1) + (sigma2^2 / n2) ).",
+          "T": "N/A"
+        },
+        {
+          "id": "4.6",
+          "keywords": [
+            "approximately",
+            "large",
+            "p",
+            "normal",
+            "condition",
+            "distribution",
+            "check",
+            "counts"
+          ],
+          "title": "How do you check if the distribution of p-hat is approximately Normal?",
+          "C": "Check the Large Counts condition: np >= 10 and n(1-p) >= 10.",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Check the Large Counts condition: np >= 10 and n(1-p) >= 10.",
+          "T": "N/A"
+        },
+        {
+          "id": "4.7",
+          "keywords": [
+            "what",
+            "capture",
+            "specific",
+            "from",
+            "area",
+            "standard",
+            "t",
+            "must",
+            "mean",
+            "critical",
+            "confidence",
+            "move",
+            "errors",
+            "z",
+            "number",
+            "value"
+          ],
+          "title": "What is a \"Critical Value\" (z* or t*)?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The number of standard errors you must move from the mean to capture a specific area of confidence.",
+          "T": "N/A"
+        }
+      ]
+    },
+    "5": {
+      "branch_name": "Inference for Categorical Data - Proportions (3.2.x)",
+      "nodes": [
+        {
+          "id": "5.0",
+          "keywords": [
+            "what",
+            "sample",
+            "interval",
+            "p",
+            "proportion",
+            "z",
+            "formula",
+            "sqrt"
+          ],
+          "title": "What is the formula for a one-sample z-interval for a proportion?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "p-hat +/- z* * sqrt( p-hat(1 - p-hat) / n ).",
+          "T": "N/A"
+        },
+        {
+          "id": "5.1",
+          "keywords": [
+            "specific",
+            "error",
+            "needed",
+            "given",
+            "margin",
+            "sample",
+            "z",
+            "p",
+            "estimate",
+            "proportion",
+            "find",
+            "size"
+          ],
+          "title": "How do you find the sample size n needed for a specific margin of error (ME) for a proportion?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "n = (z* / ME)^2 * p*(1-p*). Use p*=0.5 if no estimate is given.",
+          "T": "N/A"
+        },
+        {
+          "id": "5.2",
+          "keywords": [
+            "what",
+            "note",
+            "test",
+            "denominator",
+            "p",
+            "statistic",
+            "proportion",
+            "z",
+            "formula",
+            "zero",
+            "sqrt"
+          ],
+          "title": "What is the Test Statistic formula for a one-proportion z-test?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "z = (p-hat - p-zero) / sqrt( p-zero(1 - p-zero) / n ). Note: Use p-zero in the denominator.",
+          "T": "N/A"
+        },
+        {
+          "id": "5.3",
+          "keywords": [
+            "what",
+            "assumes",
+            "test",
+            "from",
+            "both",
+            "combining",
+            "groups",
+            "pooling",
+            "sizes",
+            "sample",
+            "p",
+            "combined",
+            "successes",
+            "when",
+            "single",
+            "proportion",
+            "z"
+          ],
+          "title": "What is \"Pooling\" in a two-proportion z-test?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Combining successes and sample sizes from both groups to get a single p-hat-combined when H0 assumes p1 = p2.",
+          "T": "N/A"
+        },
+        {
+          "id": "5.4",
+          "keywords": [
+            "what",
+            "large",
+            "p",
+            "interval",
+            "must",
+            "condition",
+            "hat2",
+            "proportion",
+            "z",
+            "hat1",
+            "counts"
+          ],
+          "title": "What is the Large Counts condition for a two-proportion z-interval?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "n1p-hat1, n1(1-p-hat1), n2p-hat2, and n2(1-p-hat2) must all be >= 10.",
+          "T": "N/A"
+        }
+      ]
+    },
+    "6": {
+      "branch_name": "Inference for Quantitative Data - Means (3.3.x)",
+      "nodes": [
+        {
+          "id": "6.0",
+          "keywords": [
+            "extra",
+            "instead",
+            "adds",
+            "t",
+            "estimate",
+            "which",
+            "normal",
+            "variability",
+            "distribution",
+            "means",
+            "because",
+            "sigma"
+          ],
+          "title": "Why use the T-distribution instead of Normal for means?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Because we use s-x to estimate sigma, which adds extra variability.",
+          "T": "N/A"
+        },
+        {
+          "id": "6.1",
+          "keywords": [
+            "what",
+            "sample",
+            "interval",
+            "t",
+            "mean",
+            "formula",
+            "sqrt"
+          ],
+          "title": "What is the formula for a one-sample t-interval for a mean?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "x-bar +/- t* * (s-x / sqrt(n)).",
+          "T": "N/A"
+        },
+        {
+          "id": "6.2",
+          "keywords": [
+            "what",
+            "large",
+            "graph",
+            "data",
+            "strong",
+            "skew",
+            "sample",
+            "outliers",
+            "condition",
+            "normal",
+            "population",
+            "shows",
+            "means"
+          ],
+          "title": "What is the \"Normal/Large Sample\" condition for means?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "Population is Normal, OR n >= 30, OR a graph of sample data shows no strong skew/outliers.",
+          "I": "Population is Normal, OR n >= 30, OR a graph of sample data shows no strong skew/outliers.",
+          "T": "N/A"
+        },
+        {
+          "id": "6.3",
+          "keywords": [
+            "what",
+            "differences",
+            "from",
+            "data",
+            "list",
+            "t",
+            "matched",
+            "analyze",
+            "measurements",
+            "when",
+            "comes",
+            "same",
+            "person",
+            "twins",
+            "single",
+            "procedure",
+            "pairs"
+          ],
+          "title": "What is a \"Matched Pairs\" t-procedure?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "When data comes from two measurements on the same person or twins; you analyze the single list of differences.",
+          "T": "N/A"
+        },
+        {
+          "id": "6.4",
+          "keywords": [
+            "what",
+            "test",
+            "sample",
+            "t",
+            "hypothesis",
+            "null"
+          ],
+          "title": "What is the Null Hypothesis for a two-sample t-test?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "H0: mu1 = mu2 (or mu1 - mu2 = 0).",
+          "T": "N/A"
+        },
+        {
+          "id": "6.5",
+          "keywords": [
+            "interval",
+            "there",
+            "confidence",
+            "difference",
+            "evidence",
+            "because",
+            "zero"
+          ],
+          "title": "If the 95% confidence interval for mu1-mu2 is (2, 10), is there evidence of a difference?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Yes, because zero is not in the interval.",
+          "T": "N/A"
+        },
+        {
+          "id": "6.6",
+          "keywords": [
+            "usually",
+            "pooled",
+            "modern",
+            "tests",
+            "t",
+            "statistics",
+            "exam",
+            "pool",
+            "means",
+            "recommend"
+          ],
+          "title": "Do we usually pool for t-tests?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "No, the AP exam and modern statistics recommend \"Pooled: No\" for means.",
+          "T": "N/A"
+        },
+        {
+          "id": "6.7",
+          "keywords": [
+            "from",
+            "standard",
+            "typical",
+            "diff",
+            "interpret",
+            "matched",
+            "individual",
+            "mean",
+            "difference",
+            "differences",
+            "deviation",
+            "distance",
+            "pairs"
+          ],
+          "title": "How do you interpret the standard deviation of the differences (s-diff) in matched pairs?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The typical distance of an individual difference from the mean difference.",
+          "T": "N/A"
+        }
+      ]
+    },
+    "7": {
+      "branch_name": "Chi-Square Tests (3.4.x)",
+      "nodes": [
+        {
+          "id": "7.0",
+          "keywords": [
+            "what",
+            "three",
+            "homogeneity",
+            "square",
+            "tests",
+            "goodness",
+            "independence",
+            "types"
+          ],
+          "title": "What are the three types of Chi-Square tests?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Goodness of Fit, Homogeneity, and Independence.",
+          "T": "N/A"
+        },
+        {
+          "id": "7.1",
+          "keywords": [
+            "what",
+            "test",
+            "variable",
+            "multiple",
+            "homogeneity",
+            "populations",
+            "groups",
+            "does",
+            "distribution",
+            "across",
+            "same",
+            "categorical"
+          ],
+          "title": "What does a Test for Homogeneity test?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "If the distribution of one categorical variable is the same across multiple populations/groups.",
+          "T": "N/A"
+        },
+        {
+          "id": "7.2",
+          "keywords": [
+            "what",
+            "test",
+            "expected",
+            "square",
+            "statistic",
+            "observed",
+            "formula"
+          ],
+          "title": "What is the Chi-Square test statistic formula?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Chi-sq = Sum of [ (Observed - Expected)^2 / Expected ].",
+          "T": "N/A"
+        },
+        {
+          "id": "7.3",
+          "keywords": [
+            "what",
+            "shape",
+            "right",
+            "always",
+            "square",
+            "skewed",
+            "distribution",
+            "positive"
+          ],
+          "title": "What is the shape of a Chi-Square distribution?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Right-skewed and always positive.",
+          "T": "N/A"
+        },
+        {
+          "id": "7.4",
+          "keywords": [
+            "what",
+            "large",
+            "expected",
+            "square",
+            "independent",
+            "conditions",
+            "random",
+            "counts"
+          ],
+          "title": "What are the conditions for Chi-Square?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Random, Independent (10%), and Large Counts (all Expected counts >= 5).",
+          "T": "N/A"
+        },
+        {
+          "id": "7.5",
+          "keywords": [
+            "what",
+            "contribution",
+            "square",
+            "category",
+            "most",
+            "cell",
+            "deviated",
+            "single",
+            "shows",
+            "which",
+            "value"
+          ],
+          "title": "What is a \"Cell Contribution\" in Chi-Square?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The value (Obs-Exp)^2 / Exp for a single cell; it shows which category deviated most.",
+          "T": "N/A"
+        },
+        {
+          "id": "7.6",
+          "keywords": [
+            "calculate",
+            "test",
+            "expected",
+            "them",
+            "automatically",
+            "does",
+            "matrix",
+            "after",
+            "independence",
+            "counts",
+            "stores"
+          ],
+          "title": "How does the TI-84 calculate Expected counts for Independence?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "It does it automatically and stores them in Matrix after you run the test.",
+          "I": "It does it automatically and stores them in Matrix after you run the test.",
+          "T": "N/A"
+        },
+        {
+          "id": "7.7",
+          "keywords": [
+            "what",
+            "different",
+            "square",
+            "tests",
+            "alternative",
+            "correct",
+            "least",
+            "hypothesis",
+            "proportion",
+            "ha",
+            "null"
+          ],
+          "title": "What is the Alternative Hypothesis for all Chi-Square tests?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Ha: The null is not correct (at least one proportion is different).",
+          "T": "N/A"
+        }
+      ]
+    },
+    "8": {
+      "branch_name": "Inference for Slopes (3.5.x)",
+      "nodes": [
+        {
+          "id": "8.0",
+          "keywords": [
+            "what",
+            "alpha",
+            "slope",
+            "regression",
+            "population",
+            "true",
+            "where",
+            "epsilon",
+            "betax",
+            "equation",
+            "beta"
+          ],
+          "title": "What is the population regression equation?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "y = alpha + betax + epsilon (where beta is the true slope).",
+          "T": "N/A"
+        },
+        {
+          "id": "8.1",
+          "keywords": [
+            "what",
+            "implies",
+            "test",
+            "slope",
+            "relationship",
+            "hypothesis",
+            "beta",
+            "linear",
+            "null"
+          ],
+          "title": "What is the Null Hypothesis for a slope test?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "H0: beta = 0 (implies no linear relationship).",
+          "T": "N/A"
+        },
+        {
+          "id": "8.2",
+          "keywords": [
+            "degrees",
+            "freedom",
+            "regression",
+            "inference",
+            "df",
+            "find"
+          ],
+          "title": "How do you find degrees of freedom for regression inference?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "df = n - 2.",
+          "T": "N/A"
+        },
+        {
+          "id": "8.3",
+          "keywords": [
+            "what",
+            "slope",
+            "t",
+            "interval",
+            "formula"
+          ],
+          "title": "What is the formula for the t-interval for slope?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "b +/- t * (SE-b).",
+          "T": "N/A"
+        },
+        {
+          "id": "8.4",
+          "keywords": [
+            "probability",
+            "residuals",
+            "normality",
+            "histogram",
+            "plot",
+            "condition",
+            "normal",
+            "check",
+            "look"
+          ],
+          "title": "How do you check the \"Normal Residuals\" condition?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "Look at a histogram or Normal Probability Plot of the residuals and check for normality.",
+          "I": "Look at a histogram or Normal Probability Plot of the residuals and check for normality.",
+          "T": "N/A"
+        },
+        {
+          "id": "8.5",
+          "keywords": [
+            "variable",
+            "slope",
+            "sample",
+            "output",
+            "explanatory",
+            "where",
+            "coefficient",
+            "table",
+            "located",
+            "computer"
+          ],
+          "title": "Where is the sample slope located in a computer output table?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The coefficient in the row for the explanatory (X) variable.",
+          "T": "N/A"
+        },
+        {
+          "id": "8.6",
+          "keywords": [
+            "what",
+            "residuals",
+            "standard",
+            "regression",
+            "does",
+            "output",
+            "represent",
+            "deviation",
+            "computer"
+          ],
+          "title": "What does \"S\" represent in regression computer output?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The standard deviation of the residuals.",
+          "T": "N/A"
+        },
+        {
+          "id": "8.7",
+          "keywords": [
+            "what",
+            "slope",
+            "linregttest",
+            "inference",
+            "calculator",
+            "command"
+          ],
+          "title": "What is the calculator command for slope inference?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "LinRegTTest.",
+          "I": "LinRegTTest.",
+          "T": "N/A"
+        }
+      ]
+    },
+    "9": {
+      "branch_name": "(4.x)",
+      "nodes": [
+        {
+          "id": "9.0",
+          "keywords": [
+            "tight",
+            "bias",
+            "precision",
+            "clusters",
+            "difference",
+            "between",
+            "center",
+            "about",
+            "variability",
+            "accuracy",
+            "hitting"
+          ],
+          "title": "Difference between \"accuracy\" and \"precision\"?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Accuracy is about bias (hitting the center); precision is about variability (tight clusters).",
+          "T": "N/A"
+        },
+        {
+          "id": "9.1",
+          "keywords": [
+            "what",
+            "switch",
+            "happens",
+            "nothing",
+            "remains",
+            "same"
+          ],
+          "title": "If you switch X and Y, what happens to r?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Nothing. r remains the same.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.2",
+          "keywords": [
+            "what",
+            "studied",
+            "variable",
+            "lurking",
+            "variables",
+            "relationship",
+            "that",
+            "between",
+            "being",
+            "influences",
+            "unmeasured"
+          ],
+          "title": "What is a \"Lurking Variable\"?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "An unmeasured variable that influences the relationship between the variables being studied.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.3",
+          "keywords": [
+            "what",
+            "test",
+            "p",
+            "power",
+            "error",
+            "type"
+          ],
+          "title": "What is the \"Power\" of a test?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "1 - P(Type II Error).",
+          "T": "N/A"
+        },
+        {
+          "id": "9.4",
+          "keywords": [
+            "size",
+            "probability",
+            "alpha",
+            "sample",
+            "decrease",
+            "increase",
+            "effect",
+            "error",
+            "type"
+          ],
+          "title": "How do you decrease the probability of a Type II Error?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Increase sample size, increase alpha, or increase the effect size.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.5",
+          "keywords": [
+            "what",
+            "axis",
+            "area",
+            "total",
+            "always",
+            "above",
+            "that",
+            "curve",
+            "density"
+          ],
+          "title": "What is a \"Density Curve\"?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "A curve that is always on or above the axis and has a total area of 1.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.6",
+          "keywords": [
+            "what",
+            "phenomenon",
+            "random",
+            "term",
+            "predictable",
+            "uncertain",
+            "short",
+            "distribution",
+            "long",
+            "outcomes",
+            "have"
+          ],
+          "title": "What is a \"Random Phenomenon\"?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Outcomes are uncertain in the short term but have a predictable distribution in the long run.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.7",
+          "keywords": [
+            "what",
+            "event",
+            "sure",
+            "probability"
+          ],
+          "title": "What is the probability of a sure event?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "1.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.8",
+          "keywords": [
+            "what",
+            "sample",
+            "interest",
+            "estimate",
+            "used",
+            "statistic",
+            "parameter",
+            "value"
+          ],
+          "title": "What is a \"Statistic of Interest\"?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The sample value used to estimate the parameter.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.9",
+          "keywords": [
+            "what",
+            "standard",
+            "mean",
+            "error",
+            "sqrt"
+          ],
+          "title": "What is \"Standard Error of the Mean\"?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "s-x / sqrt(n).",
+          "T": "N/A"
+        },
+        {
+          "id": "9.10",
+          "keywords": [
+            "what",
+            "probability",
+            "significance",
+            "alpha",
+            "type",
+            "also",
+            "threshold",
+            "error",
+            "rejecting",
+            "level",
+            "null"
+          ],
+          "title": "What is the significance level (alpha)?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The threshold for rejecting the null; also the probability of a Type I error.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.11",
+          "keywords": [
+            "what",
+            "from",
+            "different",
+            "sided",
+            "does",
+            "mean",
+            "value",
+            "ha",
+            "testing",
+            "parameter",
+            "equal"
+          ],
+          "title": "What does \"Two-Sided\" Ha mean?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "Testing if a parameter is \"different from\" (not equal to) a value.",
+          "I": "Testing if a parameter is \"different from\" (not equal to) a value.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.12",
+          "keywords": [
+            "groups",
+            "experiment",
+            "randomize",
+            "variables",
+            "confounding",
+            "treatment",
+            "across",
+            "balance"
+          ],
+          "title": "Why do we randomize in an experiment?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "To balance confounding variables across treatment groups.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.13",
+          "keywords": [
+            "small",
+            "group",
+            "replication",
+            "just",
+            "ensure",
+            "fluke",
+            "results",
+            "consistent"
+          ],
+          "title": "Why use replication?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "To ensure the results are consistent and not just a fluke in one small group.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.14",
+          "keywords": [
+            "small",
+            "probability",
+            "result",
+            "usually",
+            "significant",
+            "very",
+            "chance",
+            "occurring",
+            "definition",
+            "statistically"
+          ],
+          "title": "Definition of \"Statistically Significant\"?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The probability of the result occurring by chance is very small (usually < 0.05).",
+          "T": "N/A"
+        },
+        {
+          "id": "9.15",
+          "keywords": [
+            "what",
+            "large",
+            "sample",
+            "mean",
+            "population",
+            "true",
+            "numbers",
+            "approaches",
+            "increases"
+          ],
+          "title": "What is the Law of Large Numbers?",
+          "C": "N/A",
+          "F": "As n increases, the sample mean approaches the true population mean.",
+          "K": "N/A",
+          "I": "As n increases, the sample mean approaches the true population mean.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.16",
+          "keywords": [
+            "identify",
+            "strongly",
+            "outliers",
+            "median",
+            "affected",
+            "statistic",
+            "resistant"
+          ],
+          "title": "How do you identify a 'Resistant' statistic?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "It is not strongly affected by outliers (Median, IQR).",
+          "T": "N/A"
+        },
+        {
+          "id": "9.17",
+          "keywords": [
+            "context",
+            "define",
+            "does",
+            "concluding",
+            "exists",
+            "when",
+            "effect",
+            "actually",
+            "error",
+            "type"
+          ],
+          "title": "Define Type I Error in context.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Concluding the effect exists when it actually does not.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.18",
+          "keywords": [
+            "does",
+            "affect",
+            "power",
+            "increasing",
+            "increases",
+            "variability",
+            "reducing"
+          ],
+          "title": "How does increasing n affect Power?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "It increases Power by reducing variability.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.19",
+          "keywords": [
+            "what",
+            "unit",
+            "collection",
+            "applied",
+            "experimental",
+            "which",
+            "treatments",
+            "smallest",
+            "individuals"
+          ],
+          "title": "What is an 'Experimental Unit'?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The smallest collection of individuals to which treatments are applied.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.20",
+          "keywords": [
+            "what",
+            "outside",
+            "data",
+            "unreliable",
+            "range",
+            "extrapolation",
+            "observed",
+            "values",
+            "predicting"
+          ],
+          "title": "What is 'Extrapolation'?",
+          "C": "N/A",
+          "F": "Predicting y for x-values outside the observed data range; it is unreliable.",
+          "K": "N/A",
+          "I": "Predicting y for x-values outside the observed data range; it is unreliable.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.21",
+          "keywords": [
+            "what",
+            "test",
+            "specified",
+            "square",
+            "correct",
+            "distribution",
+            "null"
+          ],
+          "title": "What is the null for a Chi-Square GOF test?",
+          "C": "N/A",
+          "F": "H0: The specified distribution is correct.",
+          "K": "N/A",
+          "I": "H0: The specified distribution is correct.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.22",
+          "keywords": [
+            "what",
+            "variable",
+            "lurking",
+            "affects",
+            "included",
+            "variables",
+            "relationship",
+            "that",
+            "between",
+            "study"
+          ],
+          "title": "What is a 'Lurking Variable'?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "A variable not included in the study that affects the relationship between variables.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.23",
+          "keywords": [
+            "calculate",
+            "degrees",
+            "square",
+            "freedom",
+            "df",
+            "independence"
+          ],
+          "title": "How do you calculate degrees of freedom for Chi-Square Independence?",
+          "C": "N/A",
+          "F": "df = (r-1)(c-1).",
+          "K": "N/A",
+          "I": "df = (r-1)(c-1).",
+          "T": "N/A"
+        },
+        {
+          "id": "9.24",
+          "keywords": [
+            "significance",
+            "alpha",
+            "define",
+            "threshold",
+            "rejecting",
+            "level"
+          ],
+          "title": "Define 'Alpha' (alpha).",
+          "C": "N/A",
+          "F": "The significance level; the threshold for rejecting H0.",
+          "K": "N/A",
+          "I": "The significance level; the threshold for rejecting H0.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.25",
+          "keywords": [
+            "what",
+            "result",
+            "expected",
+            "margin",
+            "sample",
+            "true",
+            "maximum",
+            "difference",
+            "between",
+            "error",
+            "parameter"
+          ],
+          "title": "What is the 'Margin of Error'?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The maximum expected difference between the sample result and the true parameter.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.26",
+          "keywords": [
+            "what",
+            "from",
+            "sample",
+            "sampling",
+            "which",
+            "frame",
+            "list",
+            "drawn",
+            "individuals"
+          ],
+          "title": "What is a 'Sampling Frame'?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The list of individuals from which a sample is drawn.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.27",
+          "keywords": [
+            "treated",
+            "subjects",
+            "placebo",
+            "define",
+            "improvement",
+            "showing",
+            "simply",
+            "they",
+            "believe",
+            "effect",
+            "being",
+            "because"
+          ],
+          "title": "Define 'Placebo Effect'.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Subjects showing improvement simply because they believe they are being treated.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.28",
+          "keywords": [
+            "from",
+            "into",
+            "stratified",
+            "sample",
+            "define",
+            "each",
+            "population",
+            "random",
+            "strata",
+            "taking",
+            "dividing"
+          ],
+          "title": "Define 'Stratified Random Sample'.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Dividing the population into strata and taking an SRS from each.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.29",
+          "keywords": [
+            "what",
+            "bias",
+            "chosen",
+            "reached",
+            "response",
+            "cannot",
+            "people",
+            "survey",
+            "when",
+            "refuse",
+            "participate"
+          ],
+          "title": "What is 'Non-response Bias'?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "When people chosen for a survey cannot be reached or refuse to participate.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.30",
+          "keywords": [
+            "right",
+            "tail",
+            "define",
+            "median",
+            "mean",
+            "skewed"
+          ],
+          "title": "Define 'Skewed Right'.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Tail is on the right; Mean > Median.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.31",
+          "keywords": [
+            "what",
+            "rule",
+            "falls",
+            "data",
+            "normal",
+            "distribution",
+            "within",
+            "empirical"
+          ],
+          "title": "What is the 'Empirical Rule'?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "68-95-99.7% of data in a Normal distribution falls within 1, 2, and 3 SDs.",
+          "I": "68-95-99.7% of data in a Normal distribution falls within 1, 2, and 3 SDs.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.32",
+          "keywords": [
+            "actual",
+            "define",
+            "predicted",
+            "residual",
+            "value"
+          ],
+          "title": "Define 'Residual'.",
+          "C": "N/A",
+          "F": "Actual value - Predicted value (y - y-hat).",
+          "K": "N/A",
+          "I": "Actual value - Predicted value (y - y-hat).",
+          "T": "N/A"
+        },
+        {
+          "id": "9.33",
+          "keywords": [
+            "what",
+            "result",
+            "significant",
+            "alpha",
+            "p",
+            "chance",
+            "unlikely",
+            "occurred",
+            "statistically",
+            "extreme",
+            "have"
+          ],
+          "title": "What is 'Statistically Significant'?",
+          "C": "N/A",
+          "F": "A result so extreme it is unlikely to have occurred by chance (P < alpha).",
+          "K": "N/A",
+          "I": "A result so extreme it is unlikely to have occurred by chance (P < alpha).",
+          "T": "N/A"
+        },
+        {
+          "id": "9.34",
+          "keywords": [
+            "what",
+            "both",
+            "either",
+            "union",
+            "occurring",
+            "events",
+            "event"
+          ],
+          "title": "What is the 'Union' of two events?",
+          "C": "N/A",
+          "F": "Either event or both occurring (A or B).",
+          "K": "N/A",
+          "I": "Either event or both occurring (A or B).",
+          "T": "N/A"
+        },
+        {
+          "id": "9.35",
+          "keywords": [
+            "probability",
+            "given",
+            "define",
+            "another",
+            "that",
+            "already",
+            "occurring",
+            "occurred",
+            "conditional",
+            "event"
+          ],
+          "title": "Define 'Conditional Probability'.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The probability of an event occurring given that another has already occurred.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.36",
+          "keywords": [
+            "what",
+            "geometric",
+            "probability",
+            "until",
+            "first",
+            "binary",
+            "independent",
+            "success",
+            "constant",
+            "bits",
+            "trials",
+            "setting"
+          ],
+          "title": "What is a 'Geometric Setting'?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "BITS: Binary, Independent, Trials until first success, Success probability constant.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.37",
+          "keywords": [
+            "what",
+            "central",
+            "theorem",
+            "mean",
+            "normal",
+            "distribution",
+            "limit",
+            "sampling",
+            "increases",
+            "becomes"
+          ],
+          "title": "What is the 'Central Limit Theorem'?",
+          "C": "N/A",
+          "F": "The sampling distribution of the mean becomes Normal as n increases (n >= 30).",
+          "K": "The sampling distribution of the mean becomes Normal as n increases (n >= 30).",
+          "I": "The sampling distribution of the mean becomes Normal as n increases (n >= 30).",
+          "T": "N/A"
+        },
+        {
+          "id": "9.38",
+          "keywords": [
+            "what",
+            "from",
+            "point",
+            "sample",
+            "estimate",
+            "used",
+            "population",
+            "single",
+            "parameter",
+            "value"
+          ],
+          "title": "What is 'Point Estimate'?",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "A single value from a sample used to estimate a population parameter.",
+          "T": "N/A"
+        },
+        {
+          "id": "9.39",
+          "keywords": [
+            "what",
+            "test",
+            "effects",
+            "both",
+            "sided",
+            "looking",
+            "directions",
+            "where",
+            "equal"
+          ],
+          "title": "What is a 'Two-sided Test'?",
+          "C": "N/A",
+          "F": "A test where Ha is \"not equal to,\" looking for effects in both directions.",
+          "K": "A test where Ha is \"not equal to,\" looking for effects in both directions.",
+          "I": "A test where Ha is \"not equal to,\" looking for effects in both directions.",
+          "T": "N/A"
+        }
+      ]
+    },
+    "10": {
+      "branch_name": "A-Z Statistical Dictionary",
+      "nodes": [
+        {
+          "id": "10.0",
+          "keywords": [
+            "bias",
+            "certain",
+            "favors",
+            "over",
+            "define",
+            "others",
+            "that",
+            "systematic",
+            "outcomes",
+            "error",
+            "study"
+          ],
+          "title": "Define 'Bias'.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Systematic error in a study that favors certain outcomes over others.",
+          "T": "N/A"
+        },
+        {
+          "id": "10.1",
+          "keywords": [
+            "outside",
+            "data",
+            "regression",
+            "define",
+            "range",
+            "extrapolation",
+            "predict",
+            "values",
+            "using",
+            "line"
+          ],
+          "title": "Define 'Extrapolation'.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Using a regression line to predict values far outside the range of the data.",
+          "T": "N/A"
+        },
+        {
+          "id": "10.2",
+          "keywords": [
+            "margin",
+            "sample",
+            "define",
+            "range",
+            "above",
+            "contains",
+            "that",
+            "below",
+            "statistic",
+            "likely",
+            "true",
+            "values",
+            "error",
+            "parameter"
+          ],
+          "title": "Define 'Margin of Error'.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The range of values above and below a sample statistic that likely contains the true parameter.",
+          "T": "N/A"
+        },
+        {
+          "id": "10.3",
+          "keywords": [
+            "assuming",
+            "obtaining",
+            "probability",
+            "p",
+            "define",
+            "least",
+            "results",
+            "true",
+            "observed",
+            "extreme",
+            "null",
+            "value"
+          ],
+          "title": "Define 'P-value'.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The probability of obtaining results at least as extreme as the observed results, assuming the null is true.",
+          "T": "N/A"
+        },
+        {
+          "id": "10.4",
+          "keywords": [
+            "large",
+            "significant",
+            "define",
+            "would",
+            "rarely",
+            "that",
+            "when",
+            "chance",
+            "observed",
+            "effect",
+            "statistically",
+            "occur"
+          ],
+          "title": "Define 'Statistically Significant'.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "When an observed effect is so large that it would rarely occur by chance.",
+          "T": "N/A"
+        },
+        {
+          "id": "10.5",
+          "keywords": [
+            "null",
+            "reject",
+            "negative",
+            "failing",
+            "define",
+            "false",
+            "when",
+            "hypothesis",
+            "actually",
+            "error",
+            "type"
+          ],
+          "title": "Define 'Type II Error'.",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "Failing to reject the null hypothesis when it is actually false (False Negative).",
+          "T": "N/A"
+        }
+      ]
+    },
+    "11": {
+      "branch_name": "Official Formula Sheet (OCR)",
+      "nodes": [
+        {
+          "id": "11.0",
+          "keywords": [
+            "formulas",
+            "standard",
+            "lsrl",
+            "slope",
+            "frac",
+            "statistics",
+            "descriptive",
+            "mean",
+            "variance",
+            "deviation",
+            "sqrt"
+          ],
+          "title": "Descriptive Statistics Formulas",
+          "C": "N/A",
+          "F": "Mean: x-bar = (Sum xi)/(n). Variance: s^2 = \\fracSum (xi - x-bar)^2n-1. Standard Deviation: s = sqrt(s^2). LSRL: y-hat = a + bx. Slope: b = r (sy)/(sx). Y-int: a = y-bar - bx-bar.",
+          "K": "N/A",
+          "I": "Mean: x-bar = (Sum xi)/(n). Variance: s^2 = \\fracSum (xi - x-bar)^2n-1. Standard Deviation: s = sqrt(s^2). LSRL: y-hat = a + bx. Slope: b = r (sy)/(sx). Y-int: a = y-bar - bx-bar.",
+          "T": "N/A"
+        },
+        {
+          "id": "11.1",
+          "keywords": [
+            "geometric",
+            "probability",
+            "formulas",
+            "binom",
+            "p",
+            "mean",
+            "sd",
+            "distribution",
+            "binomial",
+            "sqrt",
+            "sigma"
+          ],
+          "title": "Probability Distribution Formulas (Binomial/Geometric)",
+          "C": "N/A",
+          "F": "Binomial: P(X=k) = \\binomnk p^k (1-p)^n-k. Mean: mu = np. SD: sigma = sqrt(np(1-p)). Geometric: P(X=k) = (1-p)^k-1 p. Mean: mu = 1/p. SD: sigma = sqrt(1-p)/p.",
+          "K": "Binomial: P(X=k) = \\binomnk p^k (1-p)^n-k. Mean: mu = np. SD: sigma = sqrt(np(1-p)). Geometric: P(X=k) = (1-p)^k-1 p. Mean: mu = 1/p. SD: sigma = sqrt(1-p)/p.",
+          "I": "Binomial: P(X=k) = \\binomnk p^k (1-p)^n-k. Mean: mu = np. SD: sigma = sqrt(np(1-p)). Geometric: P(X=k) = (1-p)^k-1 p. Mean: mu = 1/p. SD: sigma = sqrt(1-p)/p.",
+          "T": "N/A"
+        }
+      ]
+    },
+    "12": {
+      "branch_name": "Calculator Tutorials",
+      "nodes": [
+        {
+          "id": "T.0",
+          "keywords": [
+            "area",
+            "probability",
+            "normal"
+          ],
+          "title": "Normal Area (Probability)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > VARS > 2:normalcdf(lower, upper, mean, SD). Use -1E99 for negative infinity bounds and 1E99 for positive infinity."
+        },
+        {
+          "id": "T.1",
+          "keywords": [
+            "cutoff",
+            "percentile",
+            "normal"
+          ],
+          "title": "Normal Percentile (Cutoff)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > VARS > 3:invNorm(area, mean, SD). Area must be entered as a decimal representing the left tail."
+        },
+        {
+          "id": "T.2",
+          "keywords": [
+            "exact",
+            "binomial",
+            "probability"
+          ],
+          "title": "Binomial Probability (Exact)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > VARS > A:binompdf(n, p, x). Use when the prompt asks for exactly X successes."
+        },
+        {
+          "id": "T.3",
+          "keywords": [
+            "binomial",
+            "most",
+            "cumulative"
+          ],
+          "title": "Binomial Cumulative (At Most)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > VARS > B:binomcdf(n, p, x). Calculates the sum of probabilities from 0 up to X."
+        },
+        {
+          "id": "T.4",
+          "keywords": [
+            "success",
+            "geometric",
+            "probability",
+            "first"
+          ],
+          "title": "Geometric Probability (First Success)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > VARS > E:geometpdf(p, x). Finds the probability that the first success occurs on exactly the Xth trial."
+        },
+        {
+          "id": "T.5",
+          "keywords": [
+            "random",
+            "variable",
+            "expected",
+            "discrete",
+            "value"
+          ],
+          "title": "Expected Value of Discrete Random Variable",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Enter values in L1 and probabilities in L2. Run STAT > CALC > 1:1-Var Stats L1, L2. The mean (x-bar) is your expected value."
+        },
+        {
+          "id": "T.6",
+          "keywords": [
+            "critical",
+            "value"
+          ],
+          "title": "Critical Z-Value (z*)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > VARS > 3:invNorm(tail area, 0, 1). For a 95% interval, the tail is 0.025."
+        },
+        {
+          "id": "T.7",
+          "keywords": [
+            "critical",
+            "value"
+          ],
+          "title": "Critical T-Value (t*)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > VARS > 4:invT(tail area, df). Degrees of freedom is n-1."
+        },
+        {
+          "id": "T.8",
+          "keywords": [
+            "combinations",
+            "factorials"
+          ],
+          "title": "Factorials & Combinations",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Enter your n-value. MATH > PROB > 3:nCr or 4:!."
+        },
+        {
+          "id": "T.9",
+          "keywords": [
+            "generation",
+            "integer",
+            "random"
+          ],
+          "title": "Random Integer Generation",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "MATH > PROB > 5:randInt(lower, upper, n). If simulating without replacement, you must manually ignore repeated numbers."
+        },
+        {
+          "id": "T.10",
+          "keywords": [
+            "proportions",
+            "sample",
+            "interval"
+          ],
+          "title": "1-Sample Z-Interval (Proportions)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > TESTS > A:1-PropZInt. Enter successes (x) and sample size (n). x must be a whole integer."
+        },
+        {
+          "id": "T.11",
+          "keywords": [
+            "proportions",
+            "sample",
+            "test"
+          ],
+          "title": "1-Sample Z-Test (Proportions)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > TESTS > 5:1-PropZTest. Enter the null proportion (p0), x, and n."
+        },
+        {
+          "id": "T.12",
+          "keywords": [
+            "proportions",
+            "sample",
+            "interval"
+          ],
+          "title": "2-Sample Z-Interval (Proportions)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > TESTS > B:2-PropZInt. Enter x1, n1, x2, n2."
+        },
+        {
+          "id": "T.13",
+          "keywords": [
+            "proportions",
+            "sample",
+            "test"
+          ],
+          "title": "2-Sample Z-Test (Proportions)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > TESTS > 6:2-PropZTest. Calculates the pooled proportion automatically in the background."
+        },
+        {
+          "id": "T.14",
+          "keywords": [
+            "means",
+            "sample",
+            "interval"
+          ],
+          "title": "1-Sample T-Interval (Means)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > TESTS > 8:TInterval. Choose Data if using a list, or Stats to enter x-bar, Sx, and n manually."
+        },
+        {
+          "id": "T.15",
+          "keywords": [
+            "means",
+            "sample",
+            "test"
+          ],
+          "title": "1-Sample T-Test (Means)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > TESTS > 2:T-Test. Enter the null mean (mu0)."
+        },
+        {
+          "id": "T.16",
+          "keywords": [
+            "means",
+            "sample",
+            "interval"
+          ],
+          "title": "2-Sample T-Interval (Means)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > TESTS > 0:2-SampTInt. Set Pooled: No (almost always in AP Stats)."
+        },
+        {
+          "id": "T.17",
+          "keywords": [
+            "means",
+            "sample",
+            "test"
+          ],
+          "title": "2-Sample T-Test (Means)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > TESTS > 4:2-SampTTest. Set Pooled: No. The calculator will output the complex fractional degrees of freedom."
+        },
+        {
+          "id": "T.18",
+          "keywords": [
+            "test",
+            "matched",
+            "pairs"
+          ],
+          "title": "Matched Pairs T-Test",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Highlight L3 in the list editor. Press ENTER and type L1 - L2. Run a 1-Sample T-Test (Option 2) using L3 as your data."
+        },
+        {
+          "id": "T.19",
+          "keywords": [
+            "interval",
+            "matched",
+            "pairs"
+          ],
+          "title": "Matched Pairs Interval",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "After calculating differences in L3, run a 1-Sample TInterval (Option 8) using Data from L3."
+        },
+        {
+          "id": "T.20",
+          "keywords": [
+            "square",
+            "goodness"
+          ],
+          "title": "Chi-Square Goodness of Fit",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Enter observed counts in L1, expected in L2. STAT > TESTS > D:GOF-Test. You must manually enter degrees of freedom (categories - 1)."
+        },
+        {
+          "id": "T.21",
+          "keywords": [
+            "square",
+            "homogeneity",
+            "independence"
+          ],
+          "title": "Chi-Square Independence/Homogeneity",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > x^-1 (MATRIX) > Edit > [A]. Enter dimensions and observed counts. STAT > TESTS > C:Chi-Square Test."
+        },
+        {
+          "id": "T.22",
+          "keywords": [
+            "matrix",
+            "finding",
+            "counts",
+            "expected"
+          ],
+          "title": "Finding Expected Counts (Matrix)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "After running the Independence test, the calculator automatically populates Matrix [B] with expected counts. Go to MATRIX > [B] > ENTER to view them."
+        },
+        {
+          "id": "T.23",
+          "keywords": [
+            "test",
+            "regression",
+            "linear"
+          ],
+          "title": "Linear Regression T-Test",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > TESTS > E:LinRegTTest. Use L1 for X and L2 for Y. Select the alternative hypothesis for beta (usually not equal to 0)."
+        },
+        {
+          "id": "T.24",
+          "keywords": [
+            "interval",
+            "regression",
+            "linear"
+          ],
+          "title": "Linear Regression T-Interval",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > TESTS > G:LinRegTInt. Generates the confidence interval for the true slope."
+        },
+        {
+          "id": "T.25",
+          "keywords": [
+            "lists",
+            "clear"
+          ],
+          "title": "Clear All Lists",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > 4:ClrList. Type L1, L2, L3 and hit enter. Faster than deleting individual entries."
+        },
+        {
+          "id": "T.26",
+          "keywords": [
+            "sort",
+            "ascending",
+            "data"
+          ],
+          "title": "Sort Data Ascending",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > 2:SortA(. Enter the list name (e.g., L1). Useful for quickly finding the median or outliers manually."
+        },
+        {
+          "id": "T.27",
+          "keywords": [
+            "coefficient",
+            "correlation",
+            "enable"
+          ],
+          "title": "Enable Correlation Coefficient (r)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > 0 (CATALOG) > Scroll down to DiagnosticOn > ENTER twice."
+        },
+        {
+          "id": "T.28",
+          "keywords": [
+            "equation",
+            "lsrl",
+            "find"
+          ],
+          "title": "Find LSRL Equation",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > CALC > 8:LinReg(a+bx). Ensure Xlist is L1 and Ylist is L2."
+        },
+        {
+          "id": "T.29",
+          "keywords": [
+            "store",
+            "regression",
+            "equation"
+          ],
+          "title": "Store Regression Equation",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Inside the LinReg menu, scroll to Store RegEQ:. Press VARS > Y-VARS > 1:Function > 1:Y1. This overlays the line on your scatterplot."
+        },
+        {
+          "id": "T.30",
+          "keywords": [
+            "scatterplot"
+          ],
+          "title": "Scatterplot",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > Y= (STAT PLOT) > Plot1. Turn On. Select the first graph type (scatter). Hit ZOOM > 9:ZoomStat."
+        },
+        {
+          "id": "T.31",
+          "keywords": [
+            "plot",
+            "residual"
+          ],
+          "title": "Residual Plot",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "After running LinReg, go to STAT PLOT. Set Xlist: L1 and Ylist: [2nd][STAT](LIST) -> RESID. Hit ZOOM > 9:ZoomStat."
+        },
+        {
+          "id": "T.32",
+          "keywords": [
+            "histogram"
+          ],
+          "title": "Histogram",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT PLOT > Turn On > Select the 3rd graph type. Hit ZOOM > 9. To adjust bin width, press WINDOW and change Xscl."
+        },
+        {
+          "id": "T.33",
+          "keywords": [
+            "outliers",
+            "modified",
+            "boxplot"
+          ],
+          "title": "Modified Boxplot (Outliers)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT PLOT > Select the 4th graph type (boxplot with isolated dots). This automatically applies the 1.5(IQR) rule."
+        },
+        {
+          "id": "T.34",
+          "keywords": [
+            "plot",
+            "probability",
+            "normal"
+          ],
+          "title": "Normal Probability Plot",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT PLOT > Select the 6th graph type. If the resulting plot is roughly linear, the data is approximately Normal."
+        },
+        {
+          "id": "T.35",
+          "keywords": [
+            "list"
+          ],
+          "title": "Sum of a List",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > STAT (LIST) > MATH > 5:sum(L1)."
+        },
+        {
+          "id": "T.36",
+          "keywords": [
+            "list",
+            "length"
+          ],
+          "title": "Length of a List",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > STAT (LIST) > MATH > 3:length(L1). Useful for quickly checking your sample size (n)."
+        },
+        {
+          "id": "T.37",
+          "keywords": [
+            "variable",
+            "statistics"
+          ],
+          "title": "One-Variable Statistics",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > CALC > 1:1-Var Stats. Outputs mean, standard deviation (Sx), and the 5-number summary (scroll down)."
+        },
+        {
+          "id": "T.38",
+          "keywords": [
+            "variable",
+            "statistics"
+          ],
+          "title": "Two-Variable Statistics",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "STAT > CALC > 2:2-Var Stats. Outputs sums of X, sums of Y, and sums of XY."
+        },
+        {
+          "id": "T.39",
+          "keywords": [
+            "predicting",
+            "value"
+          ],
+          "title": "Predicting a Y-value",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If the equation is stored in Y1, go to the home screen. Press VARS > Y-VARS > 1:Y1. Type Y1(value) and press enter."
+        },
+        {
+          "id": "T.40",
+          "keywords": [
+            "list",
+            "standardizing",
+            "data",
+            "scores"
+          ],
+          "title": "Standardizing Data (Z-Scores list)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Highlight the header of L2. Type (L1 - mean) / SD and press enter to populate the entire list with z-scores."
+        },
+        {
+          "id": "T.41",
+          "keywords": [
+            "curve",
+            "shading",
+            "normal"
+          ],
+          "title": "Shading Normal Curve",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > VARS > DRAW > 1:ShadeNorm(lower, upper, mean, SD). Draws the curve and shades the calculated probability."
+        },
+        {
+          "id": "T.42",
+          "keywords": [
+            "clearing",
+            "drawings"
+          ],
+          "title": "Clearing Drawings",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > PRGM (DRAW) > 1:ClrDraw. Removes leftover shaded curves from previous problems."
+        },
+        {
+          "id": "T.43",
+          "keywords": [
+            "random",
+            "seed",
+            "setting"
+          ],
+          "title": "Setting a Random Seed",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Type a unique number (like your zip code). Press STO->. Press MATH > PROB > 1:rand > ENTER."
+        },
+        {
+          "id": "T.44",
+          "keywords": [
+            "generating",
+            "sequence"
+          ],
+          "title": "Generating a Sequence",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > STAT (LIST) > OPS > 5:seq(. Useful for populating a list with a specific numeric pattern."
+        },
+        {
+          "id": "T.45",
+          "keywords": [
+            "margin",
+            "error",
+            "calculation",
+            "proportions"
+          ],
+          "title": "Margin of Error Calculation (Proportions)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Manually calculate: z* * sqrt(p-hat(1-p-hat)/n)."
+        },
+        {
+          "id": "T.46",
+          "keywords": [
+            "means",
+            "margin",
+            "error",
+            "calculation"
+          ],
+          "title": "Margin of Error Calculation (Means)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Manually calculate: t* * (Sx/sqrt(n))."
+        },
+        {
+          "id": "T.47",
+          "keywords": [
+            "manual",
+            "counts",
+            "expected"
+          ],
+          "title": "Expected Counts (GOF manual)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Highlight L2 header. Type Total Sample Size * L3 (where L3 contains your theoretical proportions)."
+        },
+        {
+          "id": "T.48",
+          "keywords": [
+            "memory",
+            "checking",
+            "system"
+          ],
+          "title": "Checking System Memory",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > + (MEM) > 2:Mem Management. Ensure you have enough free RAM before executing heavy TI-Basic scripts."
+        },
+        {
+          "id": "T.49",
+          "keywords": [
+            "program",
+            "archive"
+          ],
+          "title": "Archive a Program",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "In Mem Management, select 7:Prgm. Press ENTER next to a program to move it to ROM (an asterisk will appear), protecting it from RAM clears."
+        },
+        {
+          "id": "T.50",
+          "keywords": [
+            "trap",
+            "condition"
+          ],
+          "title": "FRQ Trap: The 10% Condition",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Never use the 10% condition (n <= 0.10N) if you are analyzing a randomized experiment. It only applies when sampling *without replacement* from a broader population."
+        },
+        {
+          "id": "T.51",
+          "keywords": [
+            "large",
+            "sample",
+            "normal",
+            "counts",
+            "trap"
+          ],
+          "title": "FRQ Trap: Large Counts vs. Normal/Large Sample",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Proportions use the Large Counts condition (np >= 10, n(1-p) >= 10). Means use the Normal/Large Sample condition (n >= 30 or Normal population). Do not mix these up on paper."
+        },
+        {
+          "id": "T.52",
+          "keywords": [
+            "test",
+            "check",
+            "condition"
+          ],
+          "title": "FRQ T-Test Condition Check",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If n < 30 and the population is not stated as Normal, you MUST draw a quick dotplot or stemplot of the sample data on your paper and state: \"The graph shows no strong skew or clear outliers, so the t-procedure is appropriate.\""
+        },
+        {
+          "id": "T.53",
+          "keywords": [
+            "standard",
+            "interpreting",
+            "value"
+          ],
+          "title": "Interpreting a P-value (FRQ Standard)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"Assuming the null hypothesis is true [context], there is a [P-value] probability of getting a sample statistic as extreme or more extreme than the one observed, strictly by chance.\""
+        },
+        {
+          "id": "T.54",
+          "keywords": [
+            "confidence",
+            "standard",
+            "interpreting",
+            "level"
+          ],
+          "title": "Interpreting Confidence Level (FRQ Standard)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"If we were to select many, many random samples of size [n] and construct a [C%] confidence interval from each, about [C%] of these intervals would capture the true [parameter in context].\""
+        },
+        {
+          "id": "T.55",
+          "keywords": [
+            "square",
+            "hypotheses"
+          ],
+          "title": "Chi-Square GOF Hypotheses",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "H0: The specified distribution of [variable] is correct. Ha: The specified distribution of [variable] is not correct. Always write these in words, never in symbols."
+        },
+        {
+          "id": "T.56",
+          "keywords": [
+            "square",
+            "hypotheses",
+            "independence"
+          ],
+          "title": "Chi-Square Independence Hypotheses",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "H0: There is no association between [Variable 1] and [Variable 2]. Ha: There is an association between [Variable 1] and [Variable 2]."
+        },
+        {
+          "id": "T.57",
+          "keywords": [
+            "square",
+            "hypotheses",
+            "homogeneity"
+          ],
+          "title": "Chi-Square Homogeneity Hypotheses",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "H0: The distribution of [Variable] is the same for [Population 1] and [Population 2]. Ha: The distribution of [Variable] is different for [Population 1] and [Population 2]."
+        },
+        {
+          "id": "T.58",
+          "keywords": [
+            "slope",
+            "regression",
+            "hypothesis",
+            "null"
+          ],
+          "title": "Regression Slope Null Hypothesis",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "H0: beta = 0. In words: \"There is no true linear relationship between [X variable] and [Y variable].\""
+        },
+        {
+          "id": "T.59",
+          "keywords": [
+            "square",
+            "counts",
+            "trap",
+            "expected"
+          ],
+          "title": "FRQ Trap: Chi-Square Expected Counts",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "The rubric requires you to show at least the first two and the last calculation for the expected counts, OR explicitly state the formula used before writing out the matrix values."
+        },
+        {
+          "id": "T.60",
+          "keywords": [
+            "error",
+            "context",
+            "type"
+          ],
+          "title": "Type I Error Context",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"We find convincing evidence that [Alternative Hypothesis], when in reality [Null Hypothesis is true].\" You MUST include the real-world consequence of this error to get full credit."
+        },
+        {
+          "id": "T.61",
+          "keywords": [
+            "error",
+            "context",
+            "type"
+          ],
+          "title": "Type II Error Context",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"We fail to find convincing evidence that [Alternative Hypothesis], when in reality [Alternative Hypothesis is actually true].\" Include the consequence."
+        },
+        {
+          "id": "T.62",
+          "keywords": [
+            "power",
+            "increasing"
+          ],
+          "title": "Increasing Power",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "In an FRQ, if asked how to increase the power of a test, state: \"Increase the sample size (n) or increase the significance level (alpha).\""
+        },
+        {
+          "id": "T.63",
+          "keywords": [
+            "experimental",
+            "design"
+          ],
+          "title": "Experimental Design FRQ",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If asked to design an experiment, explicitly list: 1) The completely randomized pool, 2) The random assignment mechanism, 3) The specific treatments, 4) The response variable being compared."
+        },
+        {
+          "id": "T.64",
+          "keywords": [
+            "blocking",
+            "justification"
+          ],
+          "title": "Blocking Justification",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"We blocked by [Variable] because it is known to affect the [Response Variable]. Blocking reduces the variation within groups, making it easier to see the true effect of the treatments.\""
+        },
+        {
+          "id": "T.65",
+          "keywords": [
+            "justification",
+            "matched",
+            "pairs"
+          ],
+          "title": "Matched Pairs Justification",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"This is a matched pairs design because each subject received both treatments in a randomized order, which controls for individual variability.\""
+        },
+        {
+          "id": "T.66",
+          "keywords": [
+            "error",
+            "deviation",
+            "standard",
+            "trap"
+          ],
+          "title": "FRQ Trap: Standard Error vs Standard Deviation",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If an FRQ asks for the meaning of \"SE Coef\" in a regression table, it is the *Standard Error of the Slope*: \"If we repeated this study many times, the sample slope would typically vary from the true population slope by [SE Coef value].\""
+        },
+        {
+          "id": "T.67",
+          "keywords": [
+            "output",
+            "regression",
+            "trap"
+          ],
+          "title": "FRQ Trap: S in Regression Output",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"S\" is the standard deviation of the residuals. \"The actual [Y variable] typically varies by [S value] away from the value predicted by the least-squares regression line.\""
+        },
+        {
+          "id": "T.68",
+          "keywords": [
+            "intercept",
+            "meaning",
+            "trap"
+          ],
+          "title": "FRQ Trap: The Y-Intercept Meaning",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Only interpret the y-intercept if x=0 is a plausible value. Otherwise, state: \"The y-intercept has no practical meaning in this context because an x-value of 0 is impossible/far outside the data range.\""
+        },
+        {
+          "id": "T.69",
+          "keywords": [
+            "combining",
+            "deviations",
+            "standard",
+            "trap"
+          ],
+          "title": "FRQ Trap: Combining Standard Deviations",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "You can only combine variances (sigma^2), NEVER standard deviations directly. Square them, add them, then take the square root. You can only do this if the variables are independent."
+        },
+        {
+          "id": "T.70",
+          "keywords": [
+            "distribution",
+            "inverse"
+          ],
+          "title": "Inverse T-Distribution",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "[2nd] > VARS > 4:invT(area, df). Use this to find the critical t^* value for confidence intervals manually."
+        },
+        {
+          "id": "T.71",
+          "keywords": [
+            "probability",
+            "checking",
+            "independence"
+          ],
+          "title": "Checking Independence (Probability)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "To prove independence on an FRQ, mathematically show that P(A|B) = P(A). If the two numbers are equal, they are independent."
+        },
+        {
+          "id": "T.72",
+          "keywords": [
+            "mutually",
+            "exclusive",
+            "check"
+          ],
+          "title": "Mutually Exclusive Check",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Mathematically show that P(A AND B) = 0. If they share outcomes, they are not mutually exclusive."
+        },
+        {
+          "id": "T.73",
+          "keywords": [
+            "stratified",
+            "cluster"
+          ],
+          "title": "Stratified vs Cluster",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Stratified takes *some* from *all* groups. Cluster takes *all* from *some* groups. Use this exact phrasing to distinguish them on FRQs."
+        },
+        {
+          "id": "T.74",
+          "keywords": [
+            "selection",
+            "inference",
+            "scope"
+          ],
+          "title": "Scope of Inference (Selection)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If individuals were randomly selected from a population, you can generalize the results to that entire population."
+        },
+        {
+          "id": "T.75",
+          "keywords": [
+            "inference",
+            "scope",
+            "assignment"
+          ],
+          "title": "Scope of Inference (Assignment)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If individuals were randomly assigned to treatments, you can infer cause and effect."
+        },
+        {
+          "id": "T.76",
+          "keywords": [
+            "prove",
+            "trap",
+            "confirm"
+          ],
+          "title": "FRQ Trap: \"Prove\" or \"Confirm\"",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Never use the words \"prove\" or \"confirm\" in statistics. Use \"provides convincing evidence\" or \"suggests.\""
+        },
+        {
+          "id": "T.77",
+          "keywords": [
+            "null",
+            "accepting",
+            "trap"
+          ],
+          "title": "FRQ Trap: Accepting the Null",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Never say \"We accept the null hypothesis.\" Always say \"We fail to reject the null hypothesis.\""
+        },
+        {
+          "id": "T.78",
+          "keywords": [
+            "lurking",
+            "confounding",
+            "trap"
+          ],
+          "title": "FRQ Trap: Confounding vs Lurking",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Confounding variables are tied to the explanatory variable and affect the response (experiments). Lurking variables are unmeasured variables driving the relationship (observational studies)."
+        },
+        {
+          "id": "T.79",
+          "keywords": [
+            "parameter",
+            "identifying"
+          ],
+          "title": "Identifying the Parameter",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "mu is a mean, p is a proportion, beta is a slope. Make sure you use the correct Greek letter in your hypotheses."
+        },
+        {
+          "id": "T.80",
+          "keywords": [
+            "sample",
+            "matched",
+            "pairs"
+          ],
+          "title": "Two-Sample vs Matched Pairs",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If there are two distinct groups of different people, it is two-sample. If the same people do both tasks, or they are explicitly paired up by a trait, it is matched pairs."
+        },
+        {
+          "id": "T.81",
+          "keywords": [
+            "list",
+            "normalizing",
+            "trap"
+          ],
+          "title": "FRQ Trap: Normalizing a List",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If asked to compare two scores from different Normal distributions, calculate the Z-score for both."
+        },
+        {
+          "id": "T.82",
+          "keywords": [
+            "score",
+            "interpretation"
+          ],
+          "title": "Z-score Interpretation",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"The [value] is [Z] standard deviations [above/below] the mean [variable].\""
+        },
+        {
+          "id": "T.83",
+          "keywords": [
+            "interpretation",
+            "percentile"
+          ],
+          "title": "Percentile Interpretation",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"[Percentile]% of the [population/individuals] had a [variable] at or below [value].\""
+        },
+        {
+          "id": "T.84",
+          "keywords": [
+            "danger",
+            "extrapolation"
+          ],
+          "title": "Extrapolation Danger",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"We cannot trust the prediction for x = [value] because it is far outside the interval of x-values used to create the regression line.\""
+        },
+        {
+          "id": "T.85",
+          "keywords": [
+            "interpretation",
+            "residual"
+          ],
+          "title": "Residual Interpretation",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "\"The actual [Y variable] was [Residual value] [higher/lower] than predicted by the regression line.\""
+        },
+        {
+          "id": "T.86",
+          "keywords": [
+            "transforming",
+            "power",
+            "data",
+            "model"
+          ],
+          "title": "Transforming Data (Power Model)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If a scatterplot is curved, highlight L3, type log(L1). Highlight L4, type log(L2). Run LinReg on L3 and L4 to straighten it."
+        },
+        {
+          "id": "T.87",
+          "keywords": [
+            "reading",
+            "transformed",
+            "equation"
+          ],
+          "title": "Reading a Transformed Equation",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If the equation is \\log(y-hat) = a + b(x), you must calculate 10^answer to get the final predicted y value."
+        },
+        {
+          "id": "T.88",
+          "keywords": [
+            "freedom",
+            "test",
+            "unpooled",
+            "degrees"
+          ],
+          "title": "Degrees of Freedom (Unpooled T-Test)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Always use the calculator's complex fractional df for 2-sample t-tests, but write down the df on your paper so graders know where your P-value came from."
+        },
+        {
+          "id": "T.89",
+          "keywords": [
+            "square",
+            "cell",
+            "contribution"
+          ],
+          "title": "Chi-Square Cell Contribution",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "The cell with the largest ((O-E)^2)/(E) contributed the most to the Chi-Square statistic. Identify this if asked \"which category differed most from expected.\""
+        },
+        {
+          "id": "T.90",
+          "keywords": [
+            "calculator",
+            "trap",
+            "syntax"
+          ],
+          "title": "Calculator Trap (Syntax)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Never write \"normalcdf\" or \"tcdf\" on your paper as your primary work. Write the formula, then use the calculator to get the answer."
+        },
+        {
+          "id": "T.91",
+          "keywords": [
+            "labels",
+            "calculator",
+            "trap"
+          ],
+          "title": "Calculator Trap (Labels)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If you use calculator speak as a backup, define the inputs: \"normalcdf(lower=[val], upper=[val], mean=[val], sd=[val]).\""
+        },
+        {
+          "id": "T.92",
+          "keywords": [
+            "large",
+            "application",
+            "numbers"
+          ],
+          "title": "Law of Large Numbers Application",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Used to explain why insurance companies or casinos make money in the long run, despite short-term variability."
+        },
+        {
+          "id": "T.93",
+          "keywords": [
+            "actual",
+            "value",
+            "expected"
+          ],
+          "title": "Expected Value vs Actual",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Never say the expected value *will* happen. Say it is the *long-run average*."
+        },
+        {
+          "id": "T.94",
+          "keywords": [
+            "interval",
+            "confidence",
+            "level"
+          ],
+          "title": "Confidence Interval vs Level",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "The interval is the specific range of numbers. The level is the methodology's success rate."
+        },
+        {
+          "id": "T.95",
+          "keywords": [
+            "intervals",
+            "overlapping",
+            "confidence"
+          ],
+          "title": "Overlapping Confidence Intervals",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Do not use overlapping confidence intervals to test for a difference between two groups. Run a proper 2-sample test instead."
+        },
+        {
+          "id": "T.96",
+          "keywords": [
+            "components",
+            "margin",
+            "error"
+          ],
+          "title": "Margin of Error Components",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Margin of error only accounts for sampling variability. It does *not* account for bias, undercoverage, or non-response."
+        },
+        {
+          "id": "T.97",
+          "keywords": [
+            "frqs",
+            "simulations"
+          ],
+          "title": "Simulations in FRQs",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "1) Assign digits to outcomes. 2) State how to read digits. 3) State what to ignore (repeats). 4) State when to stop a trial. 5) State what to record."
+        },
+        {
+          "id": "T.98",
+          "keywords": [
+            "robustness"
+          ],
+          "title": "Robustness",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "T-tests are robust to slight departures from Normality, especially if the sample size is large."
+        },
+        {
+          "id": "T.99",
+          "keywords": [
+            "rule",
+            "stats",
+            "golden"
+          ],
+          "title": "The Golden Rule of AP Stats",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "ALWAYS INCLUDE CONTEXT. A perfect mathematical answer with no words attached will score a Partial (P) or Incorrect (I)."
+        },
+        {
+          "id": "T.100",
+          "keywords": [
+            "diagnosticon",
+            "value"
+          ],
+          "title": "DiagnosticOn (The r-Value fix)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If you don't see r or r^2 after running LinReg, go to [2nd] > 0 (CATALOG) > scroll to DiagnosticOn > ENTER."
+        },
+        {
+          "id": "T.101",
+          "keywords": [
+            "list",
+            "deviations",
+            "manual",
+            "math"
+          ],
+          "title": "List Math (Manual Deviations)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Highlight the name of L2. Type (L1 - mean(L1))^2 to quickly calculate squared deviations for every point."
+        },
+        {
+          "id": "T.102",
+          "keywords": [
+            "view",
+            "table",
+            "probabilities"
+          ],
+          "title": "Table View for Probabilities",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "If you store a Binomial formula in Y1, you can press [2nd] > GRAPH (TABLE) to see all probabilities for X=1, 2, 3... at once."
+        },
+        {
+          "id": "T.103",
+          "keywords": [
+            "speed",
+            "simulation"
+          ],
+          "title": "Simulation Speed-Up",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "Use randIntNoRep(1, n) if your calculator supports it (CE models only). It automatically prevents duplicates in your sample."
+        },
+        {
+          "id": "T.104",
+          "keywords": [
+            "matrix",
+            "counts",
+            "expected"
+          ],
+          "title": "Matrix Expected Counts",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "N/A",
+          "T": "After a Chi-Square test, the expected counts are stored in [B]. View them via MATRIX > [B]."
+        }
+      ]
+    },
+    "13": {
+      "branch_name": "FRQ Survival Guide",
+      "nodes": [
+        {
+          "id": "F.0",
+          "keywords": [
+            "template",
+            "mean",
+            "left",
+            "units",
+            "describing",
+            "required",
+            "standard",
+            "described",
+            "students",
+            "outliers",
+            "forget",
+            "hack",
+            "stats",
+            "symmetric",
+            "there",
+            "list",
+            "exist",
+            "name",
+            "context",
+            "variable",
+            "right",
+            "socs",
+            "element",
+            "must",
+            "apparent",
+            "include",
+            "best",
+            "specifically",
+            "skip",
+            "spread",
+            "skewed",
+            "deviation",
+            "trap",
+            "shape",
+            "unit",
+            "rule",
+            "univariate",
+            "them",
+            "median",
+            "roughly",
+            "distribution",
+            "center",
+            "they",
+            "value"
+          ],
+          "title": "Describing a Univariate Distribution (Unit 1)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The Trap: Students list the stats but forget context or skip a required element. \nThe Rule: You must use SOCS (Shape, Outliers, Center, Spread) AND include the context (units/variable name).\n Template: \"The distribution of [variable name/context] is [Shape: roughly symmetric / right-skewed / left-skewed]. There [are / are no] apparent outliers [list them if they exist]. The center of the distribution is a [median/mean] of [value] [units], and the spread is best described by an [IQR / Standard Deviation] of [value] [units].\"\n FRQ Hack: If it's skewed, specifically name the Median and IQR. If it's symmetric, specifically name the Mean and Standard Deviation.",
+          "T": "N/A"
+        },
+        {
+          "id": "F.1",
+          "keywords": [
+            "than",
+            "group",
+            "template",
+            "higher",
+            "compare",
+            "equal",
+            "explicit",
+            "words",
+            "larger",
+            "students",
+            "outliers",
+            "comparing",
+            "comparison",
+            "fail",
+            "with",
+            "outlier",
+            "also",
+            "distributions",
+            "noticeably",
+            "less",
+            "context",
+            "both",
+            "compared",
+            "while",
+            "apparent",
+            "must",
+            "contains",
+            "spread",
+            "value",
+            "trap",
+            "greater",
+            "unit",
+            "rule",
+            "shape",
+            "them",
+            "describe",
+            "median",
+            "roughly",
+            "center",
+            "actually",
+            "perfectly",
+            "however"
+          ],
+          "title": "Comparing Two Distributions (Unit 1)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The Trap: Students describe both distributions perfectly but fail to actually compare them.\nThe Rule: You must use explicit comparison words (greater than, less than, roughly equal to) for the Center and the Spread.\n Template: \"Both distributions of [context] are [Shape]. However, Group A has a noticeably higher center (Median = [value]) than Group B (Median = [value]). Group A also has a larger spread, with an IQR of [value] compared to Group B's IQR of [value]. Group A contains an outlier at [value], while Group B has no apparent outliers.\"",
+          "T": "N/A"
+        },
+        {
+          "id": "F.2",
+          "keywords": [
+            "intercept",
+            "slope",
+            "stating",
+            "template",
+            "saying",
+            "increase",
+            "sense",
+            "impossible",
+            "units",
+            "instead",
+            "always",
+            "every",
+            "explanatory",
+            "this",
+            "often",
+            "language",
+            "both",
+            "variable",
+            "deterministic",
+            "reality",
+            "predictive",
+            "include",
+            "interpreting",
+            "decrease",
+            "extrapolating",
+            "probabilistic",
+            "using",
+            "trap",
+            "unit",
+            "rule",
+            "sentence",
+            "lsrl",
+            "makes",
+            "response",
+            "predicted",
+            "will",
+            "value"
+          ],
+          "title": "Interpreting the LSRL Slope and Y-Intercept (Unit 2)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The Trap: Using deterministic language (saying \"it will increase\" instead of \"it is predicted to increase\").\nThe Rule: Always use non-probabilistic, predictive language and include units for both X and Y.\n Slope Template: \"For every 1 [unit of X] increase in [Explanatory Variable], the [Response Variable] is predicted to [increase/decrease] by [Slope Value] [units of Y].\"\n Y-Intercept Template: \"If the [Explanatory Variable] is 0 [units of X], the predicted [Response Variable] is [Y-int Value] [units of Y].\" (Add a sentence stating if this makes sense in reality, as extrapolating to 0 is often impossible).",
+          "T": "N/A"
+        },
+        {
+          "id": "F.3",
+          "keywords": [
+            "knowledge",
+            "draw",
+            "total",
+            "slips",
+            "template",
+            "saying",
+            "generator",
+            "statistical",
+            "could",
+            "into",
+            "repeats",
+            "place",
+            "sized",
+            "exactly",
+            "with",
+            "bulletproof",
+            "these",
+            "random",
+            "execute",
+            "assignment",
+            "thoroughly",
+            "frqs",
+            "mechanism",
+            "must",
+            "explain",
+            "that",
+            "replacement",
+            "someone",
+            "remaining",
+            "handled",
+            "trap",
+            "paper",
+            "trick",
+            "unit",
+            "rule",
+            "subjects",
+            "without",
+            "them",
+            "identically",
+            "clearly",
+            "treatment",
+            "explaining",
+            "assigned",
+            "write",
+            "numbers",
+            "names",
+            "will",
+            "number"
+          ],
+          "title": "Explaining Random Assignment (Unit 3)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The Trap: Saying \"use a random number generator\" without explaining exactly how the numbers are assigned and how repeats are handled.\nThe Rule: You must explain the mechanism so clearly that someone with no statistical knowledge could execute it. \n The \"Hat Trick\" Template (Bulletproof for FRQs): \"Write the names of all [total number] subjects on identically sized slips of paper. Place them into a hat and mix thoroughly. Draw [number] slips without replacement. These subjects will be assigned to [Treatment 1]. The remaining subjects in the hat will be assigned to [Treatment 2].\"",
+          "T": "N/A"
+        },
+        {
+          "id": "F.4",
+          "keywords": [
+            "setup",
+            "writing",
+            "output",
+            "template",
+            "formula",
+            "zero",
+            "calculations",
+            "probability",
+            "work",
+            "just",
+            "show",
+            "shown",
+            "before",
+            "state",
+            "successes",
+            "with",
+            "calculator",
+            "context",
+            "must",
+            "parameters",
+            "trials",
+            "binom",
+            "trap",
+            "unit",
+            "rule",
+            "credit",
+            "p",
+            "define",
+            "binomcdf",
+            "distribution",
+            "write",
+            "execution",
+            "binomial",
+            "will",
+            "number"
+          ],
+          "title": "Binomial Probability Calculations (Unit 4)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The Trap: Just writing \"binomcdf(10, 0.5, 4) = 0.377\" will get you zero credit for work shown.\nThe Rule: You must define the distribution, state the parameters, and show the formula setup before writing the calculator output.\n Template: 1. Define: \"Let X = the number of [successes in context].\" 2. Parameters: \"X has a binomial distribution with n = [trials] and p = [probability].\" 3. Formula setup: \"P(X = k) = \\binomnk p^k (1-p)^n-k\" 4. Execution: \"P(X = 3) = \\binom103 (0.5)^3 (0.5)^7 = 0.117\" (You can use the calculator to get the 0.117, but you must write the formula).",
+          "T": "N/A"
+        },
+        {
+          "id": "F.5",
+          "keywords": [
+            "select",
+            "answer",
+            "first",
+            "understand",
+            "template",
+            "mean",
+            "process",
+            "even",
+            "calculated",
+            "prob_2",
+            "units",
+            "many",
+            "last",
+            "times",
+            "multiplication",
+            "mu_x",
+            "prob_1",
+            "summation",
+            "term",
+            "expected",
+            "show",
+            "failing",
+            "least",
+            "random",
+            "discrete",
+            "interpretation",
+            "randomly",
+            "context",
+            "variable",
+            "value_2",
+            "final",
+            "trap",
+            "mechanics",
+            "value_1",
+            "unit",
+            "rule",
+            "value_n",
+            "subjects",
+            "approximately",
+            "p",
+            "expect",
+            "prob_n",
+            "string",
+            "average",
+            "prove",
+            "value"
+          ],
+          "title": "Expected Value / Mean of a Discrete Random Variable (Unit 4)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The Trap: Failing to show the summation process.\nThe Rule: Show at least the first two and the last term of the multiplication string to prove you understand the mechanics, even if you did it in L1/L2.\n Template: 1. \"The expected value of [context] is calculated by mux = Sum xi P(xi).\" 2. \"mux = (Value1 \\times Prob1) + (Value2 \\times Prob2) + ... + (Valuen \\times Probn)\" 3. \"mux = [Final Answer] [Units].\" 4. Interpretation: \"If we randomly select many, many [subjects], we expect the average [variable] to be approximately [Final Answer].\"",
+          "T": "N/A"
+        },
+        {
+          "id": "F.6",
+          "keywords": [
+            "confident",
+            "template",
+            "population",
+            "calculation",
+            "times",
+            "formula",
+            "intervals",
+            "stat",
+            "large",
+            "misinterpreting",
+            "parts",
+            "crit",
+            "exactly",
+            "normal",
+            "state",
+            "confidence",
+            "random",
+            "z",
+            "conclusion",
+            "parameter",
+            "name",
+            "context",
+            "verify",
+            "high",
+            "must",
+            "interval",
+            "sample",
+            "skipping",
+            "conditions",
+            "that",
+            "proportion",
+            "final",
+            "between",
+            "counts",
+            "trap",
+            "rule",
+            "panic",
+            "p",
+            "assumptions",
+            "define",
+            "true",
+            "procedure",
+            "execution"
+          ],
+          "title": "The PANIC Template (Confidence Intervals)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The Trap: Skipping conditions or misinterpreting the final interval.\nThe Rule: You must hit all 5 parts exactly.\n P: Parameter: Define the population parameter. \"Let p be the true proportion of all [population] who [context].\"\n A: Assumptions/Conditions: Verify Random, 10% Rule (n <= 0.10N), and Normal/Large Counts (np-hat >= 10, n(1-p-hat) >= 10 or n >= 30).\n N: Name the Interval: State the procedure. \"One-sample z-interval for a proportion.\"\n I: Interval Calculation: Formula and execution. \"Stat +/- (Crit) \\times (SE)\" -> \"0.65 +/- 1.96 \\times 0.047 = (0.558, 0.742)\"\n C: Conclusion: \"We are [95%] confident that the true [parameter] is between [low] and [high].\"",
+          "T": "N/A"
+        },
+        {
+          "id": "F.7",
+          "keywords": [
+            "than",
+            "writing",
+            "template",
+            "process",
+            "mean",
+            "decision",
+            "hypotheses",
+            "from",
+            "tests",
+            "alpha",
+            "frac",
+            "phantoms",
+            "before",
+            "state",
+            "there",
+            "same",
+            "evidence",
+            "conclusion",
+            "parameter",
+            "sqrt",
+            "name",
+            "less",
+            "context",
+            "different",
+            "mu_0",
+            "sample",
+            "make",
+            "conditions",
+            "that",
+            "forgetting",
+            "hypothesis",
+            "obtain",
+            "explicitly",
+            "step",
+            "trap",
+            "greater",
+            "rule",
+            "test",
+            "reject",
+            "follow",
+            "panic",
+            "p",
+            "assumptions",
+            "t",
+            "statistic",
+            "true",
+            "convincing",
+            "fail",
+            "since",
+            "null",
+            "value"
+          ],
+          "title": "The PHANTOMS Template (Hypothesis Tests)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": "The Trap: Forgetting to explicitly reject or fail to reject before writing the context conclusion.\nThe Rule: Follow the 8-step process.\n P: Parameter: \"Let mu be the true mean [context].\"\n H: Hypotheses: \"H0: mu = mu0 vs Ha: mu > mu0.\"\n A: Assumptions/Conditions: (Same as PANIC).\n N: Name the Test: \"One-sample t-test for a mean.\"\n T: Test Statistic: \"t = \\fracx-bar - mu0s/sqrt(n) = 2.45.\"\n O: Obtain P-value: \"P-value = 0.007.\"\n M: Make Decision: \"Since P-value (0.007) < alpha (0.05), we reject the null hypothesis.\"\n S: State Conclusion: \"There is convincing evidence that the true mean [context] is [greater than/less than/different from] [value].\"",
+          "T": "N/A"
+        },
+        {
+          "id": "F.8",
+          "keywords": [
+            "graph",
+            "answer",
+            "identify",
+            "through",
+            "calculation",
+            "units",
+            "action",
+            "term",
+            "justification",
+            "clear",
+            "verbs",
+            "just",
+            "show",
+            "ensure",
+            "state",
+            "physical",
+            "label",
+            "actions",
+            "name",
+            "indicate",
+            "plot",
+            "arrive",
+            "determine",
+            "path",
+            "paragraph",
+            "scales",
+            "concept",
+            "needed",
+            "explanation",
+            "used",
+            "stakes",
+            "numbers",
+            "logic",
+            "value"
+          ],
+          "title": "FRQ Action Verbs (Low-Stakes)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " Identify/Indicate/State: Just name the value, term, or concept. Action: No explanation needed.\n Determine: Arrive at an answer through calculation or logic. Action: Show the path (numbers used), but no paragraph justification needed.\n Label/Plot: Physical actions on a graph. Action: Ensure units and scales are clear.",
+          "T": "N/A"
+        },
+        {
+          "id": "F.9",
+          "keywords": [
+            "calculate",
+            "visual",
+            "draw",
+            "create",
+            "substitution",
+            "formula",
+            "consistent",
+            "action",
+            "verbs",
+            "show",
+            "outliers",
+            "model",
+            "with",
+            "mathematical",
+            "provide",
+            "context",
+            "data",
+            "socs",
+            "must",
+            "spread",
+            "characteristics",
+            "boxplots",
+            "shape",
+            "rule",
+            "construct",
+            "describe",
+            "relevant",
+            "stakes",
+            "steps",
+            "center",
+            "perform"
+          ],
+          "title": "FRQ Action Verbs (Mid-Stakes)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " Calculate: Perform mathematical steps. Action: Must show the formula and the substitution.\n Describe: Provide relevant characteristics. Action: Use SOCS (Shape, Outliers, Center, Spread) with context.\n Construct/Draw: Create a visual model. Action: Must be consistent with the data (e.g., 1.5IQR rule for boxplots).",
+          "T": "N/A"
+        },
+        {
+          "id": "F.10",
+          "keywords": [
+            "similar",
+            "link",
+            "condition",
+            "differences",
+            "higher",
+            "lower",
+            "compare",
+            "statistical",
+            "action",
+            "words",
+            "defend",
+            "specific",
+            "verbs",
+            "show",
+            "alpha",
+            "comparison",
+            "with",
+            "evidence",
+            "similarities",
+            "both",
+            "data",
+            "groups",
+            "verify",
+            "high",
+            "explain",
+            "conditions",
+            "check",
+            "find",
+            "confirm",
+            "cause",
+            "because",
+            "rule",
+            "sentence",
+            "reject",
+            "p",
+            "justify",
+            "claim",
+            "stakes",
+            "effect",
+            "math",
+            "value"
+          ],
+          "title": "FRQ Action Verbs (High-Stakes)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " Explain: Show cause and effect. Action: Use \"Because\" (e.g., \"Because p-value < alpha, we reject...\").\n Compare: Find similarities and differences. Action: Use comparison words (higher, lower, similar) to link both groups in one sentence.\n Justify: Defend a claim with evidence. Action: Link specific data to a specific statistical rule.\n Verify: Confirm conditions are met. Action: Show the math for the condition check (e.g., np >= 10).",
+          "T": "N/A"
+        },
+        {
+          "id": "F.11",
+          "keywords": [
+            "similar",
+            "nalyze",
+            "compare",
+            "defend",
+            "task",
+            "statement",
+            "just",
+            "outcome",
+            "support",
+            "socs",
+            "include",
+            "directly",
+            "results",
+            "final",
+            "names",
+            "math",
+            "identify",
+            "units",
+            "formula",
+            "relate",
+            "statistical",
+            "show",
+            "outliers",
+            "arrate",
+            "distributions",
+            "conclusion",
+            "heck",
+            "dentify",
+            "variable",
+            "groups",
+            "explain",
+            "spread",
+            "conditions",
+            "tutorials",
+            "using",
+            "greater",
+            "shape",
+            "sentence",
+            "needed",
+            "interpret",
+            "steps",
+            "center",
+            "number",
+            "calculate",
+            "than",
+            "link",
+            "words",
+            "state",
+            "evidence",
+            "mathematical",
+            "provide",
+            "name",
+            "similarities",
+            "both",
+            "values",
+            "problem",
+            "p",
+            "describe",
+            "relevant",
+            "explanation",
+            "effect",
+            "verb",
+            "perform",
+            "value",
+            "differences",
+            "action",
+            "term",
+            "from",
+            "with",
+            "context",
+            "framework",
+            "statistics",
+            "like",
+            "characteristics",
+            "valid",
+            "substitute",
+            "cause",
+            "because",
+            "test",
+            "justify",
+            "claim",
+            "write",
+            "numbers"
+          ],
+          "title": "AP Statistics Task Verb Tutorials",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " Calculate: Perform mathematical steps. Action: Show the formula, substitute the numbers, and include units. Do not just write the final number.\n Compare: Explain similarities/differences. Action: Link both groups in one sentence using words like \"greater than\" or \"similar to.\"\n Describe: Provide relevant characteristics. Action: For distributions, use SOCS (Shape, Outliers, Center, Spread) with context.\n Explain: Show cause and effect. Action: Use a \"Because\" statement to link evidence to the outcome.\n Identify: State a value/term. Action: Name it directly. No explanation needed.\n Interpret: Relate results to context. Action: Use the variable names and units from the problem.\n Justify: Defend a claim. Action: Use statistical evidence (p-values, conditions) to support why the conclusion is valid.\n The \"I CAN\" Framework: 1. Identify the test. 2. Check conditions. 3. Analyze results (math). 4. Narrate conclusion (context).",
+          "T": "N/A"
+        },
+        {
+          "id": "F.12",
+          "keywords": [
+            "other",
+            "freedom",
+            "levels",
+            "error",
+            "based",
+            "more",
+            "always",
+            "margin",
+            "common",
+            "critical",
+            "confidence",
+            "calculator",
+            "z",
+            "table",
+            "less",
+            "degrees",
+            "sample",
+            "interval",
+            "df",
+            "values",
+            "increases",
+            "precise",
+            "makes",
+            "star",
+            "t",
+            "decreases",
+            "invnorm",
+            "increasing",
+            "size",
+            "width",
+            "invt"
+          ],
+          "title": "Critical Values (Z* and T*) Table",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " Z-Star Critical Values: 90%: 1.645 | 95%: 1.96 | 98%: 2.326 | 99%: 2.576. Use `invNorm` on calculator for other levels.\n T-Star Critical Values: Always based on Degrees of Freedom (df = n-1). Use `invT` on calculator. Common levels for df=30: 95%: 2.042 | 99%: 2.750.\n Confidence vs Margin of Error: Increasing confidence increases the width of the interval (makes it less precise). Increasing sample size (n) decreases the width (makes it more precise).",
+          "T": "N/A"
+        },
+        {
+          "id": "F.13",
+          "keywords": [
+            "central",
+            "theorem",
+            "whose",
+            "mean",
+            "population",
+            "estimator",
+            "gets",
+            "closer",
+            "equal",
+            "large",
+            "normal",
+            "unbiased",
+            "distributions",
+            "bridge",
+            "parameter",
+            "sample",
+            "limit",
+            "increases",
+            "shape",
+            "unit",
+            "approximately",
+            "p",
+            "distribution",
+            "regardless",
+            "true",
+            "statistic",
+            "numbers",
+            "sampling",
+            "becomes"
+          ],
+          "title": "Unit 5: Sampling Distributions (The Bridge)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " The CLT (Central Limit Theorem): Regardless of population shape, the sampling distribution of the mean (x-bar) becomes approximately Normal if n >= 30.\n Law of Large Numbers: As n increases, the sample mean (x-bar) gets closer to the true population mean (mu).\n Unbiased Estimator: A statistic whose mean of its sampling distribution is equal to the true parameter (p-hat = p, x-bar = mu).",
+          "T": "N/A"
+        },
+        {
+          "id": "F.14",
+          "keywords": [
+            "later",
+            "your",
+            "sections",
+            "full",
+            "simple",
+            "partial",
+            "statistical",
+            "task",
+            "parts",
+            "seen",
+            "introduces",
+            "confidence",
+            "asks",
+            "score",
+            "often",
+            "provided",
+            "that",
+            "wrong",
+            "give",
+            "build",
+            "something",
+            "using",
+            "counts",
+            "prompt",
+            "scoring",
+            "trick",
+            "readers",
+            "concept",
+            "strategy",
+            "usually",
+            "integrity",
+            "panic",
+            "credit",
+            "t",
+            "still",
+            "haven",
+            "part",
+            "keep",
+            "early",
+            "definitions",
+            "number",
+            "investigative"
+          ],
+          "title": "FRQ Q6: The Investigative Task",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " Strategy: Q6 counts for 25% of your FRQ score. It often introduces a NEW concept you haven't seen. \n The Trick: Don't panic. Use the definitions provided in the prompt. Part (a) usually asks for something simple to build your confidence. \n Scoring: Readers give partial credit for \"Statistical Integrity.\" If you get an early part wrong, keep using that number in later parts\u2014you can still get full credit for the later sections!",
+          "T": "N/A"
+        },
+        {
+          "id": "F.15",
+          "keywords": [
+            "unit",
+            "test",
+            "unpooled",
+            "populations",
+            "groups",
+            "degrees",
+            "freedom",
+            "p",
+            "frac",
+            "t",
+            "comparing",
+            "proportions",
+            "z",
+            "means",
+            "using",
+            "compare",
+            "sqrt"
+          ],
+          "title": "Unit 10: Comparing Two Populations",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " Proportions (z-test): Compare two groups using z = \\frac(p-hat1 - p-hat2) - 0sqrt(\\hatp)C(1-p-hatC)(1/n1 + 1/n2).\n Means (t-test): Compare two means using t = \\frac(x-bar1 - x-bar2) - 0sqrt(s1^2/n1 + s2^2/n2). Use unpooled degrees of freedom.",
+          "T": "N/A"
+        },
+        {
+          "id": "F.16",
+          "keywords": [
+            "homogeneity",
+            "populations",
+            "tests",
+            "frac",
+            "matrix",
+            "same",
+            "distributions",
+            "independence",
+            "data",
+            "categories",
+            "goodness",
+            "claimed",
+            "df",
+            "unit",
+            "test",
+            "associated",
+            "square",
+            "text",
+            "variables",
+            "distribution",
+            "across",
+            "fits"
+          ],
+          "title": "Unit 11: Chi-Square Tests",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " Goodness of Fit: Chi-Square = Sum ((O-E)^2)/(E). Use to see if data fits a claimed distribution. df = categories - 1.\n Homogeneity/Independence: Use a matrix to test if distributions are the same across populations or if two variables are associated. df = (r-1)(c-1).",
+          "T": "N/A"
+        },
+        {
+          "id": "F.17",
+          "keywords": [
+            "unit",
+            "se_b",
+            "liner",
+            "slope",
+            "t",
+            "frac",
+            "regression",
+            "independent",
+            "normal",
+            "conditions",
+            "variance",
+            "inference",
+            "df",
+            "random",
+            "testing",
+            "linear",
+            "equal"
+          ],
+          "title": "Unit 12: Inference for Regression",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " Conditions (LINER): Linear, Independent, Normal, Equal Variance, Random.\n Testing Slope: t = (b - 0)/(SEb). df = n - 2.",
+          "T": "N/A"
+        },
+        {
+          "id": "F.18",
+          "keywords": [
+            "sigma_x",
+            "standard",
+            "socs",
+            "summary",
+            "independent",
+            "results",
+            "check",
+            "proportion",
+            "boxplots",
+            "strength",
+            "rule",
+            "reduces",
+            "variables",
+            "ensures",
+            "sampling",
+            "measures",
+            "significance",
+            "regression",
+            "histograms",
+            "mean",
+            "master",
+            "mu_y",
+            "means",
+            "error",
+            "sigma",
+            "bias",
+            "probability",
+            "change",
+            "outliers",
+            "tests",
+            "critical",
+            "distributions",
+            "z",
+            "observed",
+            "assignment",
+            "assuming",
+            "normality",
+            "sigma_y",
+            "groups",
+            "must",
+            "spread",
+            "using",
+            "chapter",
+            "shape",
+            "square",
+            "interpret",
+            "predicted",
+            "datasets",
+            "true",
+            "center",
+            "extreme",
+            "linearity",
+            "slope",
+            "chapters",
+            "intervals",
+            "mu_x",
+            "pattern",
+            "large",
+            "explained",
+            "conclusions",
+            "expected",
+            "allows",
+            "variation",
+            "normal",
+            "confidence",
+            "inference",
+            "independence",
+            "residuals",
+            "sample",
+            "variance",
+            "counts",
+            "follow",
+            "p",
+            "describe",
+            "standardize",
+            "effect",
+            "value",
+            "margin",
+            "comparing",
+            "with",
+            "random",
+            "rules",
+            "cause",
+            "test",
+            "t",
+            "proportions",
+            "linear"
+          ],
+          "title": "TPS 5e Master Summary (Chapters 1-12)",
+          "C": "N/A",
+          "F": "N/A",
+          "K": "N/A",
+          "I": " Chapter 1 Summary: Describe distributions using SOCS (Shape, Outliers, Center, Spread). Use histograms for large datasets and boxplots for outliers.\n Chapter 2 Summary: Normal distributions follow the 68-95-99.7 rule. Standardize with z = (x - mu)/sigma.\n Chapter 3 Summary: r measures linear strength. r^2 is the % of variation in y explained by x. Interpret the slope as the predicted change.\n Chapter 4 Summary: Random sampling reduces bias. Random assignment allows for cause-and-effect conclusions.\n Chapter 5 Summary: Probability rules (P(A OR B) and P(A|B)). Independence check: P(A|B) = P(A).\n Chapter 6 Summary: Random variables. Mean of X+Y = mux + muy. Variance of X+Y = sigmax^2 + sigmay^2 (if independent).\n Chapter 7 Summary: Sampling distributions. The CLT ensures normality for n \\ge 30.\n Chapter 8 Summary: Confidence Intervals. Margin of Error = (Critical Value)  (Standard Error).\n Chapter 9 Summary: Significance Tests. P-value is the probability of results as extreme as observed, assuming H0 is true.\n Chapter 10 Summary: Comparing two groups. Two-sample t-test is for means; two-proportion z-test is for proportions.\n Chapter 11 Summary: Chi-Square. Expected counts must be \\ge 5.\n Chapter 12 Summary: Regression inference. Check for no pattern in residuals for linearity.",
+          "T": "N/A"
+        }
+      ]
+    }
+  }
+}
