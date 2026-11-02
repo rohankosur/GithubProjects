@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap');
+
+:root {
+  --canvas-deep-navy: #060a14;
+  --canvas-mid-navy: #0c1424;
+  --canvas-cyan-glow: #00e5ff;
+  --canvas-magenta-glow: #ff0055;
+  --canvas-amber-score: #ffb700;
+  --grid-line: rgba(0, 229, 255, 0.04);
+}
+
+* {
+  font-family: 'VT323', monospace !important;
+  letter-spacing: 0.06em;
+}
+
+/* ATMOSPHERIC MIDNIGHT CANVAS WITH SCANLINES & RADIAL RADAR BLOOM */
+body, #main {
+  background-color: var(--canvas-deep-navy) !important;
+  background-image:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.42) 50%),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(0deg, var(--grid-line) 1px, transparent 1px),
+    radial-gradient(ellipse 55% 45% at 8% 88%, rgba(255, 0, 85, 0.14), transparent 70%),
+    radial-gradient(ellipse 55% 45% at 92% 88%, rgba(0, 229, 255, 0.16), transparent 70%),
+    radial-gradient(circle at 50% 30%, #0d1629 0%, #060a14 70%, #03050a 100%) !important;
+  background-size: 100% 4px, 40px 40px, 40px 40px, 100% 100%, 100% 100%, 100% 100% !important;
+  background-attachment: fixed !important;
+}
+
+/* ARCADE TOP TELEMETRY STRIP */
+#main::before {
+  content: "CREDIT 02       CONTINENTAL 3-LAYER SIEGE // NEW TAB MATRIX       HIGH SCORE 999900";
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 12px;
+  left: 0;
+  text-align: center;
+  font-family: 'VT323', monospace !important;
+  font-size: 1.15rem;
+  color: #00e5ff;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.7);
+  letter-spacing: 0.22em;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* CRT DIGITAL CLOCK & AM/PM */
+#time {
+  color: #00ffff !important;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 25px rgba(0, 229, 255, 0.4), 0 0 50px rgba(0, 229, 255, 0.2) !important;
+  letter-spacing: 0.08em !important;
+}
+
+#time span, .time-ampm {
+  color: var(--canvas-magenta-glow) !important;
+  text-shadow: 0 0 10px rgba(255, 0, 85, 0.8) !important;
+}
+
+#date {
+  color: #5cf2bd !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.25em !important;
+  text-shadow: 0 0 8px rgba(92, 242, 189, 0.6) !important;
+}
+
+/* HUD COMMAND/SEARCH INPUT */
+#search {
+  border: 1px solid rgba(0, 229, 255, 0.45) !important;
+  background: rgba(8, 15, 29, 0.85) !important;
+  border-radius: 2px !important;
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.2), inset 0 0 10px rgba(0, 229, 255, 0.08) !important;
+}
+
+#search input {
+  color: #00e5ff !important;
+  font-size: 1.1rem !important;
+}
+
+#search input::placeholder {
+  color: rgba(0, 229, 255, 0.45) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
+/* QUICK LINKS MATRIX DOCK */
+#linkblocks .linkblock, .link-item, .link {
+  border: 1px solid rgba(0, 229, 255, 0.25) !important;
+  background: rgba(10, 18, 35, 0.75) !important;
+  border-radius: 2px !important;
+  box-shadow: inset 0 0 8px rgba(0, 229, 255, 0.08) !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+#linkblocks .linkblock:hover, .link-item:hover, .link:hover {
+  border-color: var(--canvas-magenta-glow) !important;
+  background: rgba(22, 28, 48, 0.9) !important;
+  box-shadow: 0 0 16px rgba(255, 0, 85, 0.6), inset 0 0 10px rgba(255, 0, 85, 0.25) !important;
+  transform: translateY(-2px) !important;
+}
+
+#linkblocks span, .link-title {
+  color: #8bb2df !important;
+  text-transform: uppercase !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* NOTES / HUD LOG CONTAINER */
+#notes, textarea {
+  background: rgba(6, 12, 24, 0.8) !important;
+  border: 1px solid rgba(0, 229, 255, 0.3) !important;
+  color: #00e5ff !important;
+  border-radius: 2px !important;
+  box-shadow: inset 0 0 10px rgba(0, 229, 255, 0.05) !important;
+}
+
+/* POMODORO DOCK */
+#pomodoro, .pomodoro-container {
+  background: rgba(6, 12, 24, 0.85) !important;
+  border: 1px solid rgba(0, 229, 255, 0.35) !important;
+  border-radius: 2px !important;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.18) !important;
+}
+
+#pomodoro button, .pomodoro-container button {
+  border: 1px solid rgba(0, 229, 255, 0.25) !important;
+  border-radius: 0px !important;
+  color: #00ffff !important;
+  background: rgba(3, 7, 15, 0.6) !important;
+  text-transform: uppercase !important;
+}
+
+#pomodoro button:hover, .pomodoro-container button:hover {
+  background: rgba(0, 229, 255, 0.18) !important;
+  border-color: var(--canvas-cyan-glow) !important;
+}
+
+/* STOIC QUOTE TERMINAL HUD */
+#quotes blockquote, #quote, blockquote {
+  color: #ffaa00 !important;
+  text-shadow: 0 0 8px rgba(255, 170, 0, 0.5) !important;
+  font-size: 1.15rem !important;
+  border-left: 2px solid var(--canvas-magenta-glow) !important;
+  padding-left: 14px !important;
+  background: rgba(4, 8, 16, 0.4) !important;
+}
+
+#quotes figcaption, #author, figcaption {
+  color: #79a8d7 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;
+}
+
+/* INTERFACE CONTROLS */
+#interface-settings-button, button#settings, #settings {
+  color: #00e5ff !important;
+  filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.6)) !important;
+}
